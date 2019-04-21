@@ -1,0 +1,5 @@
+To,Location
+I0,PIN_AB28
+I1,PIN_AC28
+Eq,PIN_G19
+notEq,PIN_F19

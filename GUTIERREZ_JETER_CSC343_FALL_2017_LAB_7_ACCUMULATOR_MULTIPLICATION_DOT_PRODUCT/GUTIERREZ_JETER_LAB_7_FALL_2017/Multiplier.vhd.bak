@@ -1,0 +1,40 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+---- Uncomment the following library declaration if instantiating
+---- any Xilinx primitives in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
+
+entity Multiplier is
+port ( input : in std_logic_vector(7 downto 0);
+            btn1,btn2,btn3 : in std_logic;
+            output : out std_logic_vector(15 downto 0));
+end Multiplier;
+
+architecture Behavioral of Multiplier is
+signal broj1:std_logic_vector (7 downto 0);
+signal broj2:std_logic_vector (7 downto 0);
+begin
+process (btn1, btn2)
+begin
+
+if (btn1'event and btn1='1') then
+        broj1<=input;
+end if;
+
+if (btn2'event and btn2='1') then
+        broj2<=input;
+end if;
+end process;
+
+process (btn3)
+begin
+
+if (btn3'event and btn3='1') then
+        output <= broj1 * broj2;
+end if;
+end process;
+end Behavioral; 

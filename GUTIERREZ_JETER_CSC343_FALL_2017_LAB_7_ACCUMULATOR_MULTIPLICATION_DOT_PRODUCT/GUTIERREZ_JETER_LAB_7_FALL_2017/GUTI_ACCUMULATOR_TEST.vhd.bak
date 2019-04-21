@@ -1,0 +1,50 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_UNsigned.all;
+
+entity GUTI_ACCUMULATOR_TEST is
+end entity;
+
+
+architecture arch_test of GUTI_ACCUMULATOR_TEST is
+COMPONENT accumulator is
+port(a : in std_logic_vector(15 downto 0);
+clk, reset : in std_logic;
+sum : out std_logic_vector(15 downto 0);
+hex1, hex2, hex3, hex4: out std_logic_vector(6 downto 0);
+overflow: out std_logic);
+END COMPONENT;
+	signal X,S :STD_LOGIC_VECTOR(15 DOWNTO 0);
+	SIGNAL H1,H2,H3,H4: STD_LOGIC_VECTOR(6 DOWNTO 0);
+	SIGNAL CLK1,RESET1,OVERFLOW1: STD_LOGIC;
+
+begin
+
+uut: ACCUMULATOR
+port map (
+INPUT_X => X,
+INPUT_Y => Y,
+PRODUCT => P
+);
+
+tb : process
+			begin
+			wait for 100 ns;
+			report "Hello Simulator";
+			X<="00000000";
+			Y<="00000000";
+				for I in 0 to 256 loop
+					for J in 0 to 256 loop
+						wait for 100 ns;
+						assert (P = X*Y) report "The Product from 4 bit adder is P= " & integer'image(to_integer(unsigned((P)))) &
+							" while the expected A*B = " & integer'image(to_integer(unsigned((X*Y)))) severity ERROR;
+
+						Y<=Y+"00000001";
+					end loop;
+					X<=X+"00000001";
+				end loop;
+			report "Test completed";
+			wait;
+		end process;
+end arch_test;

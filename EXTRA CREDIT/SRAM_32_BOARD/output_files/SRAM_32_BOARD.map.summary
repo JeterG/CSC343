@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Dec 10 20:16:19 2017
+Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+Revision Name : SRAM_32_BOARD
+Top-level Entity Name : Sram
+Family : Cyclone IV E
+Total logic elements : 120
+    Total combinational functions : 120
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 112
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

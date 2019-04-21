@@ -1,0 +1,9 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {/mnt/1158F89F14FC49C4/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC343_LAB2_COMPARATOR_CIRCUITS_FALL_2017/GUTIERREZ_1BIT_COMPARATOR.vhd}
+

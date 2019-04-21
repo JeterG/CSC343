@@ -1,0 +1,67 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all;
+--USE work.fulladd_package.all ;
+entity GUTIERREZ_TEST_COMPARE_32_BITS_ADVANCE is
+end GUTIERREZ_TEST_COMPARE_32_BITS_ADVANCE;
+architecture arch_test_32_COMPARE of GUTIERREZ_TEST_COMPARE_32_BITS_ADVANCE is
+--componengt declaration for the Unit Under Test
+component GUTIERREZ_COMPARE_32_BITS_ADVANCE is 
+	port ( Mode: in std_logic;
+			 X, Y: in std_logic_vector(31 downto 0);
+			 S: out std_logic_vector (31 downto 0);
+			 Neg: out std_logic;
+			 Z: out std_logic;
+			 Cout, Overflow: out std_logic);
+end component;
+signal A,B,SUM :STD_LOGIC_VECTOR(31 DOWNTO 0);
+signal Ci,Co,Neg2,Z1 :STD_LOGIC;
+begin
+-----Instantiate the Unit Under Test (UUT)
+uut: GUTIERREZ_COMPARE_32_BITS_ADVANCE port map (
+Mode => Ci,
+X => A,
+Y => B,
+S => SUM,
+Cout =>Co,
+Neg => Neg2,
+Z => Z1
+);
+---- Test Bench ---User Defined Process
+tb : process
+begin
+--Hold reset state for 100 ns
+wait for 100 ns;
+report "Hello Simulator";
+A<="00000000000000000000000000000000";
+B<="00000000000000000000000000000000";
+Ci<='1';
+--Loop over all values of A
+for I in 0 to 2560 loop
+--Loop over all values of B
+for J in 0 to 2560 loop
+--Wait for outputto update
+wait for 10 ns;
+---report " the A+B = " & integer'image(to_integer(unsigned((A+B))));
+---The statement below checks for ALL possible input values if the ouput is correct.
+assert (Sum = A-B) report "The Comparison between A and B are S= " & integer'image(to_integer(signed((SUM)))) &
+" while the expected A compared to B = " & integer'image(to_integer(signed((A-B)))) severity ERROR;
+if A=B then
+assert (Z1='1') report "Same Values are being reported as different" severity ERROR;
+else assert(Z1='0')report "Different Values are being  reported as teh same" severity ERROR;
+end if;
+assert(Neg2=Sum(31))report "Sign is incorrect." severity ERROR;
+
+--Increment to the next value of B
+B<=B+"00000000000000000000000000000001";
+end loop;
+--Increment to the next value of A
+A<=A+"00000000000000000000000000000001";
+--Echo to users test is finished
+end loop;
+report "Test completed";
+wait; -- will wait for ever
+end process;
+---END User Defined Process
+end arch_test_32_COMPARE;

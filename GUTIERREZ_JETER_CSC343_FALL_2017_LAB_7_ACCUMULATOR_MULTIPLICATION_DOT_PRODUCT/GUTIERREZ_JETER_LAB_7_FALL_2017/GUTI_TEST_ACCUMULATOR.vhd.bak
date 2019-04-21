@@ -1,0 +1,70 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all;
+use work.GUTIERREZ_ADDER_PACKAGE_COMPARE.all;
+--USE work.fulladd_package.all ;
+entity GUTIERREZ_TEST_COMPARE_4_BITS_ADVANCE is
+end GUTIERREZ_TEST_COMPARE_4_BITS_ADVANCE;
+architecture arch_test_4_COMPARE of GUTIERREZ_TEST_COMPARE_4_BITS_ADVANCE is
+--componengt declaration for the Unit Under Test
+component GUTIERREZ_COMPARE_4_BITS_ADVANCE is
+	port ( SUBTRACT: in std_logic;
+			 X, Y: in std_logic_vector(3 downto 0);
+			 S: out std_logic_vector (3 downto 0);
+			 NEGATIVE: out std_logic;
+			 Z: out std_logic;
+			 Cout, Overflow: out std_logic);
+end component;
+signal A,B,SUM :STD_LOGIC_VECTOR(3 DOWNTO 0);
+signal Ci,Co,NEGATIVE2,Z1,Overflow2 :STD_LOGIC;
+begin
+-----Instantiate the Unit Under Test (UUT)
+uut: GUTIERREZ_COMPARE_4_BITS_ADVANCE port map (
+SUBTRACT => Ci,
+X => A,
+Y => B,
+S => SUM,
+Cout =>Co,
+NEGATIVE => NEGATIVE2,
+Z => Z1,
+Overflow => Overflow2
+);
+---- Test Bench ---User Defined Process
+tb : process
+begin
+--Hold reset state for 100 ns
+wait for 100 ns;
+report "TESTING 4 BIT COMPARATOR ADVANCED";
+A<="0000";
+B<="0000";
+Ci<='1';
+--Loop over all values of A
+for I in 0 to 16 loop
+--Loop over all values of B
+for J in 0 to 16 loop
+--Wait for outputto update
+wait for 10 ns;
+---report " the A+B = " & integer'image(to_integer(unsigned((A+B))));
+---The statement below checks for ALL possible input values if the ouput is correct.
+assert (Sum = A-B) report "The Comparison between A and Be IS S= " & integer'image(to_integer(signed((SUM)))) &
+" while the expected A compared to B = " & integer'image(to_integer(signed((A-B)))) severity ERROR;
+if A=B then
+assert (Z1='1') report "Same Values are being reported as different" severity ERROR;
+else assert(Z1='0')report "Different Values are being  reported as teh same" severity ERROR;
+end if;
+assert(NEGATIVE2=Sum(3))report "Sign is incorrect." severity ERROR;
+assert(overflow2=overflow2)report "Overflow is wrong" severity ERROR;
+
+--Increment to the next value of B
+B<=B+"0001";
+end loop;
+--Increment to the next value of A
+A<=A+"0001";
+--Echo to users test is finished
+end loop;
+report "Test completed";
+wait; -- will wait for ever
+end process;
+---END User Defined Process
+end arch_test_4_COMPARE;

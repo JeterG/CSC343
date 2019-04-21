@@ -1,0 +1,371 @@
+Analysis & Synthesis report for GUTIEREZ_JETER_LAB_3_FALL_2017
+Sun Oct  1 23:58:46 2017
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Oct  1 23:58:46 2017       ;
+; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
+; Revision Name                      ; GUTIEREZ_JETER_LAB_3_FALL_2017              ;
+; Top-level Entity Name              ; GUTIERREZ_COMPARE_8_BITS_ADVANCE            ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 22                                          ;
+;     Total combinational functions  ; 22                                          ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 29                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                                                  ;
++----------------------------------------------------------------------------+----------------------------------+--------------------------------+
+; Option                                                                     ; Setting                          ; Default Value                  ;
++----------------------------------------------------------------------------+----------------------------------+--------------------------------+
+; Device                                                                     ; EP4CE115F29C7                    ;                                ;
+; Top-level entity name                                                      ; GUTIERREZ_COMPARE_8_BITS_ADVANCE ; GUTIEREZ_JETER_LAB_3_FALL_2017 ;
+; Family name                                                                ; Cyclone IV E                     ; Cyclone V                      ;
+; Use smart compilation                                                      ; Off                              ; Off                            ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                               ; On                             ;
+; Enable compact report table                                                ; Off                              ; Off                            ;
+; Restructure Multiplexers                                                   ; Auto                             ; Auto                           ;
+; Create Debugging Nodes for IP Cores                                        ; Off                              ; Off                            ;
+; Preserve fewer node names                                                  ; On                               ; On                             ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                              ; Off                            ;
+; Verilog Version                                                            ; Verilog_2001                     ; Verilog_2001                   ;
+; VHDL Version                                                               ; VHDL_1993                        ; VHDL_1993                      ;
+; State Machine Processing                                                   ; Auto                             ; Auto                           ;
+; Safe State Machine                                                         ; Off                              ; Off                            ;
+; Extract Verilog State Machines                                             ; On                               ; On                             ;
+; Extract VHDL State Machines                                                ; On                               ; On                             ;
+; Ignore Verilog initial constructs                                          ; Off                              ; Off                            ;
+; Iteration limit for constant Verilog loops                                 ; 5000                             ; 5000                           ;
+; Iteration limit for non-constant Verilog loops                             ; 250                              ; 250                            ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                               ; On                             ;
+; Infer RAMs from Raw Logic                                                  ; On                               ; On                             ;
+; Parallel Synthesis                                                         ; On                               ; On                             ;
+; DSP Block Balancing                                                        ; Auto                             ; Auto                           ;
+; NOT Gate Push-Back                                                         ; On                               ; On                             ;
+; Power-Up Don't Care                                                        ; On                               ; On                             ;
+; Remove Redundant Logic Cells                                               ; Off                              ; Off                            ;
+; Remove Duplicate Registers                                                 ; On                               ; On                             ;
+; Ignore CARRY Buffers                                                       ; Off                              ; Off                            ;
+; Ignore CASCADE Buffers                                                     ; Off                              ; Off                            ;
+; Ignore GLOBAL Buffers                                                      ; Off                              ; Off                            ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                              ; Off                            ;
+; Ignore LCELL Buffers                                                       ; Off                              ; Off                            ;
+; Ignore SOFT Buffers                                                        ; On                               ; On                             ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                              ; Off                            ;
+; Optimization Technique                                                     ; Balanced                         ; Balanced                       ;
+; Carry Chain Length                                                         ; 70                               ; 70                             ;
+; Auto Carry Chains                                                          ; On                               ; On                             ;
+; Auto Open-Drain Pins                                                       ; On                               ; On                             ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                              ; Off                            ;
+; Auto ROM Replacement                                                       ; On                               ; On                             ;
+; Auto RAM Replacement                                                       ; On                               ; On                             ;
+; Auto DSP Block Replacement                                                 ; On                               ; On                             ;
+; Auto Shift Register Replacement                                            ; Auto                             ; Auto                           ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto                             ; Auto                           ;
+; Auto Clock Enable Replacement                                              ; On                               ; On                             ;
+; Strict RAM Replacement                                                     ; Off                              ; Off                            ;
+; Allow Synchronous Control Signals                                          ; On                               ; On                             ;
+; Force Use of Synchronous Clear Signals                                     ; Off                              ; Off                            ;
+; Auto RAM Block Balancing                                                   ; On                               ; On                             ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                              ; Off                            ;
+; Auto Resource Sharing                                                      ; Off                              ; Off                            ;
+; Allow Any RAM Size For Recognition                                         ; Off                              ; Off                            ;
+; Allow Any ROM Size For Recognition                                         ; Off                              ; Off                            ;
+; Allow Any Shift Register Size For Recognition                              ; Off                              ; Off                            ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                               ; On                             ;
+; Ignore translate_off and synthesis_off directives                          ; Off                              ; Off                            ;
+; Timing-Driven Synthesis                                                    ; On                               ; On                             ;
+; Report Parameter Settings                                                  ; On                               ; On                             ;
+; Report Source Assignments                                                  ; On                               ; On                             ;
+; Report Connectivity Checks                                                 ; On                               ; On                             ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                              ; Off                            ;
+; Synchronization Register Chain Length                                      ; 2                                ; 2                              ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation               ; Normal compilation             ;
+; HDL message level                                                          ; Level2                           ; Level2                         ;
+; Suppress Register Optimization Related Messages                            ; Off                              ; Off                            ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000                             ; 5000                           ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000                             ; 5000                           ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                              ; 100                            ;
+; Clock MUX Protection                                                       ; On                               ; On                             ;
+; Auto Gated Clock Conversion                                                ; Off                              ; Off                            ;
+; Block Design Naming                                                        ; Auto                             ; Auto                           ;
+; SDC constraint protection                                                  ; Off                              ; Off                            ;
+; Synthesis Effort                                                           ; Auto                             ; Auto                           ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                               ; On                             ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                              ; Off                            ;
+; Analysis & Synthesis Message Level                                         ; Medium                           ; Medium                         ;
+; Disable Register Merging Across Hierarchies                                ; Auto                             ; Auto                           ;
+; Resource Aware Inference For Block RAM                                     ; On                               ; On                             ;
+; Synthesis Seed                                                             ; 1                                ; 1                              ;
++----------------------------------------------------------------------------+----------------------------------+--------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                   ;
++--------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path     ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                                                        ; Library ;
++--------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; GUTIERREZ_FULL_ADDER_USING_GATES.vhd ; yes             ; User VHDL File  ; /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_FULL_ADDER_USING_GATES.vhd ;         ;
+; GUTIERREZ_ADDER_PACKAGE_COMPARE.vhd  ; yes             ; User VHDL File  ; /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_ADDER_PACKAGE_COMPARE.vhd  ;         ;
+; GUTIERREZ_ADDER_8_BITS.vhd           ; yes             ; User VHDL File  ; /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_ADDER_8_BITS.vhd           ;         ;
+; GUTIERREZ_COMPARE_8_BITS_ADVANCE.vhd ; yes             ; User VHDL File  ; /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_COMPARE_8_BITS_ADVANCE.vhd ;         ;
++--------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 22             ;
+;                                             ;                ;
+; Total combinational functions               ; 22             ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 17             ;
+;     -- 3 input functions                    ; 3              ;
+;     -- <=2 input functions                  ; 2              ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 22             ;
+;     -- arithmetic mode                      ; 0              ;
+;                                             ;                ;
+; Total registers                             ; 0              ;
+;     -- Dedicated logic registers            ; 0              ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 29             ;
+;                                             ;                ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; SUBTRACT~input ;
+; Maximum fan-out                             ; 16             ;
+; Total fan-out                               ; 122            ;
+; Average fan-out                             ; 1.52           ;
++---------------------------------------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                       ;
++----------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------+----------------------------------+--------------+
+; Compilation Hierarchy Node                               ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                              ; Entity Name                      ; Library Name ;
++----------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------+----------------------------------+--------------+
+; |GUTIERREZ_COMPARE_8_BITS_ADVANCE                        ; 22 (4)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 29   ; 0            ; |GUTIERREZ_COMPARE_8_BITS_ADVANCE                                                                                ; GUTIERREZ_COMPARE_8_BITS_ADVANCE ; work         ;
+;    |GUTIERREZ_ADDER_8_BITS:SECOND|                       ; 18 (1)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GUTIERREZ_COMPARE_8_BITS_ADVANCE|GUTIERREZ_ADDER_8_BITS:SECOND                                                  ; GUTIERREZ_ADDER_8_BITS           ; work         ;
+;       |GUTIERREZ_FULL_ADDER_USING_GATES:FIRST|           ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GUTIERREZ_COMPARE_8_BITS_ADVANCE|GUTIERREZ_ADDER_8_BITS:SECOND|GUTIERREZ_FULL_ADDER_USING_GATES:FIRST           ; GUTIERREZ_FULL_ADDER_USING_GATES ; work         ;
+;       |GUTIERREZ_FULL_ADDER_USING_GATES:\THIRD:1:FOURTH| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GUTIERREZ_COMPARE_8_BITS_ADVANCE|GUTIERREZ_ADDER_8_BITS:SECOND|GUTIERREZ_FULL_ADDER_USING_GATES:\THIRD:1:FOURTH ; GUTIERREZ_FULL_ADDER_USING_GATES ; work         ;
+;       |GUTIERREZ_FULL_ADDER_USING_GATES:\THIRD:2:FOURTH| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GUTIERREZ_COMPARE_8_BITS_ADVANCE|GUTIERREZ_ADDER_8_BITS:SECOND|GUTIERREZ_FULL_ADDER_USING_GATES:\THIRD:2:FOURTH ; GUTIERREZ_FULL_ADDER_USING_GATES ; work         ;
+;       |GUTIERREZ_FULL_ADDER_USING_GATES:\THIRD:3:FOURTH| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GUTIERREZ_COMPARE_8_BITS_ADVANCE|GUTIERREZ_ADDER_8_BITS:SECOND|GUTIERREZ_FULL_ADDER_USING_GATES:\THIRD:3:FOURTH ; GUTIERREZ_FULL_ADDER_USING_GATES ; work         ;
+;       |GUTIERREZ_FULL_ADDER_USING_GATES:\THIRD:4:FOURTH| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GUTIERREZ_COMPARE_8_BITS_ADVANCE|GUTIERREZ_ADDER_8_BITS:SECOND|GUTIERREZ_FULL_ADDER_USING_GATES:\THIRD:4:FOURTH ; GUTIERREZ_FULL_ADDER_USING_GATES ; work         ;
+;       |GUTIERREZ_FULL_ADDER_USING_GATES:\THIRD:5:FOURTH| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GUTIERREZ_COMPARE_8_BITS_ADVANCE|GUTIERREZ_ADDER_8_BITS:SECOND|GUTIERREZ_FULL_ADDER_USING_GATES:\THIRD:5:FOURTH ; GUTIERREZ_FULL_ADDER_USING_GATES ; work         ;
+;       |GUTIERREZ_FULL_ADDER_USING_GATES:\THIRD:6:FOURTH| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GUTIERREZ_COMPARE_8_BITS_ADVANCE|GUTIERREZ_ADDER_8_BITS:SECOND|GUTIERREZ_FULL_ADDER_USING_GATES:\THIRD:6:FOURTH ; GUTIERREZ_FULL_ADDER_USING_GATES ; work         ;
+;       |GUTIERREZ_FULL_ADDER_USING_GATES:\THIRD:7:FOURTH| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GUTIERREZ_COMPARE_8_BITS_ADVANCE|GUTIERREZ_ADDER_8_BITS:SECOND|GUTIERREZ_FULL_ADDER_USING_GATES:\THIRD:7:FOURTH ; GUTIERREZ_FULL_ADDER_USING_GATES ; work         ;
++----------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------+----------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 29                          ;
+; cycloneiii_lcell_comb ; 24                          ;
+;     normal            ; 24                          ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 3                           ;
+;         4 data inputs ; 17                          ;
+;                       ;                             ;
+; Max LUT depth         ; 11.00                       ;
+; Average LUT depth     ; 8.71                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+    Info: Processing started: Sun Oct  1 23:58:31 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GUTIEREZ_JETER_LAB_3_FALL_2017 -c GUTIEREZ_JETER_LAB_3_FALL_2017
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file GUTIERREZ_ADDER_16_BITS.vhd
+    Info (12022): Found design unit 1: GUTIERREZ_ADDER_16_BITS-DESIGN_16 File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_ADDER_16_BITS.vhd Line: 13
+    Info (12023): Found entity 1: GUTIERREZ_ADDER_16_BITS File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_ADDER_16_BITS.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file GUTIERREZ_TEST_MISTAKE4_ADDER.vhd
+    Info (12022): Found design unit 1: GUTIERREZ_TEST_MISTAKE4_ADDER-arch_test File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_TEST_MISTAKE4_ADDER.vhd Line: 8
+    Info (12023): Found entity 1: GUTIERREZ_TEST_MISTAKE4_ADDER File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_TEST_MISTAKE4_ADDER.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file GUTIERREZ_MISTAKE4_ADDER.vhd
+    Info (12022): Found design unit 1: GUTIERREZ_MISTAKE4_ADDER-DESIGN File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_MISTAKE4_ADDER.vhd Line: 13
+    Info (12023): Found entity 1: GUTIERREZ_MISTAKE4_ADDER File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_MISTAKE4_ADDER.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file GUTIERREZ_ADDER_4_BITS.vhd
+    Info (12022): Found design unit 1: GUTIERREZ_ADDER_4_BITS-DESIGN File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_ADDER_4_BITS.vhd Line: 12
+    Info (12023): Found entity 1: GUTIERREZ_ADDER_4_BITS File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_ADDER_4_BITS.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file GUTIERREZ_FULL_ADDER_USING_GATES.vhd
+    Info (12022): Found design unit 1: GUTIERREZ_FULL_ADDER_USING_GATES-arch File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_FULL_ADDER_USING_GATES.vhd Line: 10
+    Info (12023): Found entity 1: GUTIERREZ_FULL_ADDER_USING_GATES File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_FULL_ADDER_USING_GATES.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file GUTIERREZ_ADD_SUB_4_BITS.vhd
+    Info (12022): Found design unit 1: GUTIERREZ_ADD_SUB_4_BITS-STRUCTURE File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_ADD_SUB_4_BITS.vhd Line: 12
+    Info (12023): Found entity 1: GUTIERREZ_ADD_SUB_4_BITS File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_ADD_SUB_4_BITS.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file GUTIERREZ_TEST_4_BIT_ADDER.vhd
+    Info (12022): Found design unit 1: GUTIERREZ_TEST_4_BIT_ADDER-arch_test File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_TEST_4_BIT_ADDER.vhd Line: 9
+    Info (12023): Found entity 1: GUTIERREZ_TEST_4_BIT_ADDER File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_TEST_4_BIT_ADDER.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file GUTIERREZ_ADD_SUB_16_BITS.vhd
+    Info (12022): Found design unit 1: GUTIERREZ_ADD_SUB_16_BITS-STRUCTURE_16 File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_ADD_SUB_16_BITS.vhd Line: 12
+    Info (12023): Found entity 1: GUTIERREZ_ADD_SUB_16_BITS File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_ADD_SUB_16_BITS.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file GUTIERREZ_TEST_16_BIT_ADDER.vhd
+    Info (12022): Found design unit 1: GUTIERREZ_TEST_16_BIT_ADDER-arch_test_16 File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_TEST_16_BIT_ADDER.vhd Line: 9
+    Info (12023): Found entity 1: GUTIERREZ_TEST_16_BIT_ADDER File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_TEST_16_BIT_ADDER.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file GUTIERREZ_ADDER_32_BITS.vhd
+    Info (12022): Found design unit 1: GUTIERREZ_ADDER_32_BITS-DESIGN_32 File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_ADDER_32_BITS.vhd Line: 13
+    Info (12023): Found entity 1: GUTIERREZ_ADDER_32_BITS File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_ADDER_32_BITS.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file GUTIERREZ_ADD_SUB_32_BITS.vhd
+    Info (12022): Found design unit 1: GUTIERREZ_ADD_SUB_32_BITS-STRUCTURE_32 File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_ADD_SUB_32_BITS.vhd Line: 12
+    Info (12023): Found entity 1: GUTIERREZ_ADD_SUB_32_BITS File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_ADD_SUB_32_BITS.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file GUTIERREZ_TEST_32_BIT_ADDER.vhd
+    Info (12022): Found design unit 1: GUTIERREZ_TEST_32_BIT_ADDER-arch_test_32 File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_TEST_32_BIT_ADDER.vhd Line: 9
+    Info (12023): Found entity 1: GUTIERREZ_TEST_32_BIT_ADDER File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_TEST_32_BIT_ADDER.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file GUTIERREZ_COMPARE_4_BITS_ADVANCE.vhd
+    Info (12022): Found design unit 1: GUTIERREZ_COMPARE_4_BITS_ADVANCE-IDEA File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_COMPARE_4_BITS_ADVANCE.vhd Line: 14
+    Info (12023): Found entity 1: GUTIERREZ_COMPARE_4_BITS_ADVANCE File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_COMPARE_4_BITS_ADVANCE.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file GUTIERREZ_COMPARE_16_BITS_ADVANCE.vhd
+    Info (12022): Found design unit 1: GUTIERREZ_COMPARE_16_BITS_ADVANCE-IDEA_16 File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_COMPARE_16_BITS_ADVANCE.vhd Line: 15
+    Info (12023): Found entity 1: GUTIERREZ_COMPARE_16_BITS_ADVANCE File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_COMPARE_16_BITS_ADVANCE.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file GUTIERREZ_COMPARE_32_BITS_ADVANCE.vhd
+    Info (12022): Found design unit 1: GUTIERREZ_COMPARE_32_BITS_ADVANCE-IDEA_32 File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_COMPARE_32_BITS_ADVANCE.vhd Line: 15
+    Info (12023): Found entity 1: GUTIERREZ_COMPARE_32_BITS_ADVANCE File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_COMPARE_32_BITS_ADVANCE.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file GUTIEREZ_TEST_COMPARE_4_BITS_ADVANCE.vhd
+    Info (12022): Found design unit 1: GUTIERREZ_TEST_COMPARE_4_BITS_ADVANCE-arch_test_4_COMPARE File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIEREZ_TEST_COMPARE_4_BITS_ADVANCE.vhd Line: 9
+    Info (12023): Found entity 1: GUTIERREZ_TEST_COMPARE_4_BITS_ADVANCE File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIEREZ_TEST_COMPARE_4_BITS_ADVANCE.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file GUTIEREZ_TEST_COMPARE_16_BITS_ADVANCE.vhd
+    Info (12022): Found design unit 1: GUTIERREZ_TEST_COMPARE_16_BITS_ADVANCE-arch_test_16_COMPARE File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIEREZ_TEST_COMPARE_16_BITS_ADVANCE.vhd Line: 9
+    Info (12023): Found entity 1: GUTIERREZ_TEST_COMPARE_16_BITS_ADVANCE File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIEREZ_TEST_COMPARE_16_BITS_ADVANCE.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file GUTIEREZ_TEST_COMPARE_32_BITS_ADVANCE.vhd
+    Info (12022): Found design unit 1: GUTIERREZ_TEST_COMPARE_32_BITS_ADVANCE-arch_test_32_COMPARE File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIEREZ_TEST_COMPARE_32_BITS_ADVANCE.vhd Line: 9
+    Info (12023): Found entity 1: GUTIERREZ_TEST_COMPARE_32_BITS_ADVANCE File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIEREZ_TEST_COMPARE_32_BITS_ADVANCE.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file GUTIERREZ_TEST_4_BIT_ADD_SUB.vhd
+    Info (12022): Found design unit 1: GUTIERREZ_TEST_4_BIT_ADD_SUB-arch_test File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_TEST_4_BIT_ADD_SUB.vhd Line: 9
+    Info (12023): Found entity 1: GUTIERREZ_TEST_4_BIT_ADD_SUB File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_TEST_4_BIT_ADD_SUB.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file GUTIERREZ_TEST_16_BIT_ADD_SUB.vhd
+    Info (12022): Found design unit 1: GUTIERREZ_TEST_16_BIT_ADD_SUB-arch_test File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_TEST_16_BIT_ADD_SUB.vhd Line: 9
+    Info (12023): Found entity 1: GUTIERREZ_TEST_16_BIT_ADD_SUB File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_TEST_16_BIT_ADD_SUB.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file GUTIERREZ_TEST_32_BIT_ADD_SUB.vhd
+    Info (12022): Found design unit 1: GUTIERREZ_TEST_32_BIT_ADD_SUB-arch_test File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_TEST_32_BIT_ADD_SUB.vhd Line: 9
+    Info (12023): Found entity 1: GUTIERREZ_TEST_32_BIT_ADD_SUB File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_TEST_32_BIT_ADD_SUB.vhd Line: 7
+Info (12021): Found 1 design units, including 0 entities, in source file GUTIERREZ_ADDER_PACKAGE_COMPARE.vhd
+    Info (12022): Found design unit 1: GUTIERREZ_ADDER_PACKAGE_COMPARE File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_ADDER_PACKAGE_COMPARE.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file GUTIERREZ_32_BIT_SEARCH.vhd
+    Info (12022): Found design unit 1: GUTIERREZ_32_BIT_SEARCH-DESIGN_SEARCH File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_32_BIT_SEARCH.vhd Line: 10
+    Info (12023): Found entity 1: GUTIERREZ_32_BIT_SEARCH File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_32_BIT_SEARCH.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file GUTIERREZ_ADDER_8_BITS.vhd
+    Info (12022): Found design unit 1: GUTIERREZ_ADDER_8_BITS-DESIGN_8 File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_ADDER_8_BITS.vhd Line: 13
+    Info (12023): Found entity 1: GUTIERREZ_ADDER_8_BITS File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_ADDER_8_BITS.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file GUTIERREZ_ADD_SUB_8_BITS.vhd
+    Info (12022): Found design unit 1: GUTIERREZ_ADD_SUB_8_BITS-STRUCTURE_8 File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_ADD_SUB_8_BITS.vhd Line: 12
+    Info (12023): Found entity 1: GUTIERREZ_ADD_SUB_8_BITS File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_ADD_SUB_8_BITS.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file GUTIERREZ_COMPARE_8_BITS_ADVANCE.vhd
+    Info (12022): Found design unit 1: GUTIERREZ_COMPARE_8_BITS_ADVANCE-IDEA_8 File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_COMPARE_8_BITS_ADVANCE.vhd Line: 15
+    Info (12023): Found entity 1: GUTIERREZ_COMPARE_8_BITS_ADVANCE File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_COMPARE_8_BITS_ADVANCE.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file GUTIERREZ_8_BIT_SEARCH.vhd
+    Info (12022): Found design unit 1: GUTIERREZ_8_BIT_SEARCH-DESIGN_SEARCH_8 File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_8_BIT_SEARCH.vhd Line: 10
+    Info (12023): Found entity 1: GUTIERREZ_8_BIT_SEARCH File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_8_BIT_SEARCH.vhd Line: 6
+Info (12127): Elaborating entity "GUTIERREZ_COMPARE_8_BITS_ADVANCE" for the top level hierarchy
+Info (12128): Elaborating entity "GUTIERREZ_ADDER_8_BITS" for hierarchy "GUTIERREZ_ADDER_8_BITS:SECOND" File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_COMPARE_8_BITS_ADVANCE.vhd Line: 29
+Info (12128): Elaborating entity "GUTIERREZ_FULL_ADDER_USING_GATES" for hierarchy "GUTIERREZ_ADDER_8_BITS:SECOND|GUTIERREZ_FULL_ADDER_USING_GATES:FIRST" File: /media/ubuntu/STORAGE/backup/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/GUTIERREZ_ADDER_8_BITS.vhd Line: 22
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 51 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 17 input pins
+    Info (21059): Implemented 12 output pins
+    Info (21061): Implemented 22 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 1250 megabytes
+    Info: Processing ended: Sun Oct  1 23:58:46 2017
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:32
+
+

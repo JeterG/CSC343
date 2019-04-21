@@ -1,0 +1,178 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/simulation/qsim
+vGUTI_16bit_Accumulator
+Z1 !s110 1511381290
+!i10b 1
+!s100 ai6MjQcd2iGA7LMoE;a>z2
+IgQTNVlzAC@2MY0GA45<f>3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1511381289
+Z3 8GUTIERREZ_JETER_LAB_7_FALL_2017.vo
+Z4 FGUTIERREZ_JETER_LAB_7_FALL_2017.vo
+Z5 L0 32
+Z6 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z7 !s108 1511381290.000000
+Z8 !s107 GUTIERREZ_JETER_LAB_7_FALL_2017.vo|
+Z9 !s90 -work|work|GUTIERREZ_JETER_LAB_7_FALL_2017.vo|
+!i113 1
+Z10 o-work work
+n@g@u@t@i_16bit_@accumulator
+vGUTI_16bit_Accumulator_vlg_vec_tst
+R1
+!i10b 1
+!s100 SZgWVbCGl^UI=Rl`_PD7i1
+IzlY:V2;I62@QJG5l7]kNB3
+R2
+R0
+w1511381288
+8GUTI_16BIT_ACCUMULATOR.vwf.vt
+FGUTI_16BIT_ACCUMULATOR.vwf.vt
+Z11 L0 30
+R6
+r1
+!s85 0
+31
+R7
+!s107 GUTI_16BIT_ACCUMULATOR.vwf.vt|
+!s90 -work|work|GUTI_16BIT_ACCUMULATOR.vwf.vt|
+!i113 1
+R10
+n@g@u@t@i_16bit_@accumulator_vlg_vec_tst
+vGUTI_8BIT_MULTIPLICATION
+Z12 !s110 1511382877
+!i10b 1
+!s100 XEf9<U^De;o=i]El?mKVg1
+IcRiUeM1ZK@`GIK<QXj>U81
+R2
+R0
+w1511382876
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z13 !s108 1511382877.000000
+R8
+R9
+!i113 1
+R10
+n@g@u@t@i_8@b@i@t_@m@u@l@t@i@p@l@i@c@a@t@i@o@n
+vGUTI_8BIT_MULTIPLICATION_vlg_vec_tst
+R12
+!i10b 1
+!s100 ;fAXmCMJbQKMEV_KMET101
+I@d@;DRBDnP>G4UDWWge^]2
+R2
+R0
+w1511382875
+8GUTI_8BIT_MULTIPLIER.vwf.vt
+FGUTI_8BIT_MULTIPLIER.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R13
+!s107 GUTI_8BIT_MULTIPLIER.vwf.vt|
+!s90 -work|work|GUTI_8BIT_MULTIPLIER.vwf.vt|
+!i113 1
+R10
+n@g@u@t@i_8@b@i@t_@m@u@l@t@i@p@l@i@c@a@t@i@o@n_vlg_vec_tst
+vGUTI_DOT_PRODUCT
+Z14 !s110 1511474887
+!i10b 1
+!s100 4LME4HzDH6HWO35;hIJ:33
+I2e1]6V[l_EOhTZW0i9G5;1
+R2
+R0
+w1511474887
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z15 !s108 1511474887.000000
+R8
+R9
+!i113 1
+R10
+n@g@u@t@i_@d@o@t_@p@r@o@d@u@c@t
+vGUTI_DOT_PRODUCT_vlg_vec_tst
+R14
+!i10b 1
+!s100 ODO^n5k[I_hHXg]6[H<6j2
+I3cUFfN6oJdXbQY`0`e>:h0
+R2
+R0
+w1511474886
+8GUTI_DOT_PRODUCT.vwf.vt
+FGUTI_DOT_PRODUCT.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R15
+!s107 GUTI_DOT_PRODUCT.vwf.vt|
+!s90 -work|work|GUTI_DOT_PRODUCT.vwf.vt|
+!i113 1
+R10
+n@g@u@t@i_@d@o@t_@p@r@o@d@u@c@t_vlg_vec_tst
+vGUTI_multi_4bit
+Z16 !s110 1511382193
+!i10b 1
+!s100 VGUklVK^WN63>o44]?:Th2
+I=E7E:YYZOOF^JAij:2;oo0
+R2
+R0
+w1511382192
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z17 !s108 1511382193.000000
+R8
+R9
+!i113 1
+R10
+n@g@u@t@i_multi_4bit
+vGUTI_multi_4bit_vlg_vec_tst
+R16
+!i10b 1
+!s100 3gVBO2ARk_NQNYz_LM=7a0
+I4o3?I_fJSQ>I><U_EfXLO2
+R2
+R0
+w1511382190
+8GUTI_multi_4bit.vwf.vt
+FGUTI_multi_4bit.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R17
+!s107 GUTI_multi_4bit.vwf.vt|
+!s90 -work|work|GUTI_multi_4bit.vwf.vt|
+!i113 1
+R10
+n@g@u@t@i_multi_4bit_vlg_vec_tst

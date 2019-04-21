@@ -1,0 +1,32 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/simulation/modelsim
+vGUTI_multi_4bit
+!s110 1511382454
+!i10b 1
+!s100 9f6Bd`CSD95H:eIK5zjX32
+Iel@5QP?@DYJENAI>z=I3Q0
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1511382372
+8GUTIERREZ_JETER_LAB_7_FALL_2017_7_1200mv_85c_slow.vo
+FGUTIERREZ_JETER_LAB_7_FALL_2017_7_1200mv_85c_slow.vo
+L0 32
+OV;L;10.4d;61
+r1
+!s85 0
+31
+!s108 1511382454.000000
+!s107 GUTIERREZ_JETER_LAB_7_FALL_2017_7_1200mv_85c_slow.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|GUTIERREZ_JETER_LAB_7_FALL_2017_7_1200mv_85c_slow.vo|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+.
+n@g@u@t@i_multi_4bit

@@ -1,0 +1,14 @@
+Library ieee;
+use ieee.std_logic_1164.all;
+entity GUTIERREZ_1BIT_COMPARATOR_WITH_NOTEQ is
+port ( I0, I1 : in std_logic;
+Eq, notEq: out std_logic);
+end GUTIERREZ_1BIT_COMPARATOR_WITH_NOTEQ;
+architecture arch of GUTIERREZ_1BIT_COMPARATOR_WITH_NOTEQ is
+signal p0, p1 : std_logic;
+begin
+EQ <= p0 or p1;
+p0 <= (not I0) and (not I1);
+p1 <= I0 and I1;
+notEq <= not EQ;
+end arch;

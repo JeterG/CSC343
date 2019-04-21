@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Nov 25 15:29:07 2017
+Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+Revision Name : GUTIERREZ_JETER_LAB_7_FALL_2017
+Top-level Entity Name : GUTI_Sram
+Family : Cyclone IV E
+Total logic elements : 74
+    Total combinational functions : 74
+    Dedicated logic registers : 16
+Total registers : 16
+Total pins : 135
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 1
+Total PLLs : 0

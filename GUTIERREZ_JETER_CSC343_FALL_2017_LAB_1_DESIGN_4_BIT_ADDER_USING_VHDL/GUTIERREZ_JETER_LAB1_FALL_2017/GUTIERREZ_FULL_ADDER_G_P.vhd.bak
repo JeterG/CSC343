@@ -1,0 +1,12 @@
+library IEEE;--Jeter Gutierrez Due 3/27/2017
+use IEEE.std_logic_1164.all;
+entity full_adder_g_p is
+port( a, b, cin: in std_logic;
+sum, g, p: out std_logic);
+end full_adder_g_p;
+architecture arch of full_adder_g_p is
+begin
+sum <= a xor b xor cin;
+p <= a xor b; --complete this
+g <= a and b; --complete this
+end arch;--Jeter Gutierrez Due 3/27/2017

@@ -1,0 +1,73 @@
+# do GUTIERREZ_JETER_LAB_2_FALL_2017_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim ALTERA vmap 10.4d Lib Mapping Utility 2015.12 Dec 30 2015
+# vmap work rtl_work 
+# Modifying /mnt/1158F89F14FC49C4/Quartus_Installation/modelsim_ase/linuxaloem/../modelsim.ini
+# 
+# vcom -93 -work work {/mnt/1158F89F14FC49C4/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC343_LAB2_COMPARATOR_CIRCUITS_FALL_2017/GUTIERREZ_1BIT_COMPARATOR.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 10:17:54 on Sep 18,2017
+# vcom -reportprogress 300 -93 -work work /mnt/1158F89F14FC49C4/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC343_LAB2_COMPARATOR_CIRCUITS_FALL_2017/GUTIERREZ_1BIT_COMPARATOR.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity GUTIERREZ_1BIT_COMPARATOR
+# -- Compiling architecture arch of GUTIERREZ_1BIT_COMPARATOR
+# End time: 10:17:54 on Sep 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/mnt/1158F89F14FC49C4/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC343_LAB2_COMPARATOR_CIRCUITS_FALL_2017/GUTIERREZ_8BIT_COMPARATOR_PORT.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 10:17:54 on Sep 18,2017
+# vcom -reportprogress 300 -93 -work work /mnt/1158F89F14FC49C4/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC343_LAB2_COMPARATOR_CIRCUITS_FALL_2017/GUTIERREZ_8BIT_COMPARATOR_PORT.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity GUTIERREZ_8BIT_COMPARATOR_PORT
+# -- Compiling architecture arch of GUTIERREZ_8BIT_COMPARATOR_PORT
+# End time: 10:17:54 on Sep 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# stdin: <EOF>
+vcom -reportprogress 300 -work work /mnt/1158F89F14FC49C4/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC343_LAB2_COMPARATOR_CIRCUITS_FALL_2017/GUTIERREZ_TEST_8BIT_COMPARATOR_PORT.vhd
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 10:18:02 on Sep 18,2017
+# vcom -reportprogress 300 -work work /mnt/1158F89F14FC49C4/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC343_LAB2_COMPARATOR_CIRCUITS_FALL_2017/GUTIERREZ_TEST_8BIT_COMPARATOR_PORT.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity GUTIERREZ_TEST_8BIT_COMPARATOR_PORT
+# -- Compiling architecture arch_test of GUTIERREZ_TEST_8BIT_COMPARATOR_PORT
+# End time: 10:18:02 on Sep 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /mnt/1158F89F14FC49C4/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC343_LAB2_COMPARATOR_CIRCUITS_FALL_2017/GUTIERREZ_TEST_8BIT_COMPARATOR_PORT.vhd
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 10:18:03 on Sep 18,2017
+# vcom -reportprogress 300 -work work /mnt/1158F89F14FC49C4/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC343_LAB2_COMPARATOR_CIRCUITS_FALL_2017/GUTIERREZ_TEST_8BIT_COMPARATOR_PORT.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity GUTIERREZ_TEST_8BIT_COMPARATOR_PORT
+# -- Compiling architecture arch_test of GUTIERREZ_TEST_8BIT_COMPARATOR_PORT
+# End time: 10:18:03 on Sep 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.gutierrez_test_8bit_comparator_port
+# vsim work.gutierrez_test_8bit_comparator_port 
+# Start time: 10:18:07 on Sep 18,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.gutierrez_test_8bit_comparator_port(arch_test)
+# Loading work.gutierrez_8bit_comparator_port(arch)
+# Loading work.gutierrez_1bit_comparator(arch)
+add wave -position insertpoint sim:/gutierrez_test_8bit_comparator_port/*
+run -all
+# ** Failure: No errors detected. Simulation successful
+#    Time: 1608 ns  Iteration: 0  Process: /gutierrez_test_8bit_comparator_port/line__16 File: /mnt/1158F89F14FC49C4/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC343_LAB2_COMPARATOR_CIRCUITS_FALL_2017/GUTIERREZ_TEST_8BIT_COMPARATOR_PORT.vhd
+# Break in Process line__16 at /mnt/1158F89F14FC49C4/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC343_LAB2_COMPARATOR_CIRCUITS_FALL_2017/GUTIERREZ_TEST_8BIT_COMPARATOR_PORT.vhd line 74
+# End time: 10:19:03 on Sep 18,2017, Elapsed time: 0:00:56
+# Errors: 0, Warnings: 0

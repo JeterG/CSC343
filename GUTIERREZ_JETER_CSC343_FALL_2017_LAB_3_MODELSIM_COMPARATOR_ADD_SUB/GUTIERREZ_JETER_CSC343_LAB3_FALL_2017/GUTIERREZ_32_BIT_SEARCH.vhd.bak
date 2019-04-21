@@ -1,0 +1,16 @@
+library ieee;--Jeter Gutierrez September 24 ,2017
+use ieee.std_logic_1164.all;--Jeter Gutierrez September 24 ,2017
+use ieee.std_logic_arith.all;--Jeter Gutierrez September 24 ,2017
+use ieee.std_logic_signed.all;--Jeter Gutierrez September 24 ,2017
+use work.GUTIERREZ_ADDER_PACKAGE_COMPARE.all;--Jeter Gutierrez September 24 ,2017
+entity GUTIERREZ_32_BIT_SEARCH is--Jeter Gutierrez September 24 ,2017
+	port ( cin: in std_logic;--Jeter Gutierrez September 24 ,2017
+			 X: in std_logic_vector(31 downto 0);--Jeter Gutierrez September 24 ,2017
+			 sum_prime: out std_logic_vector (3 downto 0);--Jeter Gutierrez September 24 ,2017
+			 Cout, Overflow: out std_logic);--Jeter Gutierrez September 24 ,2017
+end entity;--Jeter Gutierrez September 24 ,2017
+architecture DESIGN_SEARCH of GUTIERREZ_32_BIT_SEARCH is --Jeter Gutierrez September 24 ,2017
+begin
+
+type MEMORY is array (0 to 9) of std_logic_vector(31 downto 0); 
+end DESIGN_SEARCH;--Jeter Gutierrez September 24 ,2017

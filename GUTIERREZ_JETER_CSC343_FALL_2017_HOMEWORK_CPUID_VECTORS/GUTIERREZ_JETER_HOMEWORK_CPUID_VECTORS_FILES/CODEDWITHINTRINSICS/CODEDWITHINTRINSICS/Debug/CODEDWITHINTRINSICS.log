@@ -1,0 +1,5 @@
+﻿  CODEDWITHINTRINSICS.cpp
+c:\users\jeter_gutierrez\source\repos\codedwithintrinsics\codedwithintrinsics\codedwithintrinsics.cpp(17): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\jeter_gutierrez\source\repos\codedwithintrinsics\codedwithintrinsics\codedwithintrinsics.cpp(18): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\jeter_gutierrez\source\repos\codedwithintrinsics\codedwithintrinsics\codedwithintrinsics.cpp(19): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  CODEDWITHINTRINSICS.vcxproj -> C:\Users\Jeter_Gutierrez\source\repos\CODEDWITHINTRINSICS\Debug\CODEDWITHINTRINSICS.exe

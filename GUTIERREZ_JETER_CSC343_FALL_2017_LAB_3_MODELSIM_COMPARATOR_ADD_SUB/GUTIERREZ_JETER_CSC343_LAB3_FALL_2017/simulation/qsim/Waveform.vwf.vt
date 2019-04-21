@@ -1,0 +1,281 @@
+// Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus Prime License Agreement,
+// the Altera MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Altera and sold by Altera or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "09/22/2017 18:33:48"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          GUTIERREZ_ADDER_16_BITS
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module GUTIERREZ_ADDER_16_BITS_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg cin;
+reg [15:0] X;
+reg [15:0] Y;
+// wires                                               
+wire Cout;
+wire Overflow;
+wire [15:0] sum_prime;
+
+// assign statements (if any)                          
+GUTIERREZ_ADDER_16_BITS i1 (
+// port map - connection between master ports and signals/registers   
+	.cin(cin),
+	.Cout(Cout),
+	.Overflow(Overflow),
+	.sum_prime(sum_prime),
+	.X(X),
+	.Y(Y)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+
+// cin
+initial
+begin
+	cin = 1'b0;
+end 
+// X[ 15 ]
+initial
+begin
+	X[15] = 1'b1;
+	X[15] = #240000 1'b0;
+end 
+// X[ 14 ]
+initial
+begin
+	X[14] = 1'b1;
+	X[14] = #240000 1'b0;
+end 
+// X[ 13 ]
+initial
+begin
+	X[13] = 1'b1;
+	X[13] = #240000 1'b0;
+end 
+// X[ 12 ]
+initial
+begin
+	X[12] = 1'b1;
+	X[12] = #240000 1'b0;
+end 
+// X[ 11 ]
+initial
+begin
+	X[11] = 1'b1;
+	X[11] = #240000 1'b0;
+end 
+// X[ 10 ]
+initial
+begin
+	X[10] = 1'b1;
+	X[10] = #240000 1'b0;
+end 
+// X[ 9 ]
+initial
+begin
+	X[9] = 1'b1;
+	X[9] = #240000 1'b0;
+end 
+// X[ 8 ]
+initial
+begin
+	X[8] = 1'b1;
+	X[8] = #240000 1'b0;
+end 
+// X[ 7 ]
+initial
+begin
+	X[7] = 1'b1;
+	X[7] = #240000 1'b0;
+end 
+// X[ 6 ]
+initial
+begin
+	X[6] = 1'b1;
+	X[6] = #240000 1'b0;
+end 
+// X[ 5 ]
+initial
+begin
+	X[5] = 1'b1;
+	X[5] = #240000 1'b0;
+end 
+// X[ 4 ]
+initial
+begin
+	X[4] = 1'b1;
+	X[4] = #240000 1'b0;
+	X[4] = #640000 1'b1;
+end 
+// X[ 3 ]
+initial
+begin
+	X[3] = 1'b1;
+	X[3] = #240000 1'b0;
+	X[3] = #320000 1'b1;
+	X[3] = #320000 1'b0;
+end 
+// X[ 2 ]
+initial
+begin
+	X[2] = 1'b0;
+	# 80000;
+	repeat(2)
+	begin
+		X[2] = 1'b1;
+		X[2] = #160000 1'b0;
+		# 160000;
+	end
+	X[2] = 1'b1;
+	X[2] = #160000 1'b0;
+end 
+// X[ 1 ]
+initial
+begin
+	repeat(6)
+	begin
+		X[1] = 1'b1;
+		X[1] = #80000 1'b0;
+		# 80000;
+	end
+	X[1] = 1'b1;
+end 
+// X[ 0 ]
+initial
+begin
+	repeat(12)
+	begin
+		X[0] = 1'b0;
+		X[0] = #40000 1'b1;
+		# 40000;
+	end
+	X[0] = 1'b0;
+end 
+// Y[ 15 ]
+initial
+begin
+	Y[15] = 1'b0;
+end 
+// Y[ 14 ]
+initial
+begin
+	Y[14] = 1'b0;
+end 
+// Y[ 13 ]
+initial
+begin
+	Y[13] = 1'b0;
+end 
+// Y[ 12 ]
+initial
+begin
+	Y[12] = 1'b0;
+end 
+// Y[ 11 ]
+initial
+begin
+	Y[11] = 1'b0;
+end 
+// Y[ 10 ]
+initial
+begin
+	Y[10] = 1'b0;
+end 
+// Y[ 9 ]
+initial
+begin
+	Y[9] = 1'b0;
+end 
+// Y[ 8 ]
+initial
+begin
+	Y[8] = 1'b0;
+end 
+// Y[ 7 ]
+initial
+begin
+	Y[7] = 1'b0;
+end 
+// Y[ 6 ]
+initial
+begin
+	Y[6] = 1'b0;
+end 
+// Y[ 5 ]
+initial
+begin
+	Y[5] = 1'b0;
+end 
+// Y[ 4 ]
+initial
+begin
+	Y[4] = 1'b0;
+	Y[4] = #640000 1'b1;
+end 
+// Y[ 3 ]
+initial
+begin
+	Y[3] = 1'b0;
+	Y[3] = #320000 1'b1;
+	Y[3] = #320000 1'b0;
+	Y[3] = #320000 1'b1;
+end 
+// Y[ 2 ]
+initial
+begin
+	repeat(3)
+	begin
+		Y[2] = 1'b0;
+		Y[2] = #160000 1'b1;
+		# 160000;
+	end
+	Y[2] = 1'b0;
+end 
+// Y[ 1 ]
+initial
+begin
+	repeat(6)
+	begin
+		Y[1] = 1'b0;
+		Y[1] = #80000 1'b1;
+		# 80000;
+	end
+	Y[1] = 1'b0;
+end 
+// Y[ 0 ]
+initial
+begin
+	repeat(12)
+	begin
+		Y[0] = 1'b0;
+		Y[0] = #40000 1'b1;
+		# 40000;
+	end
+	Y[0] = 1'b0;
+end 
+endmodule
+

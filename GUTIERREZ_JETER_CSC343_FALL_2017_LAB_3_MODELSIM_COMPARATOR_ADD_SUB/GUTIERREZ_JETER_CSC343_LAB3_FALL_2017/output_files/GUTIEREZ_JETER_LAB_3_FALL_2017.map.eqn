@@ -1,0 +1,162 @@
+-- Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, the Altera Quartus Prime License Agreement,
+-- the Altera MegaCore Function License Agreement, or other 
+-- applicable license agreement, including, without limitation, 
+-- that your use is for the sole purpose of programming logic 
+-- devices manufactured by Altera and sold by Altera or its 
+-- authorized distributors.  Please refer to the applicable 
+-- agreement for further details.
+--B1_sum is GUTIERREZ_FULL_ADDER_USING_GATES:FIRST|sum
+B1_sum = !A1L1 $ (!A1L4 $ ());
+
+
+--B1_sum is GUTIERREZ_FULL_ADDER_USING_GATES:\SECOND:1:THIRD|sum
+B1_sum = (  & ( ! $ (((!A1L1 & (A1L4 & )) # (A1L1 & (() # (A1L4))))) ) ) # ( ! & ( ! $ (((!A1L1 & ((!A1L4) # (!))) # (A1L1 & (!A1L4 & !)))) ) );
+
+
+--B1L1 is GUTIERREZ_FULL_ADDER_USING_GATES:\SECOND:1:THIRD|cout_prime~0
+B1L1 = (  & ( ((!A1L1 & (A1L4 & )) # (A1L1 & (() # (A1L4)))) # () ) ) # ( ! & ( ( & ((!A1L1 & (A1L4 & )) # (A1L1 & (() # (A1L4))))) ) );
+
+
+--B1_sum is GUTIERREZ_FULL_ADDER_USING_GATES:\SECOND:2:THIRD|sum
+B1_sum = ! $ (! $ (B1L1));
+
+
+--B2_sum is GUTIERREZ_FULL_ADDER_USING_GATES:\SECOND:3:THIRD|sum
+B2_sum = (  & ( ! $ (((! & ( & B1L1)) # ( & ((B1L1) # ())))) ) ) # ( ! & ( ! $ (((! & ((!) # (!B1L1))) # ( & (! & !B1L1)))) ) );
+
+
+--B2L2 is GUTIERREZ_FULL_ADDER_USING_GATES:\SECOND:3:THIRD|cout_prime~0
+B2L2 = (  & ( ((! & ( & B1L1)) # ( & ((B1L1) # ()))) # () ) ) # ( ! & ( ( & ((! & ( & B1L1)) # ( & ((B1L1) # ())))) ) );
+
+
+--A1L1 is Overflow~0
+A1L1 = (  & ( (!B1L1 & ((( & )) # ())) # (B1L1 & (! & (! & !))) ) ) # ( ! & ( (!B1L1 & ( & ( & ))) # (B1L1 & ((!) # ((! & !)))) ) );
+
+
+--A1L0 is sum_prime[0]~output
+A1L0 = OUTPUT_BUFFER.O(.I(B1_sum), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--sum_prime[0] is sum_prime[0]
+sum_prime[0] = OUTPUT();
+
+
+--A1L2 is sum_prime[1]~output
+A1L2 = OUTPUT_BUFFER.O(.I(B1_sum), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--sum_prime[1] is sum_prime[1]
+sum_prime[1] = OUTPUT();
+
+
+--A1L1 is sum_prime[2]~output
+A1L1 = OUTPUT_BUFFER.O(.I(B1_sum), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--sum_prime[2] is sum_prime[2]
+sum_prime[2] = OUTPUT();
+
+
+--A1L0 is sum_prime[3]~output
+A1L0 = OUTPUT_BUFFER.O(.I(B2_sum), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--sum_prime[3] is sum_prime[3]
+sum_prime[3] = OUTPUT();
+
+
+--A1L2 is Cout~output
+A1L2 = OUTPUT_BUFFER.O(.I(B2L2), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--Cout is Cout
+Cout = OUTPUT();
+
+
+--A1L1 is Overflow~output
+A1L1 = OUTPUT_BUFFER.O(.I(A1L1), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--Overflow is Overflow
+Overflow = OUTPUT();
+
+
+--A1L1 is cin~input
+A1L1 = INPUT_BUFFER(.I(cin), );
+
+
+--cin is cin
+cin = INPUT();
+
+
+--A1L4 is X[0]~input
+A1L4 = INPUT_BUFFER(.I(X[0]), );
+
+
+--X[0] is X[0]
+X[0] = INPUT();
+
+
+-- is Y[0]~input
+ = INPUT_BUFFER(.I(Y[0]), );
+
+
+--Y[0] is Y[0]
+Y[0] = INPUT();
+
+
+-- is X[1]~input
+ = INPUT_BUFFER(.I(X[1]), );
+
+
+--X[1] is X[1]
+X[1] = INPUT();
+
+
+-- is Y[1]~input
+ = INPUT_BUFFER(.I(Y[1]), );
+
+
+--Y[1] is Y[1]
+Y[1] = INPUT();
+
+
+-- is X[2]~input
+ = INPUT_BUFFER(.I(X[2]), );
+
+
+--X[2] is X[2]
+X[2] = INPUT();
+
+
+-- is Y[2]~input
+ = INPUT_BUFFER(.I(Y[2]), );
+
+
+--Y[2] is Y[2]
+Y[2] = INPUT();
+
+
+-- is X[3]~input
+ = INPUT_BUFFER(.I(X[3]), );
+
+
+--X[3] is X[3]
+X[3] = INPUT();
+
+
+-- is Y[3]~input
+ = INPUT_BUFFER(.I(Y[3]), );
+
+
+--Y[3] is Y[3]
+Y[3] = INPUT();
+
+

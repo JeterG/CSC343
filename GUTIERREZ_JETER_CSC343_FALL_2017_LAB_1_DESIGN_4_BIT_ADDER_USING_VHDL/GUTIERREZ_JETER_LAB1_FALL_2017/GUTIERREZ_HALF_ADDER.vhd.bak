@@ -1,0 +1,11 @@
+library IEEE;--Jeter Gutierrez September 11 ,2017
+entity GUTIERREZ_HALF_ADDER is--Jeter Gutierrez September 11 ,2017
+  port(A,   B:     in  bit;--Jeter Gutierrez September 11 ,2017
+       SUM, CARRY: out bit);--Jeter Gutierrez September 11 ,2017
+end HALF_ADDER;--Jeter Gutierrez September 11 ,2017
+--Jeter Gutierrez September 11 ,2017
+architecture behavior of GUTIERREZ_HALF_ADDER is--Jeter Gutierrez September 11 ,2017
+begin--Jeter Gutierrez September 11 ,2017
+    SUM   <= A xor B;--Jeter Gutierrez September 11 ,2017
+    CARRY <= A and B;--Jeter Gutierrez September 11 ,2017
+end behavior;--Jeter Gutierrez September 11 ,2017

@@ -1,0 +1,72 @@
+# do GUTIERREZ_JETER_LAB_5_FALL_2017_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim ALTERA vmap 10.4d Lib Mapping Utility 2015.12 Dec 30 2015
+# vmap work rtl_work 
+# Modifying /mnt/STORAGE/Quartus_Installation/modelsim_ase/linuxaloem/../modelsim.ini
+# 
+# vcom -93 -work work {/mnt/STORAGE/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC343_LAB5_INTEGRATION_PROJECT_fall_2017/GUTIERREZ_JETER_CSC343_FALL_2017/GUTIERREZ_ADDER_PACKAGE_COMPARE.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 22:53:55 on Oct 19,2017
+# vcom -reportprogress 300 -93 -work work /mnt/STORAGE/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC343_LAB5_INTEGRATION_PROJECT_fall_2017/GUTIERREZ_JETER_CSC343_FALL_2017/GUTIERREZ_ADDER_PACKAGE_COMPARE.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package GUTIERREZ_ADDER_PACKAGE_COMPARE
+# End time: 22:53:55 on Oct 19,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/mnt/STORAGE/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC343_LAB5_INTEGRATION_PROJECT_fall_2017/GUTIERREZ_JETER_CSC343_FALL_2017/GUTIERREZ_OPT_CODE_PACKAGE.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 22:53:55 on Oct 19,2017
+# vcom -reportprogress 300 -93 -work work /mnt/STORAGE/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC343_LAB5_INTEGRATION_PROJECT_fall_2017/GUTIERREZ_JETER_CSC343_FALL_2017/GUTIERREZ_OPT_CODE_PACKAGE.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package GUTIERREZ_OPT_CODE_PACKAGE
+# End time: 22:53:55 on Oct 19,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/mnt/STORAGE/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC343_LAB5_INTEGRATION_PROJECT_fall_2017/GUTIERREZ_JETER_CSC343_FALL_2017/GUTIERREZ_FULL_ADDER_USING_GATES.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 22:53:55 on Oct 19,2017
+# vcom -reportprogress 300 -93 -work work /mnt/STORAGE/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC343_LAB5_INTEGRATION_PROJECT_fall_2017/GUTIERREZ_JETER_CSC343_FALL_2017/GUTIERREZ_FULL_ADDER_USING_GATES.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity GUTIERREZ_FULL_ADDER_USING_GATES
+# -- Compiling architecture arch of GUTIERREZ_FULL_ADDER_USING_GATES
+# End time: 22:53:55 on Oct 19,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/mnt/STORAGE/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC343_LAB5_INTEGRATION_PROJECT_fall_2017/GUTIERREZ_JETER_CSC343_FALL_2017/GUTIERREZ_ADD_SUB_6_BITS_LPM.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 22:53:55 on Oct 19,2017
+# vcom -reportprogress 300 -93 -work work /mnt/STORAGE/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC343_LAB5_INTEGRATION_PROJECT_fall_2017/GUTIERREZ_JETER_CSC343_FALL_2017/GUTIERREZ_ADD_SUB_6_BITS_LPM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity GUTIERREZ_ADD_SUB_6_BITS_LPM
+# -- Compiling architecture SYN of gutierrez_add_sub_6_bits_lpm
+# End time: 22:53:55 on Oct 19,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/mnt/STORAGE/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC343_LAB5_INTEGRATION_PROJECT_fall_2017/GUTIERREZ_JETER_CSC343_FALL_2017/GUTIERREZ_DEC_TO_HEX.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 22:53:55 on Oct 19,2017
+# vcom -reportprogress 300 -93 -work work /mnt/STORAGE/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC343_LAB5_INTEGRATION_PROJECT_fall_2017/GUTIERREZ_JETER_CSC343_FALL_2017/GUTIERREZ_DEC_TO_HEX.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity GUTIERREZ_DEC_TO_HEX
+# -- Compiling architecture design of GUTIERREZ_DEC_TO_HEX
+# ** Error: /mnt/STORAGE/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC343_LAB5_INTEGRATION_PROJECT_fall_2017/GUTIERREZ_JETER_CSC343_FALL_2017/GUTIERREZ_DEC_TO_HEX.vhd(14): (vcom-1339) Case statement choices cover only 16 out of 6561 cases.
+# ** Error: /mnt/STORAGE/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC343_LAB5_INTEGRATION_PROJECT_fall_2017/GUTIERREZ_JETER_CSC343_FALL_2017/GUTIERREZ_DEC_TO_HEX.vhd(40): VHDL Compiler exiting
+# End time: 22:53:55 on Oct 19,2017, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: /mnt/STORAGE/Quartus_Installation/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./GUTIERREZ_JETER_LAB_5_FALL_2017_run_msim_rtl_vhdl.do line 12
+# /mnt/STORAGE/Quartus_Installation/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom -93 -work work {/mnt/STORAGE/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC343_LAB5_INTEGRATION_PROJECT_fall_2017/GUTIERREZ_JETER_CSC343_FAL..."

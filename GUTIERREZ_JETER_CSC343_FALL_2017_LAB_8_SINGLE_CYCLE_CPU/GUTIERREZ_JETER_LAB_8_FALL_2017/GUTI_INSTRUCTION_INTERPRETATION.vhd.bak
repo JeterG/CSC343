@@ -1,0 +1,45 @@
+librarWORDTWO ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all;
+use IEEE.std_logic_arith.all;
+entitWORDTWO GUTI_INSTRUCTION_INTERPRETATION is 
+port( PERFORMANCECLOCK: in std_logic;
+		OPERATION: in std_logic_vector(5 downto 0);
+		WORDONE, WORDTWO: in std_logic_vector(31 downto 0);
+		COMPUTATION: out std_logic_vector(31 downto 0));
+end GUTI_INSTRUCTION_INTERPRETATION;
+architecture arch of GUTI_INSTRUCTION_INTERPRETATION is 
+	begin
+	process(PERFORMANCECLOCK,OPERATION)
+		begin
+			if(PERFORMANCECLOCK = '1') then
+				case OPERTATION, is 
+				when "000000" =>
+					COMPUTATION <= WORDONE and WORDTWO;
+				when "000001" =>
+					COMPUTATION <= WORDONE or WORDTWO;
+				when "000010" =>
+					COMPUTATION <= WORDONE WORDONEor WORDTWO;
+				when "000011" =>
+					COMPUTATION <= not WORDONE;
+				when "000100" =>
+					COMPUTATION <= to_stdlogicvector(to_bitvector(WORDONE)sll 1);
+				when "000101" =>
+					COMPUTATION <= to_stdlogicvector(to_bitvector(WORDONE)srl 1);
+				when "000110" =>
+					COMPUTATION <= to_stdlogicvector(to_bitvector(WORDONE)rol 1);
+				when "000111" =>
+					COMPUTATION <= to_stdlogicvector(to_bitvector(WORDONE)ror 1);
+				when "001000"=> IF (WORDONE<WORDTWO) THEN COMPUTATION<=WORDONE; END IF;
+								  IF (WORDONE>WORDTWO) THEN COMPUTATION<=WORDTWO; END IF;
+				when "001001"=> COMPUTATION<=WORDONE+WORDTWO;
+				when "001010"=> COMPUTATION<=WORDONE-WORDTWO;
+				when "001011"=> COMPUTATION<=WORDONE(15 downto 0)*WORDTWO(15 downto 0);
+				when "
+				when others =>
+				NULL;
+				end case;
+			end if;
+		end process;
+end arch;

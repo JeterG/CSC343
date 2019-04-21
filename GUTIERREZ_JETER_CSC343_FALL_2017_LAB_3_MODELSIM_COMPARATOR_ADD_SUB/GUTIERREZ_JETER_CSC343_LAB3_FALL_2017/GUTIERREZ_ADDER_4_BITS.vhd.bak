@@ -1,0 +1,28 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_arith.all;
+use IEEE.std_logic_signed.all;
+
+entity GUTIERREZ_ADDER_4_BITS is
+	port ( cin: in std_logic;
+			 X, Y: in std_logic_vector(3 downto 0);
+			 Sout: out std_logic_vector (3 downto 0);
+			 Cout, Overflow: out std_logic);
+end entity;
+
+architecture DESIGN of GUTIERREZ_ADDER_4_BITS is 
+	component GUTIERREZ_FULL_ADDER_USING_GATES
+		Port ( ci,xi,yi : in  STD_LOGIC;
+             si,ci_1 : out  STD_LOGIC);
+	end component;
+	
+	signal carry: std_logic_vector(3 downto 0);
+	begin
+		FIRST: GUTIERREZ_FULL_ADDER_USING_GATES port map  (cin, X(0),Y(0),Sout(0),carry(0));
+		carry_out: Cout<= carry(3);
+		over: Overflow<= carry(3) xor carry(1);
+	SECOND:
+		for i in 1 to (3) generate
+			THIRD: GUTIERREZ_FULL_ADDER_USING_GATES port map  (carry(i-1), X(i),Y(i),Sout(i),carry(i));
+		end generate;
+end DESIGN;

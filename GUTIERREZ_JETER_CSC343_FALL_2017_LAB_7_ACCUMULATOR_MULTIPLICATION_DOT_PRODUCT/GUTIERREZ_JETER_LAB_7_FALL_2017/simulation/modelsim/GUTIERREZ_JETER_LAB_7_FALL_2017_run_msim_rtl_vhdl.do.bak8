@@ -1,0 +1,11 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {/home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_TREEMULTI.vhd}
+vcom -93 -work work {/home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_FA.vhd}
+vcom -93 -work work {/home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_HA.vhd}
+

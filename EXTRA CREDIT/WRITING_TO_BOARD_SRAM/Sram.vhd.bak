@@ -1,0 +1,53 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use work.swaby_package_Adders.all;
+
+entity Sram is
+    port(
+        Switches: in std_logic_vector(17 downto 0);--including address which will be Switches[13 : 17]
+        LEDR: out std_logic_vector(17 downto 0);---output
+        SRAM_ADDR: out std_logic_vector(19 downto 0);
+        SRAM_DQ: inout std_logic_vector(15 downto 0);
+        SRAM_CE_N: out std_logic;
+        SRAM_OE_N: out std_logic;
+        SRAM_WE_N: out std_logic;
+        SRAM_UB_N: out std_logic;
+        SRAM_LB_N: out std_logic;
+        HEX11: out STD_LOGIC_VECTOR(6 downto 0);
+        HEX22: out std_LOGIC_VECTOR(6 downto 0)
+   );
+end Sram;
+
+
+architecture arch of Sram is
+
+    signal address: std_logic_vector(4 downto 0);
+    signal data: std_logic_vector(7 downto 0);
+    signal output: std_logic_vector(7 downto 0);
+    signal Wenable: std_logic;
+    signal hex: std_logic_vector(7 downto 0);
+    --signal we: std_logic;
+
+begin
+	--shift: swaby_shiftReg
+    Wenable <= Switches(11); -- when SW[11] is 0 then WRITE ENABLE is 1 
+    address <= Switches(17 downto 13);-- address to write and read  from switches 13 to 17
+    data <= Switches(7 downto 0) when Wenable = '1' else (others => 'Z');-- Load value into signal logic vector
+    LEDR(7 downto 0)<= output;-- use 7 segment Display
+    hex <= output;
+    SRAM_WE_N <= not Wenable;---keep value 1
+    SRAM_CE_N <= '0';
+    SRAM_OE_N <= '0';
+    SRAM_UB_N <= '0';
+    SRAM_LB_N <= '0';
+    SRAM_ADDR(19 downto 5) <= (others => '0');---set unused ports to 0
+    SRAM_ADDR(4 downto 0) <= address;--assign address to first 5 ports
+    SRAM_DQ(15 downto 8) <= (others => '0');
+    SRAM_DQ(7 downto 0) <= data; --assign data to register
+
+    output <= SRAM_DQ(7 downto 0);
+
+--    Hx0: swaby_dec_to_hex  port map(hex(3 downto 0), HEX11(0), HEX11(1), HEX11(2), HEX11(3),HEX11(4), HEX11(5), HEX11(6));
+--    Hx1: swaby_dec_to_hex port map (hex(7 downto 4), HEX22(0), HEX22(1), HEX22(2), HEX22(3),HEX22(4), HEX22(5), HEX22(6));
+
+end arch;

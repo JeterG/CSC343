@@ -1,0 +1,622 @@
+Analysis & Synthesis report for GUTIERREZ_JETER_LAB_7_FALL_2017
+Sat Nov 25 15:29:07 2017
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. User-Specified and Inferred Latches
+ 10. General Register Statistics
+ 11. Parameter Settings for Inferred Entity Instance: GUTI_DOT_PRODUCT:ACCUMULATE|GUTI_8BITMULTIPLIER:MULTIPLY|lpm_mult:Mult0
+ 12. lpm_mult Parameter Settings by Entity Instance
+ 13. Port Connectivity Checks: "GUTI_DOT_PRODUCT:ACCUMULATE|accumulator:STORE"
+ 14. Port Connectivity Checks: "GUTI_DOT_PRODUCT:ACCUMULATE"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat Nov 25 15:29:07 2017       ;
+; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
+; Revision Name                      ; GUTIERREZ_JETER_LAB_7_FALL_2017             ;
+; Top-level Entity Name              ; GUTI_Sram                                   ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 74                                          ;
+;     Total combinational functions  ; 74                                          ;
+;     Dedicated logic registers      ; 16                                          ;
+; Total registers                    ; 16                                          ;
+; Total pins                         ; 135                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 1                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                                     ;
++----------------------------------------------------------------------------+--------------------+---------------------------------+
+; Option                                                                     ; Setting            ; Default Value                   ;
++----------------------------------------------------------------------------+--------------------+---------------------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                                 ;
+; Top-level entity name                                                      ; GUTI_SRAM          ; GUTIERREZ_JETER_LAB_7_FALL_2017 ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V                       ;
+; Use smart compilation                                                      ; Off                ; Off                             ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                              ;
+; Enable compact report table                                                ; Off                ; Off                             ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto                            ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                             ;
+; Preserve fewer node names                                                  ; On                 ; On                              ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001                    ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993                       ;
+; State Machine Processing                                                   ; Auto               ; Auto                            ;
+; Safe State Machine                                                         ; Off                ; Off                             ;
+; Extract Verilog State Machines                                             ; On                 ; On                              ;
+; Extract VHDL State Machines                                                ; On                 ; On                              ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                             ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000                            ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                             ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                              ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                              ;
+; Parallel Synthesis                                                         ; On                 ; On                              ;
+; DSP Block Balancing                                                        ; Auto               ; Auto                            ;
+; NOT Gate Push-Back                                                         ; On                 ; On                              ;
+; Power-Up Don't Care                                                        ; On                 ; On                              ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                             ;
+; Remove Duplicate Registers                                                 ; On                 ; On                              ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                             ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                             ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                             ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                             ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                             ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                              ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                             ;
+; Optimization Technique                                                     ; Balanced           ; Balanced                        ;
+; Carry Chain Length                                                         ; 70                 ; 70                              ;
+; Auto Carry Chains                                                          ; On                 ; On                              ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                              ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                             ;
+; Auto ROM Replacement                                                       ; On                 ; On                              ;
+; Auto RAM Replacement                                                       ; On                 ; On                              ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                              ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto                            ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto                            ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                              ;
+; Strict RAM Replacement                                                     ; Off                ; Off                             ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                              ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                             ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                              ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                             ;
+; Auto Resource Sharing                                                      ; Off                ; Off                             ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                             ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                             ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                             ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                              ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                             ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                              ;
+; Report Parameter Settings                                                  ; On                 ; On                              ;
+; Report Source Assignments                                                  ; On                 ; On                              ;
+; Report Connectivity Checks                                                 ; On                 ; On                              ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                             ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                               ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation              ;
+; HDL message level                                                          ; Level2             ; Level2                          ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                             ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000                            ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000                            ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                             ;
+; Clock MUX Protection                                                       ; On                 ; On                              ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                             ;
+; Block Design Naming                                                        ; Auto               ; Auto                            ;
+; SDC constraint protection                                                  ; Off                ; Off                             ;
+; Synthesis Effort                                                           ; Auto               ; Auto                            ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                              ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                             ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium                          ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto                            ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                              ;
+; Synthesis Seed                                                             ; 1                  ; 1                               ;
++----------------------------------------------------------------------------+--------------------+---------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                  ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                                              ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; GUTI_hex.vhd                     ; yes             ; User VHDL File               ; /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_hex.vhd            ;         ;
+; dec_to_hex.vhd                   ; yes             ; User VHDL File               ; /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/dec_to_hex.vhd          ;         ;
+; accumulator.vhd                  ; yes             ; User VHDL File               ; /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/accumulator.vhd         ;         ;
+; GUTI_8BITMULTIPLIER.vhd          ; yes             ; User VHDL File               ; /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_8BITMULTIPLIER.vhd ;         ;
+; GUTI_DOT_PRODUCT.vhd             ; yes             ; User VHDL File               ; /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_DOT_PRODUCT.vhd    ;         ;
+; GUTI_SRAM.vhd                    ; yes             ; User VHDL File               ; /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd           ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; /home/jgutierrez/QUARTUS/16.0/quartus/libraries/megafunctions/lpm_mult.tdf                                                                                ;         ;
+; aglobal160.inc                   ; yes             ; Megafunction                 ; /home/jgutierrez/QUARTUS/16.0/quartus/libraries/megafunctions/aglobal160.inc                                                                              ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; /home/jgutierrez/QUARTUS/16.0/quartus/libraries/megafunctions/lpm_add_sub.inc                                                                             ;         ;
+; multcore.inc                     ; yes             ; Megafunction                 ; /home/jgutierrez/QUARTUS/16.0/quartus/libraries/megafunctions/multcore.inc                                                                                ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; /home/jgutierrez/QUARTUS/16.0/quartus/libraries/megafunctions/bypassff.inc                                                                                ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; /home/jgutierrez/QUARTUS/16.0/quartus/libraries/megafunctions/altshift.inc                                                                                ;         ;
+; db/mult_aat.tdf                  ; yes             ; Auto-Generated Megafunction  ; /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/db/mult_aat.tdf         ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                                                            ;
++---------------------------------------------+----------------------------------------------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                                                    ;
++---------------------------------------------+----------------------------------------------------------------------------------------------------------+
+; Estimated Total logic elements              ; 74                                                                                                       ;
+;                                             ;                                                                                                          ;
+; Total combinational functions               ; 74                                                                                                       ;
+; Logic element usage by number of LUT inputs ;                                                                                                          ;
+;     -- 4 input functions                    ; 42                                                                                                       ;
+;     -- 3 input functions                    ; 31                                                                                                       ;
+;     -- <=2 input functions                  ; 1                                                                                                        ;
+;                                             ;                                                                                                          ;
+; Logic elements by mode                      ;                                                                                                          ;
+;     -- normal mode                          ; 59                                                                                                       ;
+;     -- arithmetic mode                      ; 15                                                                                                       ;
+;                                             ;                                                                                                          ;
+; Total registers                             ; 16                                                                                                       ;
+;     -- Dedicated logic registers            ; 16                                                                                                       ;
+;     -- I/O registers                        ; 0                                                                                                        ;
+;                                             ;                                                                                                          ;
+; I/O pins                                    ; 135                                                                                                      ;
+;                                             ;                                                                                                          ;
+; Embedded Multiplier 9-bit elements          ; 1                                                                                                        ;
+;                                             ;                                                                                                          ;
+; Maximum fan-out node                        ; GUTI_DOT_PRODUCT:ACCUMULATE|GUTI_8BITMULTIPLIER:MULTIPLY|lpm_mult:Mult0|mult_aat:auto_generated|mac_out2 ;
+; Maximum fan-out                             ; 16                                                                                                       ;
+; Total fan-out                               ; 554                                                                                                      ;
+; Average fan-out                             ; 1.47                                                                                                     ;
++---------------------------------------------+----------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                 ;
++---------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node            ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                        ; Entity Name         ; Library Name ;
++---------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |GUTI_Sram                            ; 74 (16)           ; 16 (0)       ; 0           ; 1            ; 1       ; 0         ; 135  ; 0            ; |GUTI_Sram                                                                                                 ; GUTI_Sram           ; work         ;
+;    |GUTI_DOT_PRODUCT:ACCUMULATE|      ; 44 (0)            ; 16 (0)       ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |GUTI_Sram|GUTI_DOT_PRODUCT:ACCUMULATE                                                                     ; GUTI_DOT_PRODUCT    ; work         ;
+;       |GUTI_8BITMULTIPLIER:MULTIPLY|  ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |GUTI_Sram|GUTI_DOT_PRODUCT:ACCUMULATE|GUTI_8BITMULTIPLIER:MULTIPLY                                        ; GUTI_8BITMULTIPLIER ; work         ;
+;          |lpm_mult:Mult0|             ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |GUTI_Sram|GUTI_DOT_PRODUCT:ACCUMULATE|GUTI_8BITMULTIPLIER:MULTIPLY|lpm_mult:Mult0                         ; lpm_mult            ; work         ;
+;             |mult_aat:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |GUTI_Sram|GUTI_DOT_PRODUCT:ACCUMULATE|GUTI_8BITMULTIPLIER:MULTIPLY|lpm_mult:Mult0|mult_aat:auto_generated ; mult_aat            ; work         ;
+;       |accumulator:STORE|             ; 44 (16)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GUTI_Sram|GUTI_DOT_PRODUCT:ACCUMULATE|accumulator:STORE                                                   ; accumulator         ; work         ;
+;          |GUTI_hex:Display1|          ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GUTI_Sram|GUTI_DOT_PRODUCT:ACCUMULATE|accumulator:STORE|GUTI_hex:Display1                                 ; GUTI_hex            ; work         ;
+;          |GUTI_hex:Display2|          ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GUTI_Sram|GUTI_DOT_PRODUCT:ACCUMULATE|accumulator:STORE|GUTI_hex:Display2                                 ; GUTI_hex            ; work         ;
+;          |GUTI_hex:Display3|          ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GUTI_Sram|GUTI_DOT_PRODUCT:ACCUMULATE|accumulator:STORE|GUTI_hex:Display3                                 ; GUTI_hex            ; work         ;
+;          |GUTI_hex:Display4|          ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GUTI_Sram|GUTI_DOT_PRODUCT:ACCUMULATE|accumulator:STORE|GUTI_hex:Display4                                 ; GUTI_hex            ; work         ;
+;    |dec_to_hex:Hx1|                   ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GUTI_Sram|dec_to_hex:Hx1                                                                                  ; dec_to_hex          ; work         ;
+;    |dec_to_hex:Hx2|                   ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |GUTI_Sram|dec_to_hex:Hx2                                                                                  ; dec_to_hex          ; work         ;
++---------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary        ;
++---------------------------------------+-------------+
+; Statistic                             ; Number Used ;
++---------------------------------------+-------------+
+; Simple Multipliers (9-bit)            ; 1           ;
+; Simple Multipliers (18-bit)           ; 0           ;
+; Embedded Multiplier Blocks            ; --          ;
+; Embedded Multiplier 9-bit elements    ; 1           ;
+; Signed Embedded Multipliers           ; 0           ;
+; Unsigned Embedded Multipliers         ; 1           ;
+; Mixed Sign Embedded Multipliers       ; 0           ;
+; Variable Sign Embedded Multipliers    ; 0           ;
+; Dedicated Input Shift Register Chains ; 0           ;
++---------------------------------------+-------------+
+Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; WORD1[0]                                            ; CLOCK1              ; yes                    ;
+; WORD1[1]                                            ; CLOCK1              ; yes                    ;
+; WORD1[2]                                            ; CLOCK1              ; yes                    ;
+; WORD1[3]                                            ; CLOCK1              ; yes                    ;
+; WORD1[4]                                            ; CLOCK1              ; yes                    ;
+; WORD1[5]                                            ; CLOCK1              ; yes                    ;
+; WORD1[6]                                            ; CLOCK1              ; yes                    ;
+; WORD1[7]                                            ; CLOCK1              ; yes                    ;
+; WORD2[0]                                            ; CLOCK2              ; yes                    ;
+; WORD2[1]                                            ; CLOCK2              ; yes                    ;
+; WORD2[2]                                            ; CLOCK2              ; yes                    ;
+; WORD2[3]                                            ; CLOCK2              ; yes                    ;
+; WORD2[4]                                            ; CLOCK2              ; yes                    ;
+; WORD2[5]                                            ; CLOCK2              ; yes                    ;
+; WORD2[6]                                            ; CLOCK2              ; yes                    ;
+; WORD2[7]                                            ; CLOCK2              ; yes                    ;
+; Number of user-specified and inferred latches = 16  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 16    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 16    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: GUTI_DOT_PRODUCT:ACCUMULATE|GUTI_8BITMULTIPLIER:MULTIPLY|lpm_mult:Mult0 ;
++------------------------------------------------+--------------+----------------------------------------------------------+
+; Parameter Name                                 ; Value        ; Type                                                     ;
++------------------------------------------------+--------------+----------------------------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY                                               ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY                                             ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE                                             ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE                                           ;
+; LPM_WIDTHA                                     ; 8            ; Untyped                                                  ;
+; LPM_WIDTHB                                     ; 8            ; Untyped                                                  ;
+; LPM_WIDTHP                                     ; 16           ; Untyped                                                  ;
+; LPM_WIDTHR                                     ; 16           ; Untyped                                                  ;
+; LPM_WIDTHS                                     ; 1            ; Untyped                                                  ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped                                                  ;
+; LPM_PIPELINE                                   ; 0            ; Untyped                                                  ;
+; LATENCY                                        ; 0            ; Untyped                                                  ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped                                                  ;
+; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped                                                  ;
+; USE_EAB                                        ; OFF          ; Untyped                                                  ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped                                                  ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                                                  ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped                                                  ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K                                      ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                                                  ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                                                  ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                                                  ;
+; CBXI_PARAMETER                                 ; mult_aat     ; Untyped                                                  ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                                                  ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                                                  ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                                                  ;
++------------------------------------------------+--------------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                                                                  ;
++---------------------------------------+-------------------------------------------------------------------------+
+; Name                                  ; Value                                                                   ;
++---------------------------------------+-------------------------------------------------------------------------+
+; Number of entity instances            ; 1                                                                       ;
+; Entity Instance                       ; GUTI_DOT_PRODUCT:ACCUMULATE|GUTI_8BITMULTIPLIER:MULTIPLY|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 8                                                                       ;
+;     -- LPM_WIDTHB                     ; 8                                                                       ;
+;     -- LPM_WIDTHP                     ; 16                                                                      ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                                                                ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                                      ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                                                      ;
+;     -- USE_EAB                        ; OFF                                                                     ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                                    ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                                      ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                                      ;
++---------------------------------------+-------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "GUTI_DOT_PRODUCT:ACCUMULATE|accumulator:STORE"                                          ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "GUTI_DOT_PRODUCT:ACCUMULATE"                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; resulting ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 135                         ;
+; cycloneiii_ff         ; 16                          ;
+;     CLR               ; 16                          ;
+; cycloneiii_io_obuf    ; 16                          ;
+; cycloneiii_lcell_comb ; 83                          ;
+;     arith             ; 15                          ;
+;         3 data inputs ; 15                          ;
+;     normal            ; 68                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 7                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 16                          ;
+;         4 data inputs ; 42                          ;
+; cycloneiii_mac_mult   ; 1                           ;
+; cycloneiii_mac_out    ; 1                           ;
+;                       ;                             ;
+; Max LUT depth         ; 2.50                        ;
+; Average LUT depth     ; 1.15                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+    Info: Processing started: Sat Nov 25 15:28:55 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GUTIERREZ_JETER_LAB_7_FALL_2017 -c GUTIERREZ_JETER_LAB_7_FALL_2017
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file GUTI_FA.vhd
+    Info (12022): Found design unit 1: GUTI_FA-arch File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_FA.vhd Line: 9
+    Info (12023): Found entity 1: GUTI_FA File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_FA.vhd Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file GUTI_HA.vhd
+    Info (12022): Found design unit 1: GUTI_HA-arch File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_HA.vhd Line: 9
+    Info (12023): Found entity 1: GUTI_HA File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_HA.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file GUTI_hex.vhd
+    Info (12022): Found design unit 1: GUTI_hex-arch File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_hex.vhd Line: 9
+    Info (12023): Found entity 1: GUTI_hex File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_hex.vhd Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file GUTI_RCA.vhd
+    Info (12022): Found design unit 1: GUTI_RCA-arch File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_RCA.vhd Line: 10
+    Info (12023): Found entity 1: GUTI_RCA File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_RCA.vhd Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file GUTI_RCA_addsub.vhd
+    Info (12022): Found design unit 1: GUTI_RCA_addsub-arch File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_RCA_addsub.vhd Line: 10
+    Info (12023): Found entity 1: GUTI_RCA_addsub File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_RCA_addsub.vhd Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file dec_to_hex.vhd
+    Info (12022): Found design unit 1: dec_to_hex-s File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/dec_to_hex.vhd Line: 18
+    Info (12023): Found entity 1: dec_to_hex File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/dec_to_hex.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file GUTI_mux2to1.vhd
+    Info (12022): Found design unit 1: GUTI_mux2to1-GUTI_behavior File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_mux2to1.vhd Line: 11
+    Info (12023): Found entity 1: GUTI_mux2to1 File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_mux2to1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file LPM_4bitAdd.vhd
+    Info (12022): Found design unit 1: lpm_4bitadd-SYN File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/LPM_4bitAdd.vhd Line: 55
+    Info (12023): Found entity 1: LPM_4bitAdd File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/LPM_4bitAdd.vhd Line: 43
+Info (12021): Found 2 design units, including 1 entities, in source file Subtractor.vhd
+    Info (12022): Found design unit 1: subtractor-SYN File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/Subtractor.vhd Line: 55
+    Info (12023): Found entity 1: Subtractor File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/Subtractor.vhd Line: 43
+Info (12021): Found 2 design units, including 1 entities, in source file Subtractor_16.vhd
+    Info (12022): Found design unit 1: subtractor_16-SYN16 File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/Subtractor_16.vhd Line: 55
+    Info (12023): Found entity 1: Subtractor_16 File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/Subtractor_16.vhd Line: 43
+Info (12021): Found 2 design units, including 1 entities, in source file GUTI_Sub_8bit_Accumulator.vhd
+    Info (12022): Found design unit 1: GUTI_Sub_8bit_Accumulator-arch File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_Sub_8bit_Accumulator.vhd Line: 10
+    Info (12023): Found entity 1: GUTI_Sub_8bit_Accumulator File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_Sub_8bit_Accumulator.vhd Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file GUTI_Add_8bit_Accumulator.vhd
+    Info (12022): Found design unit 1: GUTI_Add_8bit_Accumulator-arch File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_Add_8bit_Accumulator.vhd Line: 11
+    Info (12023): Found entity 1: GUTI_Add_8bit_Accumulator File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_Add_8bit_Accumulator.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file GUTI_16bit_Accumulator.vhd
+    Info (12022): Found design unit 1: GUTI_16bit_Accumulator-arch File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_16bit_Accumulator.vhd Line: 10
+    Info (12023): Found entity 1: GUTI_16bit_Accumulator File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_16bit_Accumulator.vhd Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file accumulator.vhd
+    Info (12022): Found design unit 1: accumulator-bhv File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/accumulator.vhd Line: 12
+    Info (12023): Found entity 1: accumulator File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/accumulator.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file GUTI_multi_4bit.vhd
+    Info (12022): Found design unit 1: GUTI_multi_4bit-arch File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_multi_4bit.vhd Line: 8
+    Info (12023): Found entity 1: GUTI_multi_4bit File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_multi_4bit.vhd Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file GUTI_8BITMULTIPLIER.vhd
+    Info (12022): Found design unit 1: GUTI_8BITMULTIPLIER-DESIGN File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_8BITMULTIPLIER.vhd Line: 11
+    Info (12023): Found entity 1: GUTI_8BITMULTIPLIER File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_8BITMULTIPLIER.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file GUTI_8BIT_MULTIPLICATION.vhd
+    Info (12022): Found design unit 1: GUTI_8BIT_MULTIPLICATION-MULTIPLYING File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_8BIT_MULTIPLICATION.vhd Line: 11
+    Info (12023): Found entity 1: GUTI_8BIT_MULTIPLICATION File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_8BIT_MULTIPLICATION.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file GUTI_TREEMULTI.vhd
+    Info (12022): Found design unit 1: GUTI_TREEMULTI-arch File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_TREEMULTI.vhd Line: 7
+    Info (12023): Found entity 1: GUTI_TREEMULTI File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_TREEMULTI.vhd Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file GUTI_DOT_PRODUCT.vhd
+    Info (12022): Found design unit 1: GUTI_DOT_PRODUCT-ARCH File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_DOT_PRODUCT.vhd Line: 12
+    Info (12023): Found entity 1: GUTI_DOT_PRODUCT File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_DOT_PRODUCT.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file GUTI_SRAM.vhd
+    Info (12022): Found design unit 1: GUTI_Sram-arch File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 13
+    Info (12023): Found entity 1: GUTI_Sram File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file GUTI_MULTIPLI_TEST4.vhd
+    Info (12022): Found design unit 1: GUTI_MULTIPLI_TEST4-arch_test File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_MULTIPLI_TEST4.vhd Line: 7
+    Info (12023): Found entity 1: GUTI_MULTIPLI_TEST4 File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_MULTIPLI_TEST4.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file GUTI_MULTIPLI_TEST.vhd
+    Info (12022): Found design unit 1: GUTI_MULTIPLI_TEST-arch_test File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_MULTIPLI_TEST.vhd Line: 7
+    Info (12023): Found entity 1: GUTI_MULTIPLI_TEST File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_MULTIPLI_TEST.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file GUTI_MULTIPLI_TEST_TREE.vhd
+    Info (12022): Found design unit 1: GUTI_MULTIPLI_TEST_TREE-arch_test File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_MULTIPLI_TEST_TREE.vhd Line: 7
+    Info (12023): Found entity 1: GUTI_MULTIPLI_TEST_TREE File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_MULTIPLI_TEST_TREE.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file test.vhd
+    Info (12022): Found design unit 1: Multiplier-Behavioral File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/test.vhd Line: 17
+    Info (12023): Found entity 1: Multiplier File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/test.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file GUTI_ACCUMULATOR_TEST.vhd
+    Info (12022): Found design unit 1: GUTI_ACCUMULATOR_TEST-arch_test File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_ACCUMULATOR_TEST.vhd Line: 7
+    Info (12023): Found entity 1: GUTI_ACCUMULATOR_TEST File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_ACCUMULATOR_TEST.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file GUTI_DOT_TEST.vhd
+    Info (12022): Found design unit 1: GUTI_DOT_TEST-arch_test File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_DOT_TEST.vhd Line: 7
+    Info (12023): Found entity 1: GUTI_DOT_TEST File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_DOT_TEST.vhd Line: 5
+Info (12127): Elaborating entity "GUTI_SRAM" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at GUTI_SRAM.vhd(16): object "F" assigned a value but never read File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 16
+Warning (10492): VHDL Process Statement warning at GUTI_SRAM.vhd(43): signal "CLOCK1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 43
+Warning (10492): VHDL Process Statement warning at GUTI_SRAM.vhd(44): signal "SRAM_DQ" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 44
+Warning (10492): VHDL Process Statement warning at GUTI_SRAM.vhd(46): signal "CLOCK2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 46
+Warning (10492): VHDL Process Statement warning at GUTI_SRAM.vhd(47): signal "SRAM_DQ" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 47
+Warning (10631): VHDL Process Statement warning at GUTI_SRAM.vhd(41): inferring latch(es) for signal or variable "WORD1", which holds its previous value in one or more paths through the process File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 41
+Warning (10631): VHDL Process Statement warning at GUTI_SRAM.vhd(41): inferring latch(es) for signal or variable "WORD2", which holds its previous value in one or more paths through the process File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 41
+Info (10041): Inferred latch for "WORD2[0]" at GUTI_SRAM.vhd(41) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 41
+Info (10041): Inferred latch for "WORD2[1]" at GUTI_SRAM.vhd(41) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 41
+Info (10041): Inferred latch for "WORD2[2]" at GUTI_SRAM.vhd(41) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 41
+Info (10041): Inferred latch for "WORD2[3]" at GUTI_SRAM.vhd(41) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 41
+Info (10041): Inferred latch for "WORD2[4]" at GUTI_SRAM.vhd(41) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 41
+Info (10041): Inferred latch for "WORD2[5]" at GUTI_SRAM.vhd(41) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 41
+Info (10041): Inferred latch for "WORD2[6]" at GUTI_SRAM.vhd(41) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 41
+Info (10041): Inferred latch for "WORD2[7]" at GUTI_SRAM.vhd(41) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 41
+Info (10041): Inferred latch for "WORD1[0]" at GUTI_SRAM.vhd(41) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 41
+Info (10041): Inferred latch for "WORD1[1]" at GUTI_SRAM.vhd(41) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 41
+Info (10041): Inferred latch for "WORD1[2]" at GUTI_SRAM.vhd(41) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 41
+Info (10041): Inferred latch for "WORD1[3]" at GUTI_SRAM.vhd(41) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 41
+Info (10041): Inferred latch for "WORD1[4]" at GUTI_SRAM.vhd(41) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 41
+Info (10041): Inferred latch for "WORD1[5]" at GUTI_SRAM.vhd(41) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 41
+Info (10041): Inferred latch for "WORD1[6]" at GUTI_SRAM.vhd(41) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 41
+Info (10041): Inferred latch for "WORD1[7]" at GUTI_SRAM.vhd(41) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 41
+Info (12128): Elaborating entity "GUTI_DOT_PRODUCT" for hierarchy "GUTI_DOT_PRODUCT:ACCUMULATE" File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 51
+Info (12128): Elaborating entity "GUTI_8BITMULTIPLIER" for hierarchy "GUTI_DOT_PRODUCT:ACCUMULATE|GUTI_8BITMULTIPLIER:MULTIPLY" File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_DOT_PRODUCT.vhd Line: 30
+Info (12128): Elaborating entity "accumulator" for hierarchy "GUTI_DOT_PRODUCT:ACCUMULATE|accumulator:STORE" File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_DOT_PRODUCT.vhd Line: 33
+Warning (10541): VHDL Signal Declaration warning at accumulator.vhd(10): used implicit default value for signal "overflow" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/accumulator.vhd Line: 10
+Info (12128): Elaborating entity "GUTI_hex" for hierarchy "GUTI_DOT_PRODUCT:ACCUMULATE|accumulator:STORE|GUTI_hex:Display1" File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/accumulator.vhd Line: 28
+Info (12128): Elaborating entity "dec_to_hex" for hierarchy "dec_to_hex:Hx1" File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 52
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "GUTI_DOT_PRODUCT:ACCUMULATE|GUTI_8BITMULTIPLIER:MULTIPLY|Mult0" File: /home/jgutierrez/QUARTUS/16.0/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+Info (12130): Elaborated megafunction instantiation "GUTI_DOT_PRODUCT:ACCUMULATE|GUTI_8BITMULTIPLIER:MULTIPLY|lpm_mult:Mult0" File: /home/jgutierrez/QUARTUS/16.0/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+Info (12133): Instantiated megafunction "GUTI_DOT_PRODUCT:ACCUMULATE|GUTI_8BITMULTIPLIER:MULTIPLY|lpm_mult:Mult0" with the following parameter: File: /home/jgutierrez/QUARTUS/16.0/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+    Info (12134): Parameter "LPM_WIDTHA" = "8"
+    Info (12134): Parameter "LPM_WIDTHB" = "8"
+    Info (12134): Parameter "LPM_WIDTHP" = "16"
+    Info (12134): Parameter "LPM_WIDTHR" = "16"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_aat.tdf
+    Info (12023): Found entity 1: mult_aat File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/db/mult_aat.tdf Line: 29
+Warning (13032): The following tri-state nodes are fed by constants
+    Warning (13033): The pin "SRAM_DQ[8]" is fed by GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 9
+    Warning (13033): The pin "SRAM_DQ[9]" is fed by GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 9
+    Warning (13033): The pin "SRAM_DQ[10]" is fed by GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 9
+    Warning (13033): The pin "SRAM_DQ[11]" is fed by GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 9
+    Warning (13033): The pin "SRAM_DQ[12]" is fed by GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 9
+    Warning (13033): The pin "SRAM_DQ[13]" is fed by GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 9
+    Warning (13033): The pin "SRAM_DQ[14]" is fed by GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 9
+    Warning (13033): The pin "SRAM_DQ[15]" is fed by GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 9
+Info (13036): One or more bidirectional pins are fed by always-enabled (GND-fed) open-drain buffers
+    Info (13037): Fan-out of permanently enabled (GND-fed) open-drain buffer feeding bidirectional pin "SRAM_DQ[8]" is set to GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 9
+    Info (13037): Fan-out of permanently enabled (GND-fed) open-drain buffer feeding bidirectional pin "SRAM_DQ[9]" is set to GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 9
+    Info (13037): Fan-out of permanently enabled (GND-fed) open-drain buffer feeding bidirectional pin "SRAM_DQ[10]" is set to GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 9
+    Info (13037): Fan-out of permanently enabled (GND-fed) open-drain buffer feeding bidirectional pin "SRAM_DQ[11]" is set to GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 9
+    Info (13037): Fan-out of permanently enabled (GND-fed) open-drain buffer feeding bidirectional pin "SRAM_DQ[12]" is set to GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 9
+    Info (13037): Fan-out of permanently enabled (GND-fed) open-drain buffer feeding bidirectional pin "SRAM_DQ[13]" is set to GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 9
+    Info (13037): Fan-out of permanently enabled (GND-fed) open-drain buffer feeding bidirectional pin "SRAM_DQ[14]" is set to GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 9
+    Info (13037): Fan-out of permanently enabled (GND-fed) open-drain buffer feeding bidirectional pin "SRAM_DQ[15]" is set to GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 9
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "RESULTING[8]" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 7
+    Warning (13410): Pin "RESULTING[9]" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 7
+    Warning (13410): Pin "RESULTING[10]" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 7
+    Warning (13410): Pin "RESULTING[11]" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 7
+    Warning (13410): Pin "RESULTING[12]" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 7
+    Warning (13410): Pin "RESULTING[13]" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 7
+    Warning (13410): Pin "RESULTING[14]" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 7
+    Warning (13410): Pin "RESULTING[15]" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 7
+    Warning (13410): Pin "SRAM_ADDR[8]" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 8
+    Warning (13410): Pin "SRAM_ADDR[9]" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 8
+    Warning (13410): Pin "SRAM_ADDR[10]" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 8
+    Warning (13410): Pin "SRAM_ADDR[11]" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 8
+    Warning (13410): Pin "SRAM_ADDR[12]" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 8
+    Warning (13410): Pin "SRAM_ADDR[13]" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 8
+    Warning (13410): Pin "SRAM_ADDR[14]" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 8
+    Warning (13410): Pin "SRAM_ADDR[15]" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 8
+    Warning (13410): Pin "SRAM_ADDR[16]" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 8
+    Warning (13410): Pin "SRAM_ADDR[17]" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 8
+    Warning (13410): Pin "SRAM_ADDR[18]" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 8
+    Warning (13410): Pin "SRAM_ADDR[19]" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 8
+    Warning (13410): Pin "SRAM_CE_N" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 10
+    Warning (13410): Pin "SRAM_OE_N" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 10
+    Warning (13410): Pin "SRAM_UB_N" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 10
+    Warning (13410): Pin "SRAM_LB_N" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 10
+    Warning (13410): Pin "HEX33[0]" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 11
+    Warning (13410): Pin "HEX33[1]" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 11
+    Warning (13410): Pin "HEX33[2]" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 11
+    Warning (13410): Pin "HEX33[3]" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 11
+    Warning (13410): Pin "HEX33[4]" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 11
+    Warning (13410): Pin "HEX33[5]" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 11
+    Warning (13410): Pin "HEX33[6]" is stuck at VCC File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 11
+    Warning (13410): Pin "HEX44[0]" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 11
+    Warning (13410): Pin "HEX44[1]" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 11
+    Warning (13410): Pin "HEX44[2]" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 11
+    Warning (13410): Pin "HEX44[3]" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 11
+    Warning (13410): Pin "HEX44[4]" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 11
+    Warning (13410): Pin "HEX44[5]" is stuck at GND File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 11
+    Warning (13410): Pin "HEX44[6]" is stuck at VCC File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 11
+Info (286030): Timing-Driven Synthesis is running
+Warning (14632): Output pin "RESULTING[0]" driven by bidirectional pin "SRAM_DQ[0]" cannot be tri-stated File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 7
+Warning (14632): Output pin "RESULTING[1]" driven by bidirectional pin "SRAM_DQ[1]" cannot be tri-stated File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 7
+Warning (14632): Output pin "RESULTING[2]" driven by bidirectional pin "SRAM_DQ[2]" cannot be tri-stated File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 7
+Warning (14632): Output pin "RESULTING[3]" driven by bidirectional pin "SRAM_DQ[3]" cannot be tri-stated File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 7
+Warning (14632): Output pin "RESULTING[4]" driven by bidirectional pin "SRAM_DQ[4]" cannot be tri-stated File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 7
+Warning (14632): Output pin "RESULTING[5]" driven by bidirectional pin "SRAM_DQ[5]" cannot be tri-stated File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 7
+Warning (14632): Output pin "RESULTING[6]" driven by bidirectional pin "SRAM_DQ[6]" cannot be tri-stated File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 7
+Warning (14632): Output pin "RESULTING[7]" driven by bidirectional pin "SRAM_DQ[7]" cannot be tri-stated File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 7
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "STORE" File: /home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/GUTI_SRAM.vhd Line: 6
+Info (21057): Implemented 210 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 22 input pins
+    Info (21059): Implemented 97 output pins
+    Info (21060): Implemented 16 bidirectional pins
+    Info (21061): Implemented 74 logic cells
+    Info (21062): Implemented 1 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 67 warnings
+    Info: Peak virtual memory: 1272 megabytes
+    Info: Processing ended: Sat Nov 25 15:29:07 2017
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:29
+
+

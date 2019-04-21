@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Oct 19 22:56:41 2017
+Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+Revision Name : GUTIERREZ_JETER_LAB_5_FALL_2017
+Top-level Entity Name : GUTIERREZ_INTEGRATION_PROJECT
+Family : Cyclone IV E
+Total logic elements : 122
+    Total combinational functions : 122
+    Dedicated logic registers : 10
+Total registers : 10
+Total pins : 41
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

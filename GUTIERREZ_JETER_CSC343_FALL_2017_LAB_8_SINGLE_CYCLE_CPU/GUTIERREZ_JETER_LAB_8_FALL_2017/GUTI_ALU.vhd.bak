@@ -1,0 +1,84 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+entity GUTI_ALU is 
+	port(sclock,pclock,writing,sorp :in std_logic;
+		aa,ab,aw:in std_logic_vector(4 downto 0);
+	instruction,storingData: in std_logic_vector(31 downto 0);
+		oa,ob,ow:out std_logic_vector(31 downto 0));
+end GUTI_ALU;
+
+architecture design of GUTI_ALU is
+
+	component GUTI_INSTRUCTION_INTERPRETATION is 
+		port( PERFORMANCECLOCK: in std_logic;
+		OPERATION: in std_logic_vector(5 downto 0);
+		WORDONE, WORDTWO: in std_logic_vector(31 downto 0);
+		COMPUTATION: out std_logic_vector(31 downto 0));
+	end component;
+
+	component GUTI_3_PORT_MEMORY IS
+		PORT
+		(	clock: IN STD_LOGIC ;
+			data: IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+			rdaddress_a: IN STD_LOGIC_VECTOR (4 DOWNTO 0);
+			rdaddress_b: IN STD_LOGIC_VECTOR (4 DOWNTO 0);
+			wraddress: IN STD_LOGIC_VECTOR (4 DOWNTO 0); 
+			wren: IN STD_LOGIC := '1';
+			qa: OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
+			qb: OUT STD_LOGIC_VECTOR (31 DOWNTO 0));
+	END component;
+
+	signal datainput,wire_out,outagain,OUTA,OUTB,outa1,outb1,complete_immediate:std_logic_vector(31 downto 0);
+	signal operation,operation_temp : std_logic_vector(5 downto 0);
+	signal reg1,reg2,regO,atemp,btemp,wtemp,ctemp: std_logic_vector(4 downto 0);
+	signal immediate: std_logic_vector(15 downto 0);
+	signal extend,clock_temp: std_logic;
+
+	begin
+		
+		operation <= instruction(31 downto 26);
+		
+		reg1 <= instruction(25 downto 21);
+		reg2 <= instruction(20 downto 16);
+		regO <= instruction(15 downto 11);
+		
+		immediate <= instruction(15 downto 0);
+		complete_immediate(15 downto 0) <= immediate;
+		complete_immediate(31 downto 16) <= (others => immediate(15));
+		
+		process(operation) begin
+			case operation is
+				when "001100" => extend<='1';
+				when others=> extend<='0';
+			end case;
+		end process;
+		
+		clock_temp <= sclock;
+		datainput <= storingData when sorp = '0' else wire_out;
+		
+		atemp <= aa when sorp='0' else reg1;
+		btemp <= ab when sorp='0' else reg2;
+		wtemp <= aw when sorp='0' else regO;
+		ctemp<=wtemp when extend='0' else btemp;
+		storage:GUTI_3_PORT_MEMORY port map(clock_temp,
+											datainput,
+											atemp, btemp, ctemp,
+											writing,
+											outa, outb);
+		
+		outa1 <= outa;
+		outb1 <= outb when extend='0' else complete_immediate;
+		
+		operation_temp <= operation when extend='0' else "000001";
+		
+		performance : GUTI_INSTRUCTION_INTERPRETATION port map(pclock,
+												operation_temp,
+												"00000000000000000000000000000000",--oUTa1,
+												"11111111111111111111111111111111",--oUTb1,
+												outagain);
+		wire_out <= outagain;
+		OA <= OUTA;
+		OB <= OUTB;
+		ow <=outagain;
+end design;

@@ -1,0 +1,433 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "SRAM_ADDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[11]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[12]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[13]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[14]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[15]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[16]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[17]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[18]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[19]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_WE_N",
+					"strict" : false
+				},
+				{
+					"name" : "HEX11[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX11[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX11[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX11[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX11[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX11[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX11[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX22[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX22[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX22[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX22[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX22[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX22[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX22[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX33[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX33[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX33[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX33[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX33[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX33[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX33[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX44[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX44[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX44[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX44[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX44[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX44[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX44[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX55[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX55[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX55[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX55[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX55[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX55[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX55[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX66[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX66[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX66[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX66[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX66[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX66[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX66[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX77[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX77[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX77[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX77[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX77[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX77[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX77[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX88[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX88[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX88[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX88[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX88[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX88[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX88[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[11]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[12]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[13]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[14]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[15]",
+					"strict" : false
+				},
+				{
+					"name" : "SUBMIT",
+					"strict" : false
+				},
+				{
+					"name" : "INPUT_WE",
+					"strict" : false
+				},
+				{
+					"name" : "INPUT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SELECTOR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SELECTOR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_OR_ADDR",
+					"strict" : false
+				},
+				{
+					"name" : "INPUT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "INPUT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "INPUT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "INPUT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "INPUT[5]",
+					"strict" : false
+				},
+				{
+					"name" : "INPUT[6]",
+					"strict" : false
+				},
+				{
+					"name" : "INPUT[7]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,35 @@
+# do GUTIERREZ_JETER_LAB6_MEMORY_LAB.do
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 16:58:59 on Nov 10,2017
+# vlog -work work GUTIERREZ_JETER_LAB6_MEMORY_LAB.vo 
+# -- Compiling module RAMPORT1
+# 
+# Top level modules:
+# 	RAMPORT1
+# End time: 16:58:59 on Nov 10,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 16:58:59 on Nov 10,2017
+# vlog -work work RAMPORT1_SIMULATION.vwf.vt 
+# -- Compiling module RAMPORT1_vlg_vec_tst
+# 
+# Top level modules:
+# 	RAMPORT1_vlg_vec_tst
+# End time: 16:58:59 on Nov 10,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.RAMPORT1_vlg_vec_tst -voptargs=""+acc"" 
+# Start time: 16:58:59 on Nov 10,2017
+# Loading work.RAMPORT1_vlg_vec_tst
+# Loading work.RAMPORT1
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# Loading cycloneive_ver.cycloneive_ram_block
+# Loading cycloneive_ver.cycloneive_ram_register
+# Loading cycloneive_ver.cycloneive_ram_pulse_generator
+# ** Note: $finish    : RAMPORT1_SIMULATION.vwf.vt(51)
+#    Time: 1 us  Iteration: 0  Instance: /RAMPORT1_vlg_vec_tst
+# End time: 16:58:59 on Nov 10,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

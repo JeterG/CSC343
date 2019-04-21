@@ -1,0 +1,725 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "DATA_IN_REGISTER_ONE[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_ONE[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_ONE[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_ONE[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_ONE[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_ONE[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_ONE[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_ONE[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_ONE[8]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_ONE[9]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_ONE[10]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_ONE[11]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_ONE[12]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_ONE[13]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_ONE[14]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_ONE[15]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_ONE[16]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_ONE[17]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_ONE[18]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_ONE[19]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_ONE[20]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_ONE[21]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_ONE[22]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_ONE[23]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_ONE[24]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_ONE[25]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_ONE[26]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_ONE[27]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_ONE[28]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_ONE[29]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_ONE[30]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_ONE[31]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_TWO[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_TWO[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_TWO[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_TWO[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_TWO[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_TWO[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_TWO[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_TWO[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_TWO[8]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_TWO[9]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_TWO[10]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_TWO[11]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_TWO[12]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_TWO[13]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_TWO[14]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_TWO[15]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_TWO[16]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_TWO[17]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_TWO[18]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_TWO[19]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_TWO[20]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_TWO[21]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_TWO[22]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_TWO[23]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_TWO[24]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_TWO[25]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_TWO[26]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_TWO[27]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_TWO[28]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_TWO[29]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_TWO[30]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA_IN_REGISTER_TWO[31]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETERESULT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETERESULT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETERESULT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETERESULT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETERESULT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETERESULT[5]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETERESULT[6]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETERESULT[7]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETERESULT[8]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETERESULT[9]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETERESULT[10]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETERESULT[11]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETERESULT[12]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETERESULT[13]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETERESULT[14]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETERESULT[15]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETERESULT[16]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETERESULT[17]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETERESULT[18]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETERESULT[19]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETERESULT[20]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETERESULT[21]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETERESULT[22]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETERESULT[23]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETERESULT[24]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETERESULT[25]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETERESULT[26]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETERESULT[27]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETERESULT[28]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETERESULT[29]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETERESULT[30]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETERESULT[31]",
+					"strict" : false
+				},
+				{
+					"name" : "STORE_SIGNAL",
+					"strict" : false
+				},
+				{
+					"name" : "STORING_CLOCK",
+					"strict" : false
+				},
+				{
+					"name" : "RAMTEMPORARY_DATA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SAVINGEVALUATING",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETEINSTRUCTION[11]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPUTATION_RESULT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETEINSTRUCTION[16]",
+					"strict" : false
+				},
+				{
+					"name" : "REGISTER_TWO_ADDRESS[0]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETEINSTRUCTION[17]",
+					"strict" : false
+				},
+				{
+					"name" : "REGISTER_TWO_ADDRESS[1]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETEINSTRUCTION[12]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPUTATION_RESULT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETEINSTRUCTION[13]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPUTATION_RESULT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETEINSTRUCTION[18]",
+					"strict" : false
+				},
+				{
+					"name" : "REGISTER_TWO_ADDRESS[2]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETEINSTRUCTION[14]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPUTATION_RESULT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETEINSTRUCTION[19]",
+					"strict" : false
+				},
+				{
+					"name" : "REGISTER_TWO_ADDRESS[3]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETEINSTRUCTION[15]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPUTATION_RESULT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETEINSTRUCTION[20]",
+					"strict" : false
+				},
+				{
+					"name" : "REGISTER_TWO_ADDRESS[4]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETEINSTRUCTION[21]",
+					"strict" : false
+				},
+				{
+					"name" : "REGISTER_ONE_ADDRESS[0]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETEINSTRUCTION[22]",
+					"strict" : false
+				},
+				{
+					"name" : "REGISTER_ONE_ADDRESS[1]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETEINSTRUCTION[23]",
+					"strict" : false
+				},
+				{
+					"name" : "REGISTER_ONE_ADDRESS[2]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETEINSTRUCTION[24]",
+					"strict" : false
+				},
+				{
+					"name" : "REGISTER_ONE_ADDRESS[3]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETEINSTRUCTION[25]",
+					"strict" : false
+				},
+				{
+					"name" : "REGISTER_ONE_ADDRESS[4]",
+					"strict" : false
+				},
+				{
+					"name" : "RAMTEMPORARY_DATA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RAMTEMPORARY_DATA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RAMTEMPORARY_DATA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "RAMTEMPORARY_DATA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "RAMTEMPORARY_DATA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "RAMTEMPORARY_DATA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "RAMTEMPORARY_DATA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "RAMTEMPORARY_DATA[8]",
+					"strict" : false
+				},
+				{
+					"name" : "RAMTEMPORARY_DATA[9]",
+					"strict" : false
+				},
+				{
+					"name" : "RAMTEMPORARY_DATA[10]",
+					"strict" : false
+				},
+				{
+					"name" : "RAMTEMPORARY_DATA[11]",
+					"strict" : false
+				},
+				{
+					"name" : "RAMTEMPORARY_DATA[12]",
+					"strict" : false
+				},
+				{
+					"name" : "RAMTEMPORARY_DATA[13]",
+					"strict" : false
+				},
+				{
+					"name" : "RAMTEMPORARY_DATA[14]",
+					"strict" : false
+				},
+				{
+					"name" : "RAMTEMPORARY_DATA[15]",
+					"strict" : false
+				},
+				{
+					"name" : "RAMTEMPORARY_DATA[16]",
+					"strict" : false
+				},
+				{
+					"name" : "RAMTEMPORARY_DATA[17]",
+					"strict" : false
+				},
+				{
+					"name" : "RAMTEMPORARY_DATA[18]",
+					"strict" : false
+				},
+				{
+					"name" : "RAMTEMPORARY_DATA[19]",
+					"strict" : false
+				},
+				{
+					"name" : "RAMTEMPORARY_DATA[20]",
+					"strict" : false
+				},
+				{
+					"name" : "RAMTEMPORARY_DATA[21]",
+					"strict" : false
+				},
+				{
+					"name" : "RAMTEMPORARY_DATA[22]",
+					"strict" : false
+				},
+				{
+					"name" : "RAMTEMPORARY_DATA[23]",
+					"strict" : false
+				},
+				{
+					"name" : "RAMTEMPORARY_DATA[24]",
+					"strict" : false
+				},
+				{
+					"name" : "RAMTEMPORARY_DATA[25]",
+					"strict" : false
+				},
+				{
+					"name" : "RAMTEMPORARY_DATA[26]",
+					"strict" : false
+				},
+				{
+					"name" : "RAMTEMPORARY_DATA[27]",
+					"strict" : false
+				},
+				{
+					"name" : "RAMTEMPORARY_DATA[28]",
+					"strict" : false
+				},
+				{
+					"name" : "RAMTEMPORARY_DATA[29]",
+					"strict" : false
+				},
+				{
+					"name" : "RAMTEMPORARY_DATA[30]",
+					"strict" : false
+				},
+				{
+					"name" : "RAMTEMPORARY_DATA[31]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETEINSTRUCTION[30]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETEINSTRUCTION[31]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETEINSTRUCTION[27]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETEINSTRUCTION[28]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETEINSTRUCTION[26]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETEINSTRUCTION[0]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETEINSTRUCTION[29]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETEINSTRUCTION[10]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETEINSTRUCTION[9]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETEINSTRUCTION[8]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETEINSTRUCTION[7]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETEINSTRUCTION[6]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETEINSTRUCTION[5]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETEINSTRUCTION[4]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETEINSTRUCTION[3]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETEINSTRUCTION[2]",
+					"strict" : false
+				},
+				{
+					"name" : "COMPLETEINSTRUCTION[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RUNNING_CLOCK",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

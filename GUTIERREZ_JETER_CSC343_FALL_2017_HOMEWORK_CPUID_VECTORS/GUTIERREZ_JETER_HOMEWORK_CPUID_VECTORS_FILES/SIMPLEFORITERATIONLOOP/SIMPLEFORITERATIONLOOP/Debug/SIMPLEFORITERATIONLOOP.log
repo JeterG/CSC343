@@ -1,0 +1,6 @@
+﻿  stdafx.cpp
+  SIMPLEFORITERATIONLOOP.cpp
+c:\users\jeter_gutierrez\source\repos\simpleforiterationloop\simpleforiterationloop\simpleforiterationloop.cpp(17): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\jeter_gutierrez\source\repos\simpleforiterationloop\simpleforiterationloop\simpleforiterationloop.cpp(21): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\jeter_gutierrez\source\repos\simpleforiterationloop\simpleforiterationloop\simpleforiterationloop.cpp(25): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  SIMPLEFORITERATIONLOOP.vcxproj -> C:\Users\Jeter_Gutierrez\source\repos\SIMPLEFORITERATIONLOOP\Debug\SIMPLEFORITERATIONLOOP.exe

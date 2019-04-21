@@ -1,0 +1,100 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, the Altera Quartus Prime License Agreement,
+# the Altera MegaCore Function License Agreement, or other 
+# applicable license agreement, including, without limitation, 
+# that your use is for the sole purpose of programming logic 
+# devices manufactured by Altera and sold by Altera or its 
+# authorized distributors.  Please refer to the applicable 
+# agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+# Date created = 10:55:28  October 03, 2017
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		GUTIERREZ_JETER_LAB_4_FALL_2017_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name TOP_LEVEL_ENTITY GUTIERREZ_OPCODE
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 16.0.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:55:28  OCTOBER 03, 2017"
+set_global_assignment -name LAST_QUARTUS_VERSION 16.0.0
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name VHDL_FILE GUTIERREZ_BITWISE_AND.vhd
+set_global_assignment -name VHDL_FILE GUTIERREZ_OPT_CODE_PACKAGE.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE GUTIERREZ_BITWISE_AND.vwf
+set_global_assignment -name VHDL_FILE GUTIERREZ_BITWISE_OR.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE GUTIERREZ_BITWISE_OR.vwf
+set_global_assignment -name VHDL_FILE GUTIERREZ_BITWISE_XOR.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE GUTIERREZ_BITWISE_XOR.vwf
+set_global_assignment -name VHDL_FILE GUTIERREZ_BITWISE_NOT.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE GUTIERREZ_BITWISE_NOT.vwf
+set_global_assignment -name VHDL_FILE GUTIERREZ_BITWISE_SHIFT_LEFT.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE GUTIERREZ_BITWISE_SHIFT_LEFT.vwf
+set_global_assignment -name VHDL_FILE GUTIERREZ_BITWISE_SHIFT_RIGHT.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE GUTIERREZ_BITWISE_SHIFT_RIGHT.vwf
+set_global_assignment -name VHDL_FILE GUTIERREZ_BITWISE_ROTATE_LEFT.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE GUTIERREZ_BITWISE_ROTATE_LEFT.vwf
+set_global_assignment -name VHDL_FILE GUTIERREZ_BITWISE_ROTATE_RIGHT.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE GUTIERREZ_BITWISE_ROTATE_RIGHT.vwf
+set_global_assignment -name VHDL_FILE GUTIERREZ_OPCODE.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE GUTIERREZ_OPCODE.vwf
+set_global_assignment -name VHDL_FILE GUTIERREZ_TEST_OPCODE.vhd
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_Y23 -to CLOCK
+set_location_assignment PIN_AB28 -to X[0]
+set_location_assignment PIN_AC28 -to X[1]
+set_location_assignment PIN_AC27 -to X[2]
+set_location_assignment PIN_AD27 -to X[3]
+set_location_assignment PIN_AB27 -to X[4]
+set_location_assignment PIN_AC26 -to X[5]
+set_location_assignment PIN_AD26 -to Y[0]
+set_location_assignment PIN_AB26 -to Y[1]
+set_location_assignment PIN_AC25 -to Y[2]
+set_location_assignment PIN_AB25 -to Y[3]
+set_location_assignment PIN_AC24 -to Y[4]
+set_location_assignment PIN_AB24 -to Y[5]
+set_location_assignment PIN_AA24 -to OPCODE[0]
+set_location_assignment PIN_AA23 -to OPCODE[1]
+set_location_assignment PIN_AA22 -to OPCODE[2]
+set_location_assignment PIN_G19 -to RESULT[0]
+set_location_assignment PIN_F19 -to RESULT[1]
+set_location_assignment PIN_E19 -to RESULT[2]
+set_location_assignment PIN_F21 -to RESULT[3]
+set_location_assignment PIN_F18 -to RESULT[4]
+set_location_assignment PIN_E18 -to RESULT[5]
+set_location_assignment PIN_Y24 -to OPCODE[3]
+set_location_assignment PIN_J19 -to X_IS_LESS_THAN_Y
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

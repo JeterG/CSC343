@@ -1,0 +1,26 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_arith.all;
+use IEEE.std_logic_signed.all;
+
+entity GUTIERREZ_ADD_SUB_4_BITS is
+	port ( SUBTRACT: in std_logic;
+			 X, Y: in std_logic_vector(3 downto 0);
+			 S: out std_logic_vector (3 downto 0);
+			 Cout, Overflow: out std_logic);
+end entity;
+architecture STRUCTURE of GUTIERREZ_ADD_SUB_4_BITS is 
+component GUTIERREZ_ADDER_4_BITS is 
+	port ( cin: in std_logic;
+			 X, Y: in std_logic_vector(3 downto 0);
+			 S: out std_logic_vector (3 downto 0);
+			 Cout, Overflow: out std_logic);
+end component;
+	signal FIRST: std_logic_vector(A-1 downto 0);
+	begin
+	SECOND:
+		for i in 0 to (3) generate
+			INVERSE: New_Y(i) <= Y(i) xor SUBTRACT;
+		end generate;
+	THIRD : GUTIERREZ_ADDER_4_BITS port map(SUBTRACT, X, FIRST, S, Cout, Overflow);
+end STRUCTURE;

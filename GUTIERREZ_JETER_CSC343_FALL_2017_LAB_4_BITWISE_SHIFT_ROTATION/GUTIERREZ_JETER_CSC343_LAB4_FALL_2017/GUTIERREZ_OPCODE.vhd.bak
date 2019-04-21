@@ -1,0 +1,42 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use work.GUTIERREZ_OPT_CODE_PACKAGE.all;--Jeter Gutierrez: October, 4, 2017|
+entity GUTIERREZ_OPCODE is 
+port( CLOCK: in std_logic;
+		OPCODE: in std_logic_vector(2 downto 0);
+		X, Y: in std_logic_vector(5 downto 0);
+		RESULT: out std_logic_vector(5 downto 0));
+end GUTIERREZ_OPCODE;
+architecture DESIGN_OPCODE of GUTIERREZ_OPCODE is 
+signal first, second: std_logic_vector(5 downto 0);
+signal output: std_logic_vector(5 downto 0);
+	begin
+	first <= X;
+	second <= Y;
+	RESULT <= output;
+	process(CLOCK)
+		begin
+			if(CLOCK = '1') then
+				case OPCODE is 
+				when "000" =>
+					output <= first and second;
+				when "001" =>
+					output <= first or second;
+				when "010" =>
+					output <= first xor second;
+				when "011" =>
+					output <= not first;
+				when "100" =>
+					output <= to_stdlogicvector(to_bitvector(first)sll 1);
+				when "101" =>
+					output <= to_stdlogicvector(to_bitvector(first)srl 1);
+				when "110" =>
+					output <= to_stdlogicvector(to_bitvector(first)rol 1);
+				when "111" =>
+					output <= to_stdlogicvector(to_bitvector(first)ror 1);
+				when others =>
+				NULL;
+				end case;
+			end if;
+		end process;
+end DESIGN_OPCODE;

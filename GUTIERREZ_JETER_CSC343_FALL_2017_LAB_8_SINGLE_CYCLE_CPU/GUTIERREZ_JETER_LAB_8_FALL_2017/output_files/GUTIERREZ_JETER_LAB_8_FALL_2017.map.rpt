@@ -1,0 +1,713 @@
+Analysis & Synthesis report for GUTIERREZ_JETER_LAB_8_FALL_2017
+Mon Dec 11 14:29:23 2017
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis DSP Block Usage Summary
+ 10. User-Specified and Inferred Latches
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for GUTI_3_PORT_MEMORY:SAVINGTO3PORTEDMEMORY|ALT3PRAM:ALT3PRAM_COMPONENT|altdpram:altdpram_component1|altsyncram:ram_block|altsyncram_bso1:auto_generated
+ 14. Source assignments for GUTI_3_PORT_MEMORY:SAVINGTO3PORTEDMEMORY|ALT3PRAM:ALT3PRAM_COMPONENT|altdpram:altdpram_component2|altsyncram:ram_block|altsyncram_bso1:auto_generated
+ 15. Parameter Settings for User Entity Instance: GUTI_3_PORT_MEMORY:SAVINGTO3PORTEDMEMORY|ALT3PRAM:ALT3PRAM_COMPONENT
+ 16. Parameter Settings for Inferred Entity Instance: GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|lpm_mult:Mult0
+ 17. lpm_mult Parameter Settings by Entity Instance
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Dec 11 14:29:23 2017       ;
+; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
+; Revision Name                      ; GUTIERREZ_JETER_LAB_8_FALL_2017             ;
+; Top-level Entity Name              ; GUTI_ALU                                    ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 433                                         ;
+;     Total combinational functions  ; 433                                         ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 179                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 2,048                                       ;
+; Embedded Multiplier 9-bit elements ; 2                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                                     ;
++----------------------------------------------------------------------------+--------------------+---------------------------------+
+; Option                                                                     ; Setting            ; Default Value                   ;
++----------------------------------------------------------------------------+--------------------+---------------------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                                 ;
+; Top-level entity name                                                      ; GUTI_ALU           ; GUTIERREZ_JETER_LAB_8_FALL_2017 ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V                       ;
+; Use smart compilation                                                      ; Off                ; Off                             ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                              ;
+; Enable compact report table                                                ; Off                ; Off                             ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto                            ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                             ;
+; Preserve fewer node names                                                  ; On                 ; On                              ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001                    ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993                       ;
+; State Machine Processing                                                   ; Auto               ; Auto                            ;
+; Safe State Machine                                                         ; Off                ; Off                             ;
+; Extract Verilog State Machines                                             ; On                 ; On                              ;
+; Extract VHDL State Machines                                                ; On                 ; On                              ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                             ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000                            ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                             ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                              ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                              ;
+; Parallel Synthesis                                                         ; On                 ; On                              ;
+; DSP Block Balancing                                                        ; Auto               ; Auto                            ;
+; NOT Gate Push-Back                                                         ; On                 ; On                              ;
+; Power-Up Don't Care                                                        ; On                 ; On                              ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                             ;
+; Remove Duplicate Registers                                                 ; On                 ; On                              ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                             ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                             ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                             ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                             ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                             ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                              ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                             ;
+; Optimization Technique                                                     ; Balanced           ; Balanced                        ;
+; Carry Chain Length                                                         ; 70                 ; 70                              ;
+; Auto Carry Chains                                                          ; On                 ; On                              ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                              ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                             ;
+; Auto ROM Replacement                                                       ; On                 ; On                              ;
+; Auto RAM Replacement                                                       ; On                 ; On                              ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                              ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto                            ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto                            ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                              ;
+; Strict RAM Replacement                                                     ; Off                ; Off                             ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                              ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                             ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                              ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                             ;
+; Auto Resource Sharing                                                      ; Off                ; Off                             ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                             ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                             ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                             ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                              ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                             ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                              ;
+; Report Parameter Settings                                                  ; On                 ; On                              ;
+; Report Source Assignments                                                  ; On                 ; On                              ;
+; Report Connectivity Checks                                                 ; On                 ; On                              ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                             ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                               ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation              ;
+; HDL message level                                                          ; Level2             ; Level2                          ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                             ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000                            ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000                            ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                             ;
+; Clock MUX Protection                                                       ; On                 ; On                              ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                             ;
+; Block Design Naming                                                        ; Auto               ; Auto                            ;
+; SDC constraint protection                                                  ; Off                ; Off                             ;
+; Synthesis Effort                                                           ; Auto               ; Auto                            ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                              ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                             ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium                          ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto                            ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                              ;
+; Synthesis Seed                                                             ; 1                  ; 1                               ;
++----------------------------------------------------------------------------+--------------------+---------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                  ;
++-------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path    ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                                           ; Library ;
++-------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; GUTI_3_PORT_MEMORY.vhd              ; yes             ; User VHDL File               ; /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_3_PORT_MEMORY.vhd              ;         ;
+; GUTI_INSTRUCTION_INTERPRETATION.vhd ; yes             ; User VHDL File               ; /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd ;         ;
+; GUTI_ALU.vhd                        ; yes             ; User VHDL File               ; /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd                        ;         ;
+; alt3pram.tdf                        ; yes             ; Megafunction                 ; /home/jgutierrez/QUARTUS/16.0/quartus/libraries/megafunctions/alt3pram.tdf                                                                             ;         ;
+; altdpram.inc                        ; yes             ; Megafunction                 ; /home/jgutierrez/QUARTUS/16.0/quartus/libraries/megafunctions/altdpram.inc                                                                             ;         ;
+; aglobal160.inc                      ; yes             ; Megafunction                 ; /home/jgutierrez/QUARTUS/16.0/quartus/libraries/megafunctions/aglobal160.inc                                                                           ;         ;
+; altdpram.tdf                        ; yes             ; Megafunction                 ; /home/jgutierrez/QUARTUS/16.0/quartus/libraries/megafunctions/altdpram.tdf                                                                             ;         ;
+; memmodes.inc                        ; yes             ; Megafunction                 ; /home/jgutierrez/QUARTUS/16.0/quartus/libraries/others/maxplus2/memmodes.inc                                                                           ;         ;
+; lpm_decode.inc                      ; yes             ; Megafunction                 ; /home/jgutierrez/QUARTUS/16.0/quartus/libraries/megafunctions/lpm_decode.inc                                                                           ;         ;
+; lpm_mux.inc                         ; yes             ; Megafunction                 ; /home/jgutierrez/QUARTUS/16.0/quartus/libraries/megafunctions/lpm_mux.inc                                                                              ;         ;
+; a_hdffe.inc                         ; yes             ; Megafunction                 ; /home/jgutierrez/QUARTUS/16.0/quartus/libraries/megafunctions/a_hdffe.inc                                                                              ;         ;
+; a_rdenreg.inc                       ; yes             ; Megafunction                 ; /home/jgutierrez/QUARTUS/16.0/quartus/libraries/megafunctions/a_rdenreg.inc                                                                            ;         ;
+; alt_le_rden_reg.inc                 ; yes             ; Megafunction                 ; /home/jgutierrez/QUARTUS/16.0/quartus/libraries/megafunctions/alt_le_rden_reg.inc                                                                      ;         ;
+; altsyncram.inc                      ; yes             ; Megafunction                 ; /home/jgutierrez/QUARTUS/16.0/quartus/libraries/megafunctions/altsyncram.inc                                                                           ;         ;
+; altsyncram.tdf                      ; yes             ; Megafunction                 ; /home/jgutierrez/QUARTUS/16.0/quartus/libraries/megafunctions/altsyncram.tdf                                                                           ;         ;
+; stratix_ram_block.inc               ; yes             ; Megafunction                 ; /home/jgutierrez/QUARTUS/16.0/quartus/libraries/megafunctions/stratix_ram_block.inc                                                                    ;         ;
+; altrom.inc                          ; yes             ; Megafunction                 ; /home/jgutierrez/QUARTUS/16.0/quartus/libraries/megafunctions/altrom.inc                                                                               ;         ;
+; altram.inc                          ; yes             ; Megafunction                 ; /home/jgutierrez/QUARTUS/16.0/quartus/libraries/megafunctions/altram.inc                                                                               ;         ;
+; db/altsyncram_bso1.tdf              ; yes             ; Auto-Generated Megafunction  ; /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/db/altsyncram_bso1.tdf              ;         ;
+; lpm_mult.tdf                        ; yes             ; Megafunction                 ; /home/jgutierrez/QUARTUS/16.0/quartus/libraries/megafunctions/lpm_mult.tdf                                                                             ;         ;
+; lpm_add_sub.inc                     ; yes             ; Megafunction                 ; /home/jgutierrez/QUARTUS/16.0/quartus/libraries/megafunctions/lpm_add_sub.inc                                                                          ;         ;
+; multcore.inc                        ; yes             ; Megafunction                 ; /home/jgutierrez/QUARTUS/16.0/quartus/libraries/megafunctions/multcore.inc                                                                             ;         ;
+; bypassff.inc                        ; yes             ; Megafunction                 ; /home/jgutierrez/QUARTUS/16.0/quartus/libraries/megafunctions/bypassff.inc                                                                             ;         ;
+; altshift.inc                        ; yes             ; Megafunction                 ; /home/jgutierrez/QUARTUS/16.0/quartus/libraries/megafunctions/altshift.inc                                                                             ;         ;
+; db/mult_7dt.tdf                     ; yes             ; Auto-Generated Megafunction  ; /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/db/mult_7dt.tdf                     ;         ;
++-------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                 ;
++---------------------------------------------+---------------+
+; Resource                                    ; Usage         ;
++---------------------------------------------+---------------+
+; Estimated Total logic elements              ; 433           ;
+;                                             ;               ;
+; Total combinational functions               ; 433           ;
+; Logic element usage by number of LUT inputs ;               ;
+;     -- 4 input functions                    ; 207           ;
+;     -- 3 input functions                    ; 218           ;
+;     -- <=2 input functions                  ; 8             ;
+;                                             ;               ;
+; Logic elements by mode                      ;               ;
+;     -- normal mode                          ; 339           ;
+;     -- arithmetic mode                      ; 94            ;
+;                                             ;               ;
+; Total registers                             ; 0             ;
+;     -- Dedicated logic registers            ; 0             ;
+;     -- I/O registers                        ; 0             ;
+;                                             ;               ;
+; I/O pins                                    ; 179           ;
+; Total memory bits                           ; 2048          ;
+;                                             ;               ;
+; Embedded Multiplier 9-bit elements          ; 2             ;
+;                                             ;               ;
+; Maximum fan-out node                        ; SIGNEXTENSION ;
+; Maximum fan-out                             ; 95            ;
+; Total fan-out                               ; 2638          ;
+; Average fan-out                             ; 3.08          ;
++---------------------------------------------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                            ;
++-----------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+--------------+
+; Compilation Hierarchy Node                                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                             ; Entity Name                     ; Library Name ;
++-----------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+--------------+
+; |GUTI_ALU                                                       ; 433 (92)          ; 0 (0)        ; 2048        ; 2            ; 0       ; 1         ; 179  ; 0            ; |GUTI_ALU                                                                                                                                                       ; GUTI_ALU                        ; work         ;
+;    |GUTI_3_PORT_MEMORY:SAVINGTO3PORTEDMEMORY|                   ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |GUTI_ALU|GUTI_3_PORT_MEMORY:SAVINGTO3PORTEDMEMORY                                                                                                              ; GUTI_3_PORT_MEMORY              ; work         ;
+;       |alt3pram:ALT3PRAM_COMPONENT|                             ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |GUTI_ALU|GUTI_3_PORT_MEMORY:SAVINGTO3PORTEDMEMORY|alt3pram:ALT3PRAM_COMPONENT                                                                                  ; alt3pram                        ; work         ;
+;          |altdpram:altdpram_component1|                         ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |GUTI_ALU|GUTI_3_PORT_MEMORY:SAVINGTO3PORTEDMEMORY|alt3pram:ALT3PRAM_COMPONENT|altdpram:altdpram_component1                                                     ; altdpram                        ; work         ;
+;             |altsyncram:ram_block|                              ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |GUTI_ALU|GUTI_3_PORT_MEMORY:SAVINGTO3PORTEDMEMORY|alt3pram:ALT3PRAM_COMPONENT|altdpram:altdpram_component1|altsyncram:ram_block                                ; altsyncram                      ; work         ;
+;                |altsyncram_bso1:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |GUTI_ALU|GUTI_3_PORT_MEMORY:SAVINGTO3PORTEDMEMORY|alt3pram:ALT3PRAM_COMPONENT|altdpram:altdpram_component1|altsyncram:ram_block|altsyncram_bso1:auto_generated ; altsyncram_bso1                 ; work         ;
+;          |altdpram:altdpram_component2|                         ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |GUTI_ALU|GUTI_3_PORT_MEMORY:SAVINGTO3PORTEDMEMORY|alt3pram:ALT3PRAM_COMPONENT|altdpram:altdpram_component2                                                     ; altdpram                        ; work         ;
+;             |altsyncram:ram_block|                              ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |GUTI_ALU|GUTI_3_PORT_MEMORY:SAVINGTO3PORTEDMEMORY|alt3pram:ALT3PRAM_COMPONENT|altdpram:altdpram_component2|altsyncram:ram_block                                ; altsyncram                      ; work         ;
+;                |altsyncram_bso1:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |GUTI_ALU|GUTI_3_PORT_MEMORY:SAVINGTO3PORTEDMEMORY|alt3pram:ALT3PRAM_COMPONENT|altdpram:altdpram_component2|altsyncram:ram_block|altsyncram_bso1:auto_generated ; altsyncram_bso1                 ; work         ;
+;    |GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION| ; 341 (341)         ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |GUTI_ALU|GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION                                                                                            ; GUTI_INSTRUCTION_INTERPRETATION ; work         ;
+;       |lpm_mult:Mult0|                                          ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |GUTI_ALU|GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|lpm_mult:Mult0                                                                             ; lpm_mult                        ; work         ;
+;          |mult_7dt:auto_generated|                              ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |GUTI_ALU|GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|lpm_mult:Mult0|mult_7dt:auto_generated                                                     ; mult_7dt                        ; work         ;
++-----------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                     ;
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                                                                                             ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; GUTI_3_PORT_MEMORY:SAVINGTO3PORTEDMEMORY|alt3pram:ALT3PRAM_COMPONENT|altdpram:altdpram_component1|altsyncram:ram_block|altsyncram_bso1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 32           ; 32           ; 32           ; 32           ; 1024 ; None ;
+; GUTI_3_PORT_MEMORY:SAVINGTO3PORTEDMEMORY|alt3pram:ALT3PRAM_COMPONENT|altdpram:altdpram_component2|altsyncram:ram_block|altsyncram_bso1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 32           ; 32           ; 32           ; 32           ; 1024 ; None ;
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary        ;
++---------------------------------------+-------------+
+; Statistic                             ; Number Used ;
++---------------------------------------+-------------+
+; Simple Multipliers (9-bit)            ; 0           ;
+; Simple Multipliers (18-bit)           ; 1           ;
+; Embedded Multiplier Blocks            ; --          ;
+; Embedded Multiplier 9-bit elements    ; 2           ;
+; Signed Embedded Multipliers           ; 0           ;
+; Unsigned Embedded Multipliers         ; 1           ;
+; Mixed Sign Embedded Multipliers       ; 0           ;
+; Variable Sign Embedded Multipliers    ; 0           ;
+; Dedicated Input Shift Register Chains ; 0           ;
++---------------------------------------+-------------+
+Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                                                              ;
++----------------------------------------------------------------------------+----------------------------------------------------------------------------+------------------------+
+; Latch Name                                                                 ; Latch Enable Signal                                                        ; Free of Timing Hazards ;
++----------------------------------------------------------------------------+----------------------------------------------------------------------------+------------------------+
+; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[0]  ; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[31] ; yes                    ;
+; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[1]  ; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[31] ; yes                    ;
+; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[2]  ; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[31] ; yes                    ;
+; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[3]  ; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[31] ; yes                    ;
+; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[4]  ; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[31] ; yes                    ;
+; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[5]  ; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[31] ; yes                    ;
+; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[6]  ; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[31] ; yes                    ;
+; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[7]  ; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[31] ; yes                    ;
+; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[8]  ; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[31] ; yes                    ;
+; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[9]  ; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[31] ; yes                    ;
+; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[10] ; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[31] ; yes                    ;
+; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[11] ; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[31] ; yes                    ;
+; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[12] ; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[31] ; yes                    ;
+; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[13] ; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[31] ; yes                    ;
+; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[14] ; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[31] ; yes                    ;
+; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[15] ; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[31] ; yes                    ;
+; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[16] ; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[31] ; yes                    ;
+; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[17] ; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[31] ; yes                    ;
+; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[18] ; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[31] ; yes                    ;
+; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[19] ; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[31] ; yes                    ;
+; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[20] ; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[31] ; yes                    ;
+; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[21] ; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[31] ; yes                    ;
+; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[22] ; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[31] ; yes                    ;
+; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[23] ; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[31] ; yes                    ;
+; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[24] ; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[31] ; yes                    ;
+; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[25] ; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[31] ; yes                    ;
+; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[26] ; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[31] ; yes                    ;
+; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[27] ; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[31] ; yes                    ;
+; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[28] ; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[31] ; yes                    ;
+; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[29] ; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[31] ; yes                    ;
+; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[30] ; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[31] ; yes                    ;
+; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[31] ; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[31] ; yes                    ;
+; SIGNEXTENSION                                                              ; Mux0                                                                       ; yes                    ;
+; Number of user-specified and inferred latches = 33                         ;                                                                            ;                        ;
++----------------------------------------------------------------------------+----------------------------------------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |GUTI_ALU|WRITE_HOLD[0]                                                    ;
+; 11:1               ; 30 bits   ; 210 LEs       ; 180 LEs              ; 30 LEs                 ; No         ; |GUTI_ALU|GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|Mux24 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for GUTI_3_PORT_MEMORY:SAVINGTO3PORTEDMEMORY|ALT3PRAM:ALT3PRAM_COMPONENT|altdpram:altdpram_component1|altsyncram:ram_block|altsyncram_bso1:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                                             ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                                              ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for GUTI_3_PORT_MEMORY:SAVINGTO3PORTEDMEMORY|ALT3PRAM:ALT3PRAM_COMPONENT|altdpram:altdpram_component2|altsyncram:ram_block|altsyncram_bso1:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                                             ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                                              ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: GUTI_3_PORT_MEMORY:SAVINGTO3PORTEDMEMORY|ALT3PRAM:ALT3PRAM_COMPONENT ;
++------------------------+--------------+---------------------------------------------------------------------------+
+; Parameter Name         ; Value        ; Type                                                                      ;
++------------------------+--------------+---------------------------------------------------------------------------+
+; WIDTH_BYTEENA          ; 1            ; Untyped                                                                   ;
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                                                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                                                              ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                                                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                                                            ;
+; WIDTH                  ; 32           ; Signed Integer                                                            ;
+; WIDTHAD                ; 5            ; Signed Integer                                                            ;
+; NUMWORDS               ; 32           ; Untyped                                                                   ;
+; LPM_FILE               ; UNUSED       ; Untyped                                                                   ;
+; INDATA_REG             ; INCLOCK      ; Untyped                                                                   ;
+; INDATA_ACLR            ; OFF          ; Untyped                                                                   ;
+; WRITE_REG              ; INCLOCK      ; Untyped                                                                   ;
+; WRITE_ACLR             ; OFF          ; Untyped                                                                   ;
+; RDADDRESS_REG_A        ; INCLOCK      ; Untyped                                                                   ;
+; RDADDRESS_ACLR_A       ; OFF          ; Untyped                                                                   ;
+; RDCONTROL_REG_A        ; UNREGISTERED ; Untyped                                                                   ;
+; RDCONTROL_ACLR_A       ; OFF          ; Untyped                                                                   ;
+; OUTDATA_REG_A          ; OUTCLOCK     ; Untyped                                                                   ;
+; OUTDATA_ACLR_A         ; OFF          ; Untyped                                                                   ;
+; RDADDRESS_REG_B        ; INCLOCK      ; Untyped                                                                   ;
+; RDADDRESS_ACLR_B       ; OFF          ; Untyped                                                                   ;
+; RDCONTROL_REG_B        ; UNREGISTERED ; Untyped                                                                   ;
+; RDCONTROL_ACLR_B       ; OFF          ; Untyped                                                                   ;
+; OUTDATA_REG_B          ; OUTCLOCK     ; Untyped                                                                   ;
+; OUTDATA_ACLR_B         ; OFF          ; Untyped                                                                   ;
+; USE_EAB                ; ON           ; Untyped                                                                   ;
+; RAM_BLOCK_TYPE         ; AUTO         ; Untyped                                                                   ;
+; MAXIMUM_DEPTH          ; 0            ; Untyped                                                                   ;
+; DEVICE_FAMILY          ; Cyclone IV E ; Untyped                                                                   ;
++------------------------+--------------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|lpm_mult:Mult0 ;
++------------------------------------------------+--------------+------------------------------------------------------------+
+; Parameter Name                                 ; Value        ; Type                                                       ;
++------------------------------------------------+--------------+------------------------------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY                                                 ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY                                               ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE                                               ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE                                             ;
+; LPM_WIDTHA                                     ; 16           ; Untyped                                                    ;
+; LPM_WIDTHB                                     ; 16           ; Untyped                                                    ;
+; LPM_WIDTHP                                     ; 32           ; Untyped                                                    ;
+; LPM_WIDTHR                                     ; 32           ; Untyped                                                    ;
+; LPM_WIDTHS                                     ; 1            ; Untyped                                                    ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped                                                    ;
+; LPM_PIPELINE                                   ; 0            ; Untyped                                                    ;
+; LATENCY                                        ; 0            ; Untyped                                                    ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped                                                    ;
+; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped                                                    ;
+; USE_EAB                                        ; OFF          ; Untyped                                                    ;
+; MAXIMIZE_SPEED                                 ; 6            ; Untyped                                                    ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                                                    ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped                                                    ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K                                        ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                                                    ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                                                    ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                                                    ;
+; CBXI_PARAMETER                                 ; mult_7dt     ; Untyped                                                    ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                                                    ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                                                    ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                                                    ;
++------------------------------------------------+--------------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                                                                    ;
++---------------------------------------+---------------------------------------------------------------------------+
+; Name                                  ; Value                                                                     ;
++---------------------------------------+---------------------------------------------------------------------------+
+; Number of entity instances            ; 1                                                                         ;
+; Entity Instance                       ; GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 16                                                                        ;
+;     -- LPM_WIDTHB                     ; 16                                                                        ;
+;     -- LPM_WIDTHP                     ; 32                                                                        ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                                                                  ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                                        ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                                                        ;
+;     -- USE_EAB                        ; OFF                                                                       ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                                      ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                                        ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                                        ;
++---------------------------------------+---------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 179                         ;
+; cycloneiii_lcell_comb ; 433                         ;
+;     arith             ; 94                          ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 93                          ;
+;     normal            ; 339                         ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 125                         ;
+;         4 data inputs ; 207                         ;
+; cycloneiii_mac_mult   ; 1                           ;
+; cycloneiii_mac_out    ; 1                           ;
+; cycloneiii_ram_block  ; 64                          ;
+;                       ;                             ;
+; Max LUT depth         ; 11.10                       ;
+; Average LUT depth     ; 6.68                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+    Info: Processing started: Mon Dec 11 14:29:06 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off GUTIERREZ_JETER_LAB_8_FALL_2017 -c GUTIERREZ_JETER_LAB_8_FALL_2017
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file GUTI_HEX.vhd
+    Info (12022): Found design unit 1: GUTI_HEX-ARCH File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_HEX.vhd Line: 11
+    Info (12023): Found entity 1: GUTI_HEX File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_HEX.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file GUTI_3_PORT_MEMORY.vhd
+    Info (12022): Found design unit 1: GUTI_3_PORT_MEMORY-SYN File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_3_PORT_MEMORY.vhd Line: 16
+    Info (12023): Found entity 1: GUTI_3_PORT_MEMORY File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_3_PORT_MEMORY.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file GUTI_INSTRUCTION_INTERPRETATION.vhd
+    Info (12022): Found design unit 1: GUTI_INSTRUCTION_INTERPRETATION-ARCH File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 12
+    Info (12023): Found entity 1: GUTI_INSTRUCTION_INTERPRETATION File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file GUTI_ALU.vhd
+    Info (12022): Found design unit 1: GUTI_ALU-DESIGN File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 13
+    Info (12023): Found entity 1: GUTI_ALU File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file GUTI_SINGLE_CYCLE_CPU.vhd
+    Info (12022): Found design unit 1: GUTI_SINGLE_CYCLE_CPU-ARCH File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_SINGLE_CYCLE_CPU.vhd Line: 15
+    Info (12023): Found entity 1: GUTI_SINGLE_CYCLE_CPU File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_SINGLE_CYCLE_CPU.vhd Line: 5
+Info (12127): Elaborating entity "GUTI_ALU" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at GUTI_ALU.vhd(41): object "DOT_COMPLETE" assigned a value but never read File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 41
+Warning (10036): Verilog HDL or VHDL warning at GUTI_ALU.vhd(42): object "BRANCH" assigned a value but never read File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 42
+Warning (10036): Verilog HDL or VHDL warning at GUTI_ALU.vhd(53): object "ARRAY1SIZE" assigned a value but never read File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 53
+Warning (10036): Verilog HDL or VHDL warning at GUTI_ALU.vhd(53): object "ARRAY2SIZE" assigned a value but never read File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 53
+Warning (10492): VHDL Process Statement warning at GUTI_ALU.vhd(71): signal "EXTENDEDVALUE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 71
+Warning (10492): VHDL Process Statement warning at GUTI_ALU.vhd(72): signal "COMPLETEINSTRUCTION" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 72
+Warning (10492): VHDL Process Statement warning at GUTI_ALU.vhd(73): signal "COMPLETEINSTRUCTION" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 73
+Warning (10492): VHDL Process Statement warning at GUTI_ALU.vhd(74): signal "DOT_TEMP" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 74
+Warning (10631): VHDL Process Statement warning at GUTI_ALU.vhd(68): inferring latch(es) for signal or variable "SIGNEXTENSION", which holds its previous value in one or more paths through the process File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 68
+Info (10041): Inferred latch for "SIGNEXTENSION" at GUTI_ALU.vhd(68) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 68
+Info (12128): Elaborating entity "GUTI_3_PORT_MEMORY" for hierarchy "GUTI_3_PORT_MEMORY:SAVINGTO3PORTEDMEMORY" File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 88
+Info (12128): Elaborating entity "ALT3PRAM" for hierarchy "GUTI_3_PORT_MEMORY:SAVINGTO3PORTEDMEMORY|ALT3PRAM:ALT3PRAM_COMPONENT" File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_3_PORT_MEMORY.vhd Line: 53
+Info (12130): Elaborated megafunction instantiation "GUTI_3_PORT_MEMORY:SAVINGTO3PORTEDMEMORY|ALT3PRAM:ALT3PRAM_COMPONENT" File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_3_PORT_MEMORY.vhd Line: 53
+Info (12133): Instantiated megafunction "GUTI_3_PORT_MEMORY:SAVINGTO3PORTEDMEMORY|ALT3PRAM:ALT3PRAM_COMPONENT" with the following parameter: File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_3_PORT_MEMORY.vhd Line: 53
+    Info (12134): Parameter "INDATA_ACLR" = "OFF"
+    Info (12134): Parameter "INDATA_REG" = "INCLOCK"
+    Info (12134): Parameter "INTENDED_DEVICE_FAMILY" = "STRATIX II"
+    Info (12134): Parameter "LPM_TYPE" = "ALT3PRAM"
+    Info (12134): Parameter "OUTDATA_ACLR_A" = "OFF"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "OFF"
+    Info (12134): Parameter "OUTDATA_REG_A" = "OUTCLOCK"
+    Info (12134): Parameter "OUTDATA_REG_B" = "OUTCLOCK"
+    Info (12134): Parameter "RDADDRESS_ACLR_A" = "OFF"
+    Info (12134): Parameter "RDADDRESS_ACLR_B" = "OFF"
+    Info (12134): Parameter "RDADDRESS_REG_A" = "INCLOCK"
+    Info (12134): Parameter "RDADDRESS_REG_B" = "INCLOCK"
+    Info (12134): Parameter "RDCONTROL_ACLR_A" = "OFF"
+    Info (12134): Parameter "RDCONTROL_ACLR_B" = "OFF"
+    Info (12134): Parameter "RDCONTROL_REG_A" = "UNREGISTERED"
+    Info (12134): Parameter "RDCONTROL_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "WIDTH" = "32"
+    Info (12134): Parameter "WIDTHAD" = "5"
+    Info (12134): Parameter "WRITE_ACLR" = "OFF"
+    Info (12134): Parameter "WRITE_REG" = "INCLOCK"
+Info (12128): Elaborating entity "altdpram" for hierarchy "GUTI_3_PORT_MEMORY:SAVINGTO3PORTEDMEMORY|ALT3PRAM:ALT3PRAM_COMPONENT|altdpram:altdpram_component1" File: /home/jgutierrez/QUARTUS/16.0/quartus/libraries/megafunctions/alt3pram.tdf Line: 115
+Info (12131): Elaborated megafunction instantiation "GUTI_3_PORT_MEMORY:SAVINGTO3PORTEDMEMORY|ALT3PRAM:ALT3PRAM_COMPONENT|altdpram:altdpram_component1", which is child of megafunction instantiation "GUTI_3_PORT_MEMORY:SAVINGTO3PORTEDMEMORY|ALT3PRAM:ALT3PRAM_COMPONENT" File: /home/jgutierrez/QUARTUS/16.0/quartus/libraries/megafunctions/alt3pram.tdf Line: 115
+Info (12128): Elaborating entity "altsyncram" for hierarchy "GUTI_3_PORT_MEMORY:SAVINGTO3PORTEDMEMORY|ALT3PRAM:ALT3PRAM_COMPONENT|altdpram:altdpram_component1|altsyncram:ram_block" File: /home/jgutierrez/QUARTUS/16.0/quartus/libraries/megafunctions/altdpram.tdf Line: 207
+Info (12131): Elaborated megafunction instantiation "GUTI_3_PORT_MEMORY:SAVINGTO3PORTEDMEMORY|ALT3PRAM:ALT3PRAM_COMPONENT|altdpram:altdpram_component1|altsyncram:ram_block", which is child of megafunction instantiation "GUTI_3_PORT_MEMORY:SAVINGTO3PORTEDMEMORY|ALT3PRAM:ALT3PRAM_COMPONENT" File: /home/jgutierrez/QUARTUS/16.0/quartus/libraries/megafunctions/altdpram.tdf Line: 207
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_bso1.tdf
+    Info (12023): Found entity 1: altsyncram_bso1 File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/db/altsyncram_bso1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_bso1" for hierarchy "GUTI_3_PORT_MEMORY:SAVINGTO3PORTEDMEMORY|ALT3PRAM:ALT3PRAM_COMPONENT|altdpram:altdpram_component1|altsyncram:ram_block|altsyncram_bso1:auto_generated" File: /home/jgutierrez/QUARTUS/16.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "GUTI_INSTRUCTION_INTERPRETATION" for hierarchy "GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION" File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 99
+Warning (10492): VHDL Process Statement warning at GUTI_INSTRUCTION_INTERPRETATION.vhd(19): signal "WORDONE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 19
+Warning (10492): VHDL Process Statement warning at GUTI_INSTRUCTION_INTERPRETATION.vhd(19): signal "WORDTWO" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 19
+Warning (10492): VHDL Process Statement warning at GUTI_INSTRUCTION_INTERPRETATION.vhd(21): signal "WORDONE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 21
+Warning (10492): VHDL Process Statement warning at GUTI_INSTRUCTION_INTERPRETATION.vhd(21): signal "WORDTWO" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 21
+Warning (10492): VHDL Process Statement warning at GUTI_INSTRUCTION_INTERPRETATION.vhd(23): signal "WORDONE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 23
+Warning (10492): VHDL Process Statement warning at GUTI_INSTRUCTION_INTERPRETATION.vhd(23): signal "WORDTWO" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 23
+Warning (10492): VHDL Process Statement warning at GUTI_INSTRUCTION_INTERPRETATION.vhd(25): signal "WORDONE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 25
+Warning (10492): VHDL Process Statement warning at GUTI_INSTRUCTION_INTERPRETATION.vhd(27): signal "WORDONE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 27
+Warning (10492): VHDL Process Statement warning at GUTI_INSTRUCTION_INTERPRETATION.vhd(29): signal "WORDONE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 29
+Warning (10492): VHDL Process Statement warning at GUTI_INSTRUCTION_INTERPRETATION.vhd(31): signal "WORDONE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 31
+Warning (10492): VHDL Process Statement warning at GUTI_INSTRUCTION_INTERPRETATION.vhd(33): signal "WORDONE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 33
+Warning (10492): VHDL Process Statement warning at GUTI_INSTRUCTION_INTERPRETATION.vhd(34): signal "WORDONE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 34
+Warning (10492): VHDL Process Statement warning at GUTI_INSTRUCTION_INTERPRETATION.vhd(34): signal "WORDTWO" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 34
+Warning (10492): VHDL Process Statement warning at GUTI_INSTRUCTION_INTERPRETATION.vhd(35): signal "WORDONE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 35
+Warning (10492): VHDL Process Statement warning at GUTI_INSTRUCTION_INTERPRETATION.vhd(35): signal "WORDTWO" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 35
+Warning (10492): VHDL Process Statement warning at GUTI_INSTRUCTION_INTERPRETATION.vhd(36): signal "WORDONE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 36
+Warning (10492): VHDL Process Statement warning at GUTI_INSTRUCTION_INTERPRETATION.vhd(36): signal "WORDTWO" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 36
+Warning (10492): VHDL Process Statement warning at GUTI_INSTRUCTION_INTERPRETATION.vhd(37): signal "WORDONE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 37
+Warning (10492): VHDL Process Statement warning at GUTI_INSTRUCTION_INTERPRETATION.vhd(37): signal "WORDTWO" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 37
+Warning (10492): VHDL Process Statement warning at GUTI_INSTRUCTION_INTERPRETATION.vhd(38): signal "WORDONE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 38
+Warning (10492): VHDL Process Statement warning at GUTI_INSTRUCTION_INTERPRETATION.vhd(38): signal "WORDTWO" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 38
+Warning (10631): VHDL Process Statement warning at GUTI_INSTRUCTION_INTERPRETATION.vhd(14): inferring latch(es) for signal or variable "COMPUTATION", which holds its previous value in one or more paths through the process File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+Info (10041): Inferred latch for "COMPUTATION[0]" at GUTI_INSTRUCTION_INTERPRETATION.vhd(14) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+Info (10041): Inferred latch for "COMPUTATION[1]" at GUTI_INSTRUCTION_INTERPRETATION.vhd(14) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+Info (10041): Inferred latch for "COMPUTATION[2]" at GUTI_INSTRUCTION_INTERPRETATION.vhd(14) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+Info (10041): Inferred latch for "COMPUTATION[3]" at GUTI_INSTRUCTION_INTERPRETATION.vhd(14) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+Info (10041): Inferred latch for "COMPUTATION[4]" at GUTI_INSTRUCTION_INTERPRETATION.vhd(14) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+Info (10041): Inferred latch for "COMPUTATION[5]" at GUTI_INSTRUCTION_INTERPRETATION.vhd(14) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+Info (10041): Inferred latch for "COMPUTATION[6]" at GUTI_INSTRUCTION_INTERPRETATION.vhd(14) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+Info (10041): Inferred latch for "COMPUTATION[7]" at GUTI_INSTRUCTION_INTERPRETATION.vhd(14) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+Info (10041): Inferred latch for "COMPUTATION[8]" at GUTI_INSTRUCTION_INTERPRETATION.vhd(14) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+Info (10041): Inferred latch for "COMPUTATION[9]" at GUTI_INSTRUCTION_INTERPRETATION.vhd(14) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+Info (10041): Inferred latch for "COMPUTATION[10]" at GUTI_INSTRUCTION_INTERPRETATION.vhd(14) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+Info (10041): Inferred latch for "COMPUTATION[11]" at GUTI_INSTRUCTION_INTERPRETATION.vhd(14) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+Info (10041): Inferred latch for "COMPUTATION[12]" at GUTI_INSTRUCTION_INTERPRETATION.vhd(14) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+Info (10041): Inferred latch for "COMPUTATION[13]" at GUTI_INSTRUCTION_INTERPRETATION.vhd(14) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+Info (10041): Inferred latch for "COMPUTATION[14]" at GUTI_INSTRUCTION_INTERPRETATION.vhd(14) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+Info (10041): Inferred latch for "COMPUTATION[15]" at GUTI_INSTRUCTION_INTERPRETATION.vhd(14) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+Info (10041): Inferred latch for "COMPUTATION[16]" at GUTI_INSTRUCTION_INTERPRETATION.vhd(14) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+Info (10041): Inferred latch for "COMPUTATION[17]" at GUTI_INSTRUCTION_INTERPRETATION.vhd(14) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+Info (10041): Inferred latch for "COMPUTATION[18]" at GUTI_INSTRUCTION_INTERPRETATION.vhd(14) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+Info (10041): Inferred latch for "COMPUTATION[19]" at GUTI_INSTRUCTION_INTERPRETATION.vhd(14) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+Info (10041): Inferred latch for "COMPUTATION[20]" at GUTI_INSTRUCTION_INTERPRETATION.vhd(14) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+Info (10041): Inferred latch for "COMPUTATION[21]" at GUTI_INSTRUCTION_INTERPRETATION.vhd(14) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+Info (10041): Inferred latch for "COMPUTATION[22]" at GUTI_INSTRUCTION_INTERPRETATION.vhd(14) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+Info (10041): Inferred latch for "COMPUTATION[23]" at GUTI_INSTRUCTION_INTERPRETATION.vhd(14) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+Info (10041): Inferred latch for "COMPUTATION[24]" at GUTI_INSTRUCTION_INTERPRETATION.vhd(14) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+Info (10041): Inferred latch for "COMPUTATION[25]" at GUTI_INSTRUCTION_INTERPRETATION.vhd(14) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+Info (10041): Inferred latch for "COMPUTATION[26]" at GUTI_INSTRUCTION_INTERPRETATION.vhd(14) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+Info (10041): Inferred latch for "COMPUTATION[27]" at GUTI_INSTRUCTION_INTERPRETATION.vhd(14) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+Info (10041): Inferred latch for "COMPUTATION[28]" at GUTI_INSTRUCTION_INTERPRETATION.vhd(14) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+Info (10041): Inferred latch for "COMPUTATION[29]" at GUTI_INSTRUCTION_INTERPRETATION.vhd(14) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+Info (10041): Inferred latch for "COMPUTATION[30]" at GUTI_INSTRUCTION_INTERPRETATION.vhd(14) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+Info (10041): Inferred latch for "COMPUTATION[31]" at GUTI_INSTRUCTION_INTERPRETATION.vhd(14) File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|Mult0" File: /home/jgutierrez/QUARTUS/16.0/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+Info (12130): Elaborated megafunction instantiation "GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|lpm_mult:Mult0" File: /home/jgutierrez/QUARTUS/16.0/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+Info (12133): Instantiated megafunction "GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|lpm_mult:Mult0" with the following parameter: File: /home/jgutierrez/QUARTUS/16.0/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+    Info (12134): Parameter "LPM_WIDTHA" = "16"
+    Info (12134): Parameter "LPM_WIDTHB" = "16"
+    Info (12134): Parameter "LPM_WIDTHP" = "32"
+    Info (12134): Parameter "LPM_WIDTHR" = "32"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_7dt.tdf
+    Info (12023): Found entity 1: mult_7dt File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/db/mult_7dt.tdf Line: 29
+Warning (13012): Latch GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[0] has unsafe behavior File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SIGNEXTENSION File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 52
+Warning (13012): Latch GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[1] has unsafe behavior File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SIGNEXTENSION File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 52
+Warning (13012): Latch GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[2] has unsafe behavior File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SIGNEXTENSION File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 52
+Warning (13012): Latch GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[3] has unsafe behavior File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SIGNEXTENSION File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 52
+Warning (13012): Latch GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[4] has unsafe behavior File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SIGNEXTENSION File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 52
+Warning (13012): Latch GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[5] has unsafe behavior File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SIGNEXTENSION File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 52
+Warning (13012): Latch GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[6] has unsafe behavior File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SIGNEXTENSION File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 52
+Warning (13012): Latch GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[7] has unsafe behavior File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SIGNEXTENSION File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 52
+Warning (13012): Latch GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[8] has unsafe behavior File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SIGNEXTENSION File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 52
+Warning (13012): Latch GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[9] has unsafe behavior File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SIGNEXTENSION File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 52
+Warning (13012): Latch GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[10] has unsafe behavior File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SIGNEXTENSION File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 52
+Warning (13012): Latch GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[11] has unsafe behavior File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SIGNEXTENSION File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 52
+Warning (13012): Latch GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[12] has unsafe behavior File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SIGNEXTENSION File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 52
+Warning (13012): Latch GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[13] has unsafe behavior File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SIGNEXTENSION File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 52
+Warning (13012): Latch GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[14] has unsafe behavior File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SIGNEXTENSION File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 52
+Warning (13012): Latch GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[15] has unsafe behavior File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SIGNEXTENSION File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 52
+Warning (13012): Latch GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[16] has unsafe behavior File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SIGNEXTENSION File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 52
+Warning (13012): Latch GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[17] has unsafe behavior File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SIGNEXTENSION File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 52
+Warning (13012): Latch GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[18] has unsafe behavior File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SIGNEXTENSION File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 52
+Warning (13012): Latch GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[19] has unsafe behavior File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SIGNEXTENSION File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 52
+Warning (13012): Latch GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[20] has unsafe behavior File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SIGNEXTENSION File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 52
+Warning (13012): Latch GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[21] has unsafe behavior File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SIGNEXTENSION File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 52
+Warning (13012): Latch GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[22] has unsafe behavior File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SIGNEXTENSION File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 52
+Warning (13012): Latch GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[23] has unsafe behavior File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SIGNEXTENSION File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 52
+Warning (13012): Latch GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[24] has unsafe behavior File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SIGNEXTENSION File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 52
+Warning (13012): Latch GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[25] has unsafe behavior File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SIGNEXTENSION File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 52
+Warning (13012): Latch GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[26] has unsafe behavior File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SIGNEXTENSION File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 52
+Warning (13012): Latch GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[27] has unsafe behavior File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SIGNEXTENSION File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 52
+Warning (13012): Latch GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[28] has unsafe behavior File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SIGNEXTENSION File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 52
+Warning (13012): Latch GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[29] has unsafe behavior File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SIGNEXTENSION File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 52
+Warning (13012): Latch GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[30] has unsafe behavior File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SIGNEXTENSION File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 52
+Warning (13012): Latch GUTI_INSTRUCTION_INTERPRETATION:INTERPRETINGTHEINSTRUCTION|COMPUTATION[31] has unsafe behavior File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_INSTRUCTION_INTERPRETATION.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SIGNEXTENSION File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 52
+Warning (13012): Latch SIGNEXTENSION has unsafe behavior File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 52
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal COMPLETEINSTRUCTION[26] File: /home/jgutierrez/Documents/GUTIERREZ_JETER_CSC343_LAB_8_SINGLE_CYCLE_COU_FALL_2017/GUTIERREZ_JETER_LAB_8_FALL_2017/GUTI_ALU.vhd Line: 9
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 678 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 83 input pins
+    Info (21059): Implemented 96 output pins
+    Info (21061): Implemented 433 logic cells
+    Info (21064): Implemented 64 RAM segments
+    Info (21062): Implemented 2 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 98 warnings
+    Info: Peak virtual memory: 1307 megabytes
+    Info: Processing ended: Mon Dec 11 14:29:23 2017
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:34
+
+

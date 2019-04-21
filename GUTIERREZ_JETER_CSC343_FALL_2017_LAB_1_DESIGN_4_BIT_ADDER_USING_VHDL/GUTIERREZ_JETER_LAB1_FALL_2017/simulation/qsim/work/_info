@@ -1,0 +1,350 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/media/jgutierrez/STORAGE/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC343_LAB1_DESIGN_4_BIT_ADDER_USING_VHDL_FALL_2017/GUTIERREZ_JETER_LAB1_FALL_2017/simulation/qsim
+vGUTIERREZ_cla32_add_subtract
+Z1 !s110 1505313496
+!i10b 1
+!s100 SHfbh?Kj>c3GOcCb`<5fo0
+I?8eWdUkT`9P:gngK5:>BP0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1505313495
+Z3 8GUTIERREZ_JETER_LAB_1_FALL_2017.vo
+Z4 FGUTIERREZ_JETER_LAB_1_FALL_2017.vo
+Z5 L0 32
+Z6 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z7 !s108 1505313496.000000
+Z8 !s107 GUTIERREZ_JETER_LAB_1_FALL_2017.vo|
+Z9 !s90 -work|work|GUTIERREZ_JETER_LAB_1_FALL_2017.vo|
+!i113 1
+Z10 o-work work
+n@g@u@t@i@e@r@r@e@z_cla32_add_subtract
+vGUTIERREZ_cla32_add_subtract_vlg_vec_tst
+R1
+!i10b 1
+!s100 fz[nLOmQVX0l0K`k>zRXY1
+ISG[P6LgJHz[3[ZmBPK@OT2
+R2
+R0
+w1505313493
+8GUTIERREZ_CLA32_ADDER_SUBTRACTOR.vwf.vt
+FGUTIERREZ_CLA32_ADDER_SUBTRACTOR.vwf.vt
+Z11 L0 30
+R6
+r1
+!s85 0
+31
+R7
+!s107 GUTIERREZ_CLA32_ADDER_SUBTRACTOR.vwf.vt|
+!s90 -work|work|GUTIERREZ_CLA32_ADDER_SUBTRACTOR.vwf.vt|
+!i113 1
+R10
+n@g@u@t@i@e@r@r@e@z_cla32_add_subtract_vlg_vec_tst
+vGUTIERREZ_FOUR_BIT_ADDER
+Z12 !s110 1505141887
+!i10b 1
+!s100 mh<e:PV5`D>NH_OCY`V0C0
+IeaYTW2[HThd<OQO8]=UOo3
+R2
+R0
+w1505141886
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z13 !s108 1505141887.000000
+R8
+R9
+!i113 1
+R10
+n@g@u@t@i@e@r@r@e@z_@f@o@u@r_@b@i@t_@a@d@d@e@r
+vGUTIERREZ_FOUR_BIT_ADDER_vlg_vec_tst
+R12
+!i10b 1
+!s100 Vo4PhQW6W9anmNZX5kW613
+I2HH9P=KdNV2c89ZX]dJ[51
+R2
+R0
+w1505141884
+8GUTIERREZ_FOUR_BIT_ADDER.vwf.vt
+FGUTIERREZ_FOUR_BIT_ADDER.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R13
+!s107 GUTIERREZ_FOUR_BIT_ADDER.vwf.vt|
+!s90 -work|work|GUTIERREZ_FOUR_BIT_ADDER.vwf.vt|
+!i113 1
+R10
+n@g@u@t@i@e@r@r@e@z_@f@o@u@r_@b@i@t_@a@d@d@e@r_vlg_vec_tst
+vGUTIERREZ_FULL_ADDER_USING_GATES
+Z14 !s110 1505041345
+!i10b 1
+!s100 knO19e4>CaUcbWhN=h65N3
+IE]=XdJX^>nE=zhD[ghfZ40
+R2
+R0
+w1505041344
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z15 !s108 1505041345.000000
+R8
+R9
+!i113 1
+R10
+n@g@u@t@i@e@r@r@e@z_@f@u@l@l_@a@d@d@e@r_@u@s@i@n@g_@g@a@t@e@s
+vGUTIERREZ_FULL_ADDER_USING_GATES_vlg_vec_tst
+R14
+!i10b 1
+!s100 JCj>lcSQTN[9?j4o_iADB3
+IgTk8<6dDk3KSdAl;A_LAT1
+R2
+R0
+w1505041343
+8GUTIERREZ_FULL_ADDER_USING_GATES.vwf.vt
+FGUTIERREZ_FULL_ADDER_USING_GATES.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R15
+!s107 GUTIERREZ_FULL_ADDER_USING_GATES.vwf.vt|
+!s90 -work|work|GUTIERREZ_FULL_ADDER_USING_GATES.vwf.vt|
+!i113 1
+R10
+n@g@u@t@i@e@r@r@e@z_@f@u@l@l_@a@d@d@e@r_@u@s@i@n@g_@g@a@t@e@s_vlg_vec_tst
+vGUTIERREZ_FULL_ADDER_USING_HALF_ADDER
+Z16 !s110 1505041560
+!i10b 1
+!s100 7R<?n0Ph^I>=gnXJDeTHG1
+IRQf@aRL?HDaU=6N9jnVlW0
+R2
+R0
+w1505041559
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z17 !s108 1505041560.000000
+R8
+R9
+!i113 1
+R10
+n@g@u@t@i@e@r@r@e@z_@f@u@l@l_@a@d@d@e@r_@u@s@i@n@g_@h@a@l@f_@a@d@d@e@r
+vGUTIERREZ_FULL_ADDER_USING_HALF_ADDER_vlg_vec_tst
+R16
+!i10b 1
+!s100 acYE?MM?XR`RTN<n2l_SE2
+IQ=^N27WU^@jE`AElzBG][0
+R2
+R0
+w1505041557
+8GUTIERREZ_FULL_ADDER_USING_HALF_ADDER.vwf.vt
+FGUTIERREZ_FULL_ADDER_USING_HALF_ADDER.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R17
+!s107 GUTIERREZ_FULL_ADDER_USING_HALF_ADDER.vwf.vt|
+!s90 -work|work|GUTIERREZ_FULL_ADDER_USING_HALF_ADDER.vwf.vt|
+!i113 1
+R10
+n@g@u@t@i@e@r@r@e@z_@f@u@l@l_@a@d@d@e@r_@u@s@i@n@g_@h@a@l@f_@a@d@d@e@r_vlg_vec_tst
+Egutierrez_half_adder
+Z18 w1505040831
+Z19 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z20 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 7m_3?ER^m`lJ;P@g>WSdP3
+Z21 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z22 DPx8 cyclonev 19 cyclonev_components 0 22 Y1SMazmlfT^N6ce3cZcWb3
+Z23 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z24 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z25 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 Oc7BZ>JHn==<@iL2AS6dl0
+R0
+Z26 8GUTIERREZ_JETER_LAB_1_FALL_2017.vho
+Z27 FGUTIERREZ_JETER_LAB_1_FALL_2017.vho
+l0
+L37
+V4dAMJ4>`2ALma>3DU2bZ71
+!s100 :VQXLNMVm<FhD;bU^O_S52
+Z28 OV;C;10.4d;61
+32
+Z29 !s110 1505040832
+!i10b 1
+Z30 !s108 1505040832.000000
+Z31 !s90 -work|work|GUTIERREZ_JETER_LAB_1_FALL_2017.vho|
+Z32 !s107 GUTIERREZ_JETER_LAB_1_FALL_2017.vho|
+!i113 1
+R10
+Z33 tExplicit 1
+Astructure
+R19
+R20
+R21
+R22
+R23
+R24
+R25
+DEx4 work 20 gutierrez_half_adder 0 22 4dAMJ4>`2ALma>3DU2bZ71
+l75
+L53
+V0ddzIJcmT_>Z3QJ7BI0fZ0
+!s100 zfaa;K>4iXYF5n9K7<<nD2
+R28
+32
+R29
+!i10b 1
+R30
+R31
+R32
+!i113 1
+R10
+R33
+vGUTIERREZ_HALF_ADDER
+Z34 !s110 1505041073
+!i10b 1
+!s100 =7;dGE2^NOFHBdFAbe@^33
+ILHVzLDocY`TM0?E5XKNG62
+R2
+R0
+w1505041072
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z35 !s108 1505041073.000000
+R8
+R9
+!i113 1
+R10
+n@g@u@t@i@e@r@r@e@z_@h@a@l@f_@a@d@d@e@r
+Egutierrez_half_adder_vhd_vec_tst
+Z36 w1505040829
+R23
+R24
+R0
+Z37 8GUTIERREZ_HALF_ADDER.vwf.vht
+Z38 FGUTIERREZ_HALF_ADDER.vwf.vht
+l0
+L32
+Va[UOI>K@]F;ZfV]fT1h1o3
+!s100 j^h_jeMdElXnJgOObK@f<1
+R28
+32
+R29
+!i10b 1
+R30
+Z39 !s90 -work|work|GUTIERREZ_HALF_ADDER.vwf.vht|
+Z40 !s107 GUTIERREZ_HALF_ADDER.vwf.vht|
+!i113 1
+R10
+R33
+Agutierrez_half_adder_arch
+R23
+R24
+DEx4 work 32 gutierrez_half_adder_vhd_vec_tst 0 22 a[UOI>K@]F;ZfV]fT1h1o3
+l49
+L34
+VU3W_=_J9?]j7H`I[b?I8?3
+!s100 nU51:TYIgM:bd7U;WhLCi2
+R28
+32
+R29
+!i10b 1
+R30
+R39
+R40
+!i113 1
+R10
+R33
+vGUTIERREZ_HALF_ADDER_vlg_vec_tst
+R34
+!i10b 1
+!s100 :I2XW7d0S>JbVbCn8eHLO0
+I@A8@8WSJbEk1LZ0CR9d`a1
+R2
+R0
+w1505041071
+8GUTIERREZ_HALF_ADDER.vwf.vt
+FGUTIERREZ_HALF_ADDER.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R35
+!s107 GUTIERREZ_HALF_ADDER.vwf.vt|
+!s90 -work|work|GUTIERREZ_HALF_ADDER.vwf.vt|
+!i113 1
+R10
+n@g@u@t@i@e@r@r@e@z_@h@a@l@f_@a@d@d@e@r_vlg_vec_tst
+vGUTIERREZ_TESTING_PACKAGE
+Z41 !s110 1505313073
+!i10b 1
+!s100 MY^2n>JKcOFPRU^K[>ZQk1
+IEAcj?EmQXo]cX8z3]:F=c1
+R2
+R0
+w1505313072
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z42 !s108 1505313073.000000
+R8
+R9
+!i113 1
+R10
+n@g@u@t@i@e@r@r@e@z_@t@e@s@t@i@n@g_@p@a@c@k@a@g@e
+vGUTIERREZ_TESTING_PACKAGE_vlg_vec_tst
+R41
+!i10b 1
+!s100 XO^To]`7eR]bEHB]nml9>1
+Iokc6<@n<6dD17]3NPUS1^1
+R2
+R0
+w1505313070
+8test_package.vwf.vt
+Ftest_package.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R42
+!s107 test_package.vwf.vt|
+!s90 -work|work|test_package.vwf.vt|
+!i113 1
+R10
+n@g@u@t@i@e@r@r@e@z_@t@e@s@t@i@n@g_@p@a@c@k@a@g@e_vlg_vec_tst

@@ -1,0 +1,119 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all;
+entity GUTI_SINGLE_CYCLE_CPU is
+    port(
+        SUBMIT,INPUT_WE,STORECLOCK,PROCESSCLOCK,WRITINGSIGNAL,STOREORPERFORM,DQORREG,SRAMCLOCK,REGCLOCK:std_logic;
+		  INPUT: in std_logic_vector(7 downto 0);
+		  SELECTOR: in std_logic_vector(3 downto 0);
+        SRAM_ADDR: out std_logic_vector(19 downto 0);
+        SRAM_DQ: inout std_logic_vector(15 downto 0);
+        SRAM_CE_N,SRAM_OE_N,SRAM_WE_N,SRAM_UB_N,SRAM_LB_N: out std_logic;
+		  HEX11,HEX22,HEX33,HEX44,HEX55,HEX66,HEX77,HEX88: out STD_LOGIC_VECTOR(6 downto 0));
+end GUTI_SINGLE_CYCLE_CPU;
+architecture arch of GUTI_SINGLE_CYCLE_CPU is
+    signal INPUT_temp: std_logic_vector(7 downto 0);
+    signal Wenable,final: std_logic;
+    signal hex,output,hex2: std_logic_vector(15 downto 0);
+	 SIGNAL DATA,TORAMPORT,INSTRUCTIONCODE,OUTA,OUTB,OUTW:STD_LOGIC_VECTOR(31 DOWNTO 0);
+	 signal DATA1,DATA2:std_logic_vector(15 downto 0);
+	 signal ABSOLUTE_ADDRESS,ABSOLUTE_ADDRESS1,ADDRESS_TEMP1,ADDRESS_TEMP2: std_logic_vector (19 downto 0);
+	 SIGNAL PROGRAMCOUNTER: STD_LOGIC_VECTOR(19 DOWNTO 0) :="00000000000000000000";
+	 SIGNAL R1,R2,R3,RR1,RR2,RR3:STD_LOGIC_VECTOR(4 DOWNTO 0);
+	 
+component GUTI_HEX is
+	port(
+		BINARY : in std_logic_vector(3 downto 0) := X"0";
+		HEXADECIMAL : out std_logic_vector(6 downto 0) := "0000000"
+	);
+end component;
+
+component GUTI_ALU is 
+	port(STORING_CLOCK,
+		  RUNNING_CLOCK,
+		  STORE_SIGNAL,SAVINGEVALUATING :in std_logic;
+		REGISTER_ONE_ADDRESS,REGISTER_TWO_ADDRESS,COMPUTATION_RESULT:in std_logic_vector(4 downto 0);
+	COMPLETEINSTRUCTION,RAMTEMPORARY_DATA: in std_logic_vector(31 downto 0);
+		DATA_IN_REGISTER_ONE,DATA_IN_REGISTER_TWO,COMPLETERESULT:out std_logic_vector(31 downto 0));
+end component;
+begin
+	 Wenable<=INPUT_WE;
+    SRAM_WE_N <= not Wenable;
+    SRAM_CE_N <= '0';
+    SRAM_OE_N <= '0';
+    SRAM_UB_N <= '0';
+    SRAM_LB_N <= '0';
+	 hex<=output WHEN DQORREG='0' ELSE OUTW(15 DOWNTO 0);
+process(SELECTOR)
+begin
+case SELECTOR is
+      when"0000"=>ABSOLUTE_ADDRESS(7 downto 0)<=INPUT+"00000100";
+      when"0001"=>ABSOLUTE_ADDRESS(15 downto 8)<=INPUT;
+      when"0010"=>ABSOLUTE_ADDRESS(19 downto 16)<=INPUT(3 downto 0);
+      
+      when"0011"=>DATA(7 downto 0)<=INPUT;              
+      when"0100"=>DATA(15 downto 8)<=INPUT;
+		
+      when"0101"=>R1<=INPUT(4 DOWNTO 0);
+      when"0110"=>R2<=INPUT(4 DOWNTO 0);
+      when"0111"=>R3<=INPUT(4 DOWNTO 0);
+		
+      when"1000"=>TORAMPORT(7 DOWNTO 0)<=INPUT;
+      when"1001"=>TORAMPORT(15 DOWNTO 8)<=INPUT;
+      when"1010"=>TORAMPORT(23 DOWNTO 16)<=INPUT;
+      when"1011"=>TORAMPORT(31 DOWNTO 24)<=INPUT;
+      when others=>null;
+    end case;
+end process;
+	ABSOLUTE_ADDRESS1<=(ABSOLUTE_ADDRESS+"00000000000000000001");
+	DATA1<=DATA(15 downto 0);
+	PROCESS(SRAMCLOCK)
+	BEGIN
+	IF (SRAMCLOCK='0') THEN
+	IF (SUBMIT='0')THEN
+	ADDRESS_TEMP1<= ABSOLUTE_ADDRESS;
+	ELSE 
+	ADDRESS_TEMP2<=ABSOLUTE_ADDRESS1;
+	END IF;
+	END IF;
+	END PROCESS;
+	PROCESS(PROCESSCLOCK)
+	BEGIN
+	IF(INPUT(1)='0') THEN
+	HEX2<=PROGRAMCOUNTER(15 DOWNTO 0)+"0000000000000100";
+	ELSE 
+	HEX2<=PROGRAMCOUNTER(15 DOWNTO 0);
+	END IF;
+	
+	END PROCESS;
+	
+	SRAM_ADDR<=ADDRESS_TEMP1 WHEN SUBMIT='0' ELSE ADDRESS_TEMP2;
+	SRAM_DQ<= DATA1 when Wenable='1' else (others=>'Z'); 
+	output(15 downto 0)<="0000000000000000"WHEN INPUT(0)='0' ELSE OUTW(15 DOWNTO 0); 
+	INSTRUCTIONCODE(15 DOWNTO 0)<=SRAM_DQ WHEN SUBMIT='0' ELSE DATA(15 DOWNTO 0);
+	INSTRUCTIONCODE(31 DOWNTO 16)<=SRAM_DQ WHEN SUBMIT='1' ELSE DATA(15 DOWNTO 0);
+RUNNING:GUTI_ALU PORT MAP (not STORECLOCK,
+                                  not PROCESSCLOCK,
+                                  WRITINGSIGNAL,
+                                  STOREORPERFORM,
+                                  RR1,
+                                  RR2,
+											 RR3,
+											 INSTRUCTIONCODE,
+                                  TORAMPORT,
+                                  OUTA,
+                                  OUTB,
+                                  OUTW
+	);
+	
+Hx0: GUTI_HEX port map (hex(3 downto 0), HEX11);
+Hx1: GUTI_HEX port map (hex(7 downto 4), HEX22);
+Hx2: GUTI_HEX port map (hex(11 downto 8), HEX33);
+Hx3: GUTI_HEX port map (hex(15 downto 12), HEX44);
+Hx4: GUTI_HEX port map (hex2(3 downto 0), HEX55);
+Hx5: GUTI_HEX port map (hex2(7 downto 4), HEX66);
+Hx6: GUTI_HEX port map (hex2(11 downto 8), HEX77);
+Hx7: GUTI_HEX port map (hex2(15 downto 12), HEX88);
+
+end arch;

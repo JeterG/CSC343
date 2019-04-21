@@ -1,0 +1,39 @@
+# do GUTIERREZ_JETER_LAB_8_FALL_2017.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 14:28:14 on Dec 11,2017
+# vlog -work work GUTIERREZ_JETER_LAB_8_FALL_2017.vo 
+# -- Compiling module GUTI_INSTRUCTION_INTERPRETATION
+# 
+# Top level modules:
+# 	GUTI_INSTRUCTION_INTERPRETATION
+# End time: 14:28:14 on Dec 11,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 14:28:14 on Dec 11,2017
+# vlog -work work GUTI_INSTRUCTION_INTERPRETATION.vwf.vt 
+# -- Compiling module GUTI_INSTRUCTION_INTERPRETATION_vlg_vec_tst
+# 
+# Top level modules:
+# 	GUTI_INSTRUCTION_INTERPRETATION_vlg_vec_tst
+# End time: 14:28:15 on Dec 11,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.GUTI_INSTRUCTION_INTERPRETATION_vlg_vec_tst -voptargs=""+acc"" 
+# Start time: 14:28:15 on Dec 11,2017
+# Loading work.GUTI_INSTRUCTION_INTERPRETATION_vlg_vec_tst
+# Loading work.GUTI_INSTRUCTION_INTERPRETATION
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading cycloneive_ver.cycloneive_mac_mult
+# Loading cycloneive_ver.cycloneive_mac_data_reg
+# Loading cycloneive_ver.cycloneive_mac_sign_reg
+# Loading cycloneive_ver.cycloneive_mac_mult_internal
+# Loading cycloneive_ver.cycloneive_mac_out
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# ** Note: $finish    : GUTI_INSTRUCTION_INTERPRETATION.vwf.vt(51)
+#    Time: 1 us  Iteration: 0  Instance: /GUTI_INSTRUCTION_INTERPRETATION_vlg_vec_tst
+# End time: 14:28:15 on Dec 11,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

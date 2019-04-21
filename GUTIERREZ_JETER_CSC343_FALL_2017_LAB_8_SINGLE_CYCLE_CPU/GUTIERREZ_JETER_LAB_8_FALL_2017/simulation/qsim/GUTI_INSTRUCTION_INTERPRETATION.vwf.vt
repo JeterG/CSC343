@@ -1,0 +1,416 @@
+// Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus Prime License Agreement,
+// the Altera MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Altera and sold by Altera or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "12/11/2017 14:28:13"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          GUTI_INSTRUCTION_INTERPRETATION
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module GUTI_INSTRUCTION_INTERPRETATION_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg [5:0] OPERATION;
+reg PERFORMANCECLOCK;
+reg [31:0] WORDONE;
+reg [31:0] WORDTWO;
+// wires                                               
+wire [31:0] COMPUTATION;
+
+// assign statements (if any)                          
+GUTI_INSTRUCTION_INTERPRETATION i1 (
+// port map - connection between master ports and signals/registers   
+	.COMPUTATION(COMPUTATION),
+	.OPERATION(OPERATION),
+	.PERFORMANCECLOCK(PERFORMANCECLOCK),
+	.WORDONE(WORDONE),
+	.WORDTWO(WORDTWO)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+// OPERATION[ 5 ]
+initial
+begin
+	OPERATION[5] = 1'b0;
+end 
+// OPERATION[ 4 ]
+initial
+begin
+	OPERATION[4] = 1'b0;
+end 
+// OPERATION[ 3 ]
+initial
+begin
+	OPERATION[3] = 1'b1;
+end 
+// OPERATION[ 2 ]
+initial
+begin
+	OPERATION[2] = 1'b0;
+end 
+// OPERATION[ 1 ]
+initial
+begin
+	OPERATION[1] = 1'b0;
+end 
+// OPERATION[ 0 ]
+initial
+begin
+	OPERATION[0] = 1'b1;
+end 
+
+// PERFORMANCECLOCK
+initial
+begin
+	repeat(12)
+	begin
+		PERFORMANCECLOCK = 1'b0;
+		PERFORMANCECLOCK = #40000 1'b1;
+		# 40000;
+	end
+	PERFORMANCECLOCK = 1'b0;
+end 
+// WORDONE[ 31 ]
+initial
+begin
+	WORDONE[31] = 1'b0;
+end 
+// WORDONE[ 30 ]
+initial
+begin
+	WORDONE[30] = 1'b0;
+end 
+// WORDONE[ 29 ]
+initial
+begin
+	WORDONE[29] = 1'b0;
+end 
+// WORDONE[ 28 ]
+initial
+begin
+	WORDONE[28] = 1'b0;
+end 
+// WORDONE[ 27 ]
+initial
+begin
+	WORDONE[27] = 1'b0;
+end 
+// WORDONE[ 26 ]
+initial
+begin
+	WORDONE[26] = 1'b0;
+end 
+// WORDONE[ 25 ]
+initial
+begin
+	WORDONE[25] = 1'b0;
+end 
+// WORDONE[ 24 ]
+initial
+begin
+	WORDONE[24] = 1'b0;
+end 
+// WORDONE[ 23 ]
+initial
+begin
+	WORDONE[23] = 1'b0;
+end 
+// WORDONE[ 22 ]
+initial
+begin
+	WORDONE[22] = 1'b0;
+end 
+// WORDONE[ 21 ]
+initial
+begin
+	WORDONE[21] = 1'b0;
+end 
+// WORDONE[ 20 ]
+initial
+begin
+	WORDONE[20] = 1'b0;
+end 
+// WORDONE[ 19 ]
+initial
+begin
+	WORDONE[19] = 1'b0;
+end 
+// WORDONE[ 18 ]
+initial
+begin
+	WORDONE[18] = 1'b0;
+end 
+// WORDONE[ 17 ]
+initial
+begin
+	WORDONE[17] = 1'b0;
+end 
+// WORDONE[ 16 ]
+initial
+begin
+	WORDONE[16] = 1'b0;
+end 
+// WORDONE[ 15 ]
+initial
+begin
+	WORDONE[15] = 1'b0;
+end 
+// WORDONE[ 14 ]
+initial
+begin
+	WORDONE[14] = 1'b0;
+end 
+// WORDONE[ 13 ]
+initial
+begin
+	WORDONE[13] = 1'b0;
+end 
+// WORDONE[ 12 ]
+initial
+begin
+	WORDONE[12] = 1'b0;
+end 
+// WORDONE[ 11 ]
+initial
+begin
+	WORDONE[11] = 1'b0;
+end 
+// WORDONE[ 10 ]
+initial
+begin
+	WORDONE[10] = 1'b0;
+end 
+// WORDONE[ 9 ]
+initial
+begin
+	WORDONE[9] = 1'b0;
+end 
+// WORDONE[ 8 ]
+initial
+begin
+	WORDONE[8] = 1'b0;
+end 
+// WORDONE[ 7 ]
+initial
+begin
+	WORDONE[7] = 1'b0;
+end 
+// WORDONE[ 6 ]
+initial
+begin
+	WORDONE[6] = 1'b0;
+end 
+// WORDONE[ 5 ]
+initial
+begin
+	WORDONE[5] = 1'b0;
+end 
+// WORDONE[ 4 ]
+initial
+begin
+	WORDONE[4] = 1'b0;
+end 
+// WORDONE[ 3 ]
+initial
+begin
+	WORDONE[3] = 1'b0;
+end 
+// WORDONE[ 2 ]
+initial
+begin
+	WORDONE[2] = 1'b0;
+end 
+// WORDONE[ 1 ]
+initial
+begin
+	WORDONE[1] = 1'b0;
+end 
+// WORDONE[ 0 ]
+initial
+begin
+	WORDONE[0] = 1'b1;
+end 
+// WORDTWO[ 31 ]
+initial
+begin
+	WORDTWO[31] = 1'b0;
+end 
+// WORDTWO[ 30 ]
+initial
+begin
+	WORDTWO[30] = 1'b0;
+end 
+// WORDTWO[ 29 ]
+initial
+begin
+	WORDTWO[29] = 1'b0;
+end 
+// WORDTWO[ 28 ]
+initial
+begin
+	WORDTWO[28] = 1'b0;
+end 
+// WORDTWO[ 27 ]
+initial
+begin
+	WORDTWO[27] = 1'b0;
+end 
+// WORDTWO[ 26 ]
+initial
+begin
+	WORDTWO[26] = 1'b0;
+end 
+// WORDTWO[ 25 ]
+initial
+begin
+	WORDTWO[25] = 1'b0;
+end 
+// WORDTWO[ 24 ]
+initial
+begin
+	WORDTWO[24] = 1'b0;
+end 
+// WORDTWO[ 23 ]
+initial
+begin
+	WORDTWO[23] = 1'b0;
+end 
+// WORDTWO[ 22 ]
+initial
+begin
+	WORDTWO[22] = 1'b0;
+end 
+// WORDTWO[ 21 ]
+initial
+begin
+	WORDTWO[21] = 1'b0;
+end 
+// WORDTWO[ 20 ]
+initial
+begin
+	WORDTWO[20] = 1'b0;
+end 
+// WORDTWO[ 19 ]
+initial
+begin
+	WORDTWO[19] = 1'b0;
+end 
+// WORDTWO[ 18 ]
+initial
+begin
+	WORDTWO[18] = 1'b0;
+end 
+// WORDTWO[ 17 ]
+initial
+begin
+	WORDTWO[17] = 1'b0;
+end 
+// WORDTWO[ 16 ]
+initial
+begin
+	WORDTWO[16] = 1'b0;
+end 
+// WORDTWO[ 15 ]
+initial
+begin
+	WORDTWO[15] = 1'b0;
+end 
+// WORDTWO[ 14 ]
+initial
+begin
+	WORDTWO[14] = 1'b0;
+end 
+// WORDTWO[ 13 ]
+initial
+begin
+	WORDTWO[13] = 1'b0;
+end 
+// WORDTWO[ 12 ]
+initial
+begin
+	WORDTWO[12] = 1'b0;
+end 
+// WORDTWO[ 11 ]
+initial
+begin
+	WORDTWO[11] = 1'b0;
+end 
+// WORDTWO[ 10 ]
+initial
+begin
+	WORDTWO[10] = 1'b0;
+end 
+// WORDTWO[ 9 ]
+initial
+begin
+	WORDTWO[9] = 1'b0;
+end 
+// WORDTWO[ 8 ]
+initial
+begin
+	WORDTWO[8] = 1'b0;
+end 
+// WORDTWO[ 7 ]
+initial
+begin
+	WORDTWO[7] = 1'b0;
+end 
+// WORDTWO[ 6 ]
+initial
+begin
+	WORDTWO[6] = 1'b0;
+end 
+// WORDTWO[ 5 ]
+initial
+begin
+	WORDTWO[5] = 1'b0;
+end 
+// WORDTWO[ 4 ]
+initial
+begin
+	WORDTWO[4] = 1'b0;
+end 
+// WORDTWO[ 3 ]
+initial
+begin
+	WORDTWO[3] = 1'b0;
+end 
+// WORDTWO[ 2 ]
+initial
+begin
+	WORDTWO[2] = 1'b0;
+end 
+// WORDTWO[ 1 ]
+initial
+begin
+	WORDTWO[1] = 1'b1;
+end 
+// WORDTWO[ 0 ]
+initial
+begin
+	WORDTWO[0] = 1'b0;
+end 
+endmodule
+

@@ -1,0 +1,94 @@
+-------------------------------------------------------
+  -- Design Name : GUTIERREZ_JETER_PACKAGES
+  -- File Name   : GUTIERREZ_ADDER_PACKAGE.vhd
+  -- Function    : Defines function for adders.
+  -- Coder       : Jeter Gutierrez (VHDL)
+  -------------------------------------------------------
+  library IEEE;--Jeter Gutierrez Due 9/24/2017
+	use IEEE.std_logic_1164.all;--Jeter Gutierrez Due 9/24/2017
+  Package GUTIERREZ_ADDER_PACKAGE is--Jeter Gutierrez Due 9/24/2017
+	
+	component GUTIERREZ_ADDER_16_BITS is
+	port ( cin: in std_logic;
+			 X, Y: in std_logic_vector(15 downto 0);
+			 sum_prime: out std_logic_vector (15 downto 0);
+			 Cout, Overflow: out std_logic);
+end component;
+
+component GUTIERREZ_MISTAKE4_ADDER is
+	port ( cin: in std_logic;
+			 X, Y: in std_logic_vector(3 downto 0);
+			 sum_prime: out std_logic_vector (3 downto 0);
+			 Cout, Overflow: out std_logic);
+end component;
+
+component GUTIERREZ_ADDER_4_BITS is
+	port ( cin: in std_logic;
+			 X, Y: in std_logic_vector(3 downto 0);
+			 sum_prime: out std_logic_vector (3 downto 0);
+			 Cout, Overflow: out std_logic);
+end component;
+
+component GUTIERREZ_FULL_ADDER_USING_GATES is--JETER GUTIERREZ September 11 2017
+     port(a, b : in std_logic;--JETER GUTIERREZ September 11 2017
+	       cin_prime : in std_logic;--JETER GUTIERREZ September 11 2017
+			 sum : out std_logic;--JETER GUTIERREZ September 11 2017
+			 cout_prime : out std_logic);--JETER GUTIERREZ September 11 2017
+end GUTIERREZ_FULL_ADDER_USING_GATES;--JETER GUTIERREZ September 11 2017
+
+component GUTIERREZ_ADD_SUB_4_BITS is
+	port ( SUBTRACT: in std_logic;
+			 X, Y: in std_logic_vector(3 downto 0);
+			 S: out std_logic_vector (3 downto 0);
+			 Cout, Overflow: out std_logic);
+end component;
+
+component GUTIERREZ_ADD_SUB_16_BITS is
+	port ( SUBTRACT: in std_logic;
+			 X, Y: in std_logic_vector(15 downto 0);
+			 S: out std_logic_vector (15 downto 0);
+			 Cout, Overflow: out std_logic);
+end component;
+
+component GUTIERREZ_ADDER_32_BITS is
+	port ( cin: in std_logic;
+			 X, Y: in std_logic_vector(31 downto 0);
+			 sum_prime: out std_logic_vector (31 downto 0);
+			 Cout, Overflow: out std_logic);
+end component;
+
+component GUTIERREZ_ADD_SUB_32_BITS is
+	port ( SUBTRACT: in std_logic;
+			 X, Y: in std_logic_vector(31 downto 0);
+			 S: out std_logic_vector (31 downto 0);
+			 Cout, Overflow: out std_logic);
+end component;
+
+component GUTIERREZ_COMPARE_4_BITS_ADVANCE is 
+	port ( SUBTRACT: in std_logic;
+			 X, Y: in std_logic_vector(3 downto 0);
+			 S: out std_logic_vector (3 downto 0);
+			 NEGATIVE: out std_logic;
+			 Z: out std_logic;
+			 Cout, Overflow: out std_logic);
+end component;
+
+component GUTIERREZ_COMPARE_16_BITS_ADVANCE is 
+	port ( SUBTRACT: in std_logic;
+			 X, Y: in std_logic_vector(15 downto 0);
+			 S: out std_logic_vector (15 downto 0);
+			 NEGATIVE: out std_logic;
+			 Z: out std_logic;
+			 Cout, Overflow: out std_logic);
+end component;
+
+component GUTIERREZ_COMPARE_32_BITS_ADVANCE is 
+	port ( SUBTRACT: in std_logic;
+			 X, Y: in std_logic_vector(31 downto 0);
+			 S: out std_logic_vector (31 downto 0);
+			 NEGATIVE: out std_logic;
+			 Z: out std_logic;
+			 Cout, Overflow: out std_logic);
+end component;
+
+ end GUTIERREZ_ADDER_PACKAGE;

@@ -1,0 +1,283 @@
+$comment
+	File created using the following command:
+		vcd file GUTIERREZ_JETER_LAB_2_FALL_2017.msim.vcd -direction
+$end
+$date
+	Sat Sep 16 14:37:20 2017
+$end
+$version
+	ModelSim Version 10.4d
+$end
+$timescale
+	1ps
+$end
+
+$scope module GUTIERREZ_8BIT_COMPARATOR_PORT_vlg_vec_tst $end
+$var reg 8 ! a [7:0] $end
+$var reg 8 " b [7:0] $end
+$var wire 1 # aeqb $end
+
+$scope module i1 $end
+$var wire 1 $ gnd $end
+$var wire 1 % vcc $end
+$var wire 1 & unknown $end
+$var tri1 1 ' devclrn $end
+$var tri1 1 ( devpor $end
+$var tri1 1 ) devoe $end
+$var wire 1 * aeqb~output_o $end
+$var wire 1 + b[0]~input_o $end
+$var wire 1 , a[1]~input_o $end
+$var wire 1 - a[0]~input_o $end
+$var wire 1 . b[1]~input_o $end
+$var wire 1 / aeqb~3_combout $end
+$var wire 1 0 b[4]~input_o $end
+$var wire 1 1 a[4]~input_o $end
+$var wire 1 2 b[5]~input_o $end
+$var wire 1 3 a[5]~input_o $end
+$var wire 1 4 aeqb~1_combout $end
+$var wire 1 5 b[7]~input_o $end
+$var wire 1 6 b[6]~input_o $end
+$var wire 1 7 a[6]~input_o $end
+$var wire 1 8 a[7]~input_o $end
+$var wire 1 9 aeqb~0_combout $end
+$var wire 1 : a[2]~input_o $end
+$var wire 1 ; b[2]~input_o $end
+$var wire 1 < b[3]~input_o $end
+$var wire 1 = a[3]~input_o $end
+$var wire 1 > aeqb~2_combout $end
+$var wire 1 ? aeqb~4_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1100100 !
+b1100100 "
+1#
+0$
+1%
+x&
+1'
+1(
+1)
+1*
+0+
+0,
+0-
+0.
+0/
+00
+01
+12
+13
+04
+05
+16
+17
+08
+09
+1:
+1;
+0<
+0=
+0>
+0?
+$end
+#50000
+b1100101 "
+1+
+1/
+1?
+0*
+0#
+#100000
+b1100111 "
+b1100110 !
+b1100110 "
+1,
+0+
+1.
+0/
+0?
+1*
+1#
+#150000
+b1100111 "
+1+
+1/
+1?
+0*
+0#
+#200000
+b1101111 "
+b1101011 "
+b1101110 !
+b1101010 !
+b1101001 "
+b1101000 !
+b1101000 "
+0,
+0:
+1=
+0+
+0.
+0;
+1<
+0/
+0?
+1*
+1#
+#250000
+b1101001 "
+1+
+1/
+1?
+0*
+0#
+#300000
+b1101011 "
+b1101010 !
+b1101010 "
+1,
+0+
+1.
+0/
+0?
+1*
+1#
+#350000
+b1101011 "
+1+
+1/
+1?
+0*
+0#
+#400000
+b1101111 "
+b1101110 !
+b1101101 "
+b1101100 !
+b1101100 "
+0,
+1:
+0+
+0.
+1;
+0/
+0?
+1*
+1#
+#450000
+b1101101 "
+1+
+1/
+1?
+0*
+0#
+#500000
+b1101111 "
+b1101110 !
+b1101110 "
+1,
+0+
+1.
+0/
+0?
+1*
+1#
+#550000
+b1101111 "
+1+
+1/
+1?
+0*
+0#
+#600000
+b1111111 "
+b1111110 !
+b1110111 "
+b1110110 !
+b1110011 "
+b1110010 !
+b1110001 "
+b1110000 !
+b1110000 "
+0,
+0:
+0=
+11
+0+
+0.
+0;
+0<
+10
+0/
+0?
+1*
+1#
+#650000
+b1110001 "
+1+
+1/
+1?
+0*
+0#
+#700000
+b1110011 "
+b1110010 !
+b1110010 "
+1,
+0+
+1.
+0/
+0?
+1*
+1#
+#750000
+b1110011 "
+1+
+1/
+1?
+0*
+0#
+#800000
+b1110111 "
+b1110110 !
+b1110101 "
+b1110100 !
+b1110100 "
+0,
+1:
+0+
+0.
+1;
+0/
+0?
+1*
+1#
+#850000
+b1110101 "
+1+
+1/
+1?
+0*
+0#
+#900000
+b1110111 "
+b1110110 !
+b1110110 "
+1,
+0+
+1.
+0/
+0?
+1*
+1#
+#950000
+b1110111 "
+1+
+1/
+1?
+0*
+0#
+#1000000

@@ -1,0 +1,19 @@
+library IEEE;--Jeter Gutierrez Due 3/27/2017
+use IEEE.std_logic_1164.all;
+entity mux32to1 is
+port(
+a, b: in std_logic_vector(31 downto 0);
+sel: in std_logic;
+y: out std_logic_vector(31 downto 0));
+end mux32to1;
+architecture behavior of mux32to1 is
+begin
+process (sel, a, b)
+begin
+if (sel = '1') then
+y <= b;
+else
+y <= a;
+end if;
+end process;
+end behavior;--Jeter Gutierrez Due 3/27/2017

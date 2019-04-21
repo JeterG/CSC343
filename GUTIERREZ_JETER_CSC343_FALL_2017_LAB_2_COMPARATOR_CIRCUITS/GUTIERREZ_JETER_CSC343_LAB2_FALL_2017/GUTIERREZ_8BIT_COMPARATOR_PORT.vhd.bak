@@ -1,0 +1,25 @@
+library ieee;
+use ieee.std_logic_1164.all;
+entity GUTIERREZ_8BIT_COMPARATOR_PORT is
+port (
+a, b: in std_logic_vector(7 downto 0);
+aeqb : out std_logic);
+end GUTIERREZ_8BIT_COMPARATOR_PORT;
+architecture arch of GUTIERREZ_8BIT_COMPARATOR_PORT is
+component GUTIERREZ_1BIT_COMPARATOR
+port (
+I0, I1: in std_logic;
+Eq : out std_logic);
+end component;
+signal e0,e1,e2,e3,e4,e5,e6,e7: std_logic;
+begin
+H1: GUTIERREZ_1BIT_COMPARATOR port map(i0=>a(0), i1=>b(0), eq=>e0);
+H2: GUTIERREZ_1BIT_COMPARATOR port map(i0=>a(1), i1=>b(1), eq=>e1);
+H3: GUTIERREZ_1BIT_COMPARATOR port map(i0=>a(2), i1=>b(2), eq=>e);
+H4: GUTIERREZ_1BIT_COMPARATOR port map(i0=>a(3), i1=>b(3), eq=>e);
+H5: GUTIERREZ_1BIT_COMPARATOR port map(i0=>a(4), i1=>b(4), eq=>e);
+H6: GUTIERREZ_1BIT_COMPARATOR port map(i0=>a(5), i1=>b(5), eq=>e);
+H7: GUTIERREZ_1BIT_COMPARATOR port map(i0=>a(6), i1=>b(6), eq=>e);
+H8: GUTIERREZ_1BIT_COMPARATOR port map(i0=>a(7), i1=>b(7), eq=>e);
+aeqb <= e0 and e1;
+end arch;

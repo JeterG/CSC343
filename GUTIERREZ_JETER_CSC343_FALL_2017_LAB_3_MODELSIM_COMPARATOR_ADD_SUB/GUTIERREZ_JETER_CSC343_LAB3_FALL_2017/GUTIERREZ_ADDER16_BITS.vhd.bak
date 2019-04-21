@@ -1,0 +1,32 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_arith.all;
+use IEEE.std_logic_signed.all;
+
+entity GUTIERREZ_ADDER_16_BITS is
+	port ( cin: in std_logic;
+			 X, Y: in std_logic_vector(15 downto 0);
+			 sum_prime: out std_logic_vector (15 downto 0);
+			 Cout, Overflow: out std_logic);
+end entity;
+
+architecture DESIGN of GUTIERREZ_ADDER_4_BITS is 
+	component GUTIERREZ_FULL_ADDER_USING_GATES
+		Port ( a,b,cin_prime : in  STD_LOGIC;
+             sum,cout_prime : out  STD_LOGIC);
+	end component;
+	
+	signal carry: std_logic_vector(15 downto 0);
+	signal sum_temp: std_logic_vector(15 downto 0);
+	begin
+		FIRST: GUTIERREZ_FULL_ADDER_USING_GATES port map  (cin, X(0),Y(0),sum_temp(0),carry(0));
+		carry_out: Cout<= carry(15);
+		
+	SECOND:
+		for i in 1 to (15) generate
+			THIRD: GUTIERREZ_FULL_ADDER_USING_GATES port map  (carry(i-1), X(i),Y(i),sum_temp(i),carry(i));
+		end generate;
+		over: Overflow<= 1' WHEN (X(15)=Y(15) AND sum_temp(15)/=X(15)) or
+                            (X(15)/=Y(15) AND sum_temp(15)/=X(15)) ELSE '0';
+		FINAL: sum_prime<=sum_temp;
+end DESIGN;

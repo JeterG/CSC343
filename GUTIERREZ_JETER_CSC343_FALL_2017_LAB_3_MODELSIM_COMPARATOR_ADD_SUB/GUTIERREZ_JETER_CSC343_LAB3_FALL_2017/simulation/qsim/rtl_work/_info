@@ -1,0 +1,472 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/mnt/1158F89F14FC49C4/GUTIERREZJETER_CSC343_FALL_2017/GUTIERREZ_JETER_CSC323_LAB3_MODELSIM_COMPARATOR_ADD_SUB_FALL_2017/simulation/qsim
+vGUTIERREZ_32_BIT_SEARCH
+Z1 !s110 1506354171
+!i10b 1
+!s100 NW7VbYKUa[ih[5TCJUC`o2
+I2oR<TeP54k_OlY2XHLfoO2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1506354170
+Z3 8GUTIEREZ_JETER_LAB_3_FALL_2017.vo
+Z4 FGUTIEREZ_JETER_LAB_3_FALL_2017.vo
+Z5 L0 32
+Z6 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z7 !s108 1506354171.000000
+Z8 !s107 GUTIEREZ_JETER_LAB_3_FALL_2017.vo|
+Z9 !s90 -work|work|GUTIEREZ_JETER_LAB_3_FALL_2017.vo|
+!i113 1
+Z10 o-work work
+n@g@u@t@i@e@r@r@e@z_32_@b@i@t_@s@e@a@r@c@h
+vGUTIERREZ_32_BIT_SEARCH_vlg_vec_tst
+R1
+!i10b 1
+!s100 DM<2zZG54O?QPzXgZf[;b0
+IJJCZYXK5[kel8k@M@DX5_2
+R2
+R0
+w1506354169
+8GUTIERREZ_32_BIT_SEARCH.vwf.vt
+FGUTIERREZ_32_BIT_SEARCH.vwf.vt
+Z11 L0 30
+R6
+r1
+!s85 0
+31
+R7
+!s107 GUTIERREZ_32_BIT_SEARCH.vwf.vt|
+!s90 -work|work|GUTIERREZ_32_BIT_SEARCH.vwf.vt|
+!i113 1
+R10
+n@g@u@t@i@e@r@r@e@z_32_@b@i@t_@s@e@a@r@c@h_vlg_vec_tst
+vGUTIERREZ_ADD_SUB_16_BITS
+Z12 !s110 1506311165
+!i10b 1
+!s100 QglH@5`_9z8:Y`2o?Zj_k2
+IVSlTn9j52R>TR2PYe5b6D2
+R2
+R0
+w1506311164
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z13 !s108 1506311165.000000
+R8
+R9
+!i113 1
+R10
+n@g@u@t@i@e@r@r@e@z_@a@d@d_@s@u@b_16_@b@i@t@s
+vGUTIERREZ_ADD_SUB_16_BITS_vlg_vec_tst
+R12
+!i10b 1
+!s100 O27dBzS0Z5S?LTW^R?=l83
+IeY`Bd2@WVXb<2o?M888b00
+R2
+R0
+w1506311162
+8GUTIERREZ_ADD_SUB_16_BITS.vwf.vt
+FGUTIERREZ_ADD_SUB_16_BITS.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R13
+!s107 GUTIERREZ_ADD_SUB_16_BITS.vwf.vt|
+!s90 -work|work|GUTIERREZ_ADD_SUB_16_BITS.vwf.vt|
+!i113 1
+R10
+n@g@u@t@i@e@r@r@e@z_@a@d@d_@s@u@b_16_@b@i@t@s_vlg_vec_tst
+vGUTIERREZ_ADD_SUB_32_BITS
+!s110 1506311961
+!i10b 1
+!s100 hbW4imHH6cdXD_@B7S<NY0
+IaBFzZ2Z5kTbQe:fdj>ol42
+R2
+R0
+w1506311961
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z14 !s108 1506311961.000000
+R8
+R9
+!i113 1
+R10
+n@g@u@t@i@e@r@r@e@z_@a@d@d_@s@u@b_32_@b@i@t@s
+vGUTIERREZ_ADD_SUB_32_BITS_vlg_vec_tst
+!s110 1506311962
+!i10b 1
+!s100 o[6lV6iI3caP=TNhno4d21
+IFCFhSo@9IAekCQS;ff0nW3
+R2
+R0
+w1506311959
+8GUTIERREZ_ADD_SUB_32_BITS.vwf.vt
+FGUTIERREZ_ADD_SUB_32_BITS.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R14
+!s107 GUTIERREZ_ADD_SUB_32_BITS.vwf.vt|
+!s90 -work|work|GUTIERREZ_ADD_SUB_32_BITS.vwf.vt|
+!i113 1
+R10
+n@g@u@t@i@e@r@r@e@z_@a@d@d_@s@u@b_32_@b@i@t@s_vlg_vec_tst
+vGUTIERREZ_ADD_SUB_4_BITS
+Z15 !s110 1506310074
+!i10b 1
+!s100 =0[N:f]kYfkI:gA`Zl_9z1
+ISOaL5h3D_1;gD;Q>1`K<n2
+R2
+R0
+w1506310073
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z16 !s108 1506310074.000000
+R8
+R9
+!i113 1
+R10
+n@g@u@t@i@e@r@r@e@z_@a@d@d_@s@u@b_4_@b@i@t@s
+vGUTIERREZ_ADD_SUB_4_BITS_vlg_vec_tst
+R15
+!i10b 1
+!s100 XJAk_G=3X3_m:hGI1Bz5A3
+ISWlS`Fg=DmG`=Ad0GM3]Z2
+R2
+R0
+w1506310072
+8GUTIERREZ_ADD_SUB_4_BITS.vwf.vt
+FGUTIERREZ_ADD_SUB_4_BITS.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R16
+!s107 GUTIERREZ_ADD_SUB_4_BITS.vwf.vt|
+!s90 -work|work|GUTIERREZ_ADD_SUB_4_BITS.vwf.vt|
+!i113 1
+R10
+n@g@u@t@i@e@r@r@e@z_@a@d@d_@s@u@b_4_@b@i@t@s_vlg_vec_tst
+vGUTIERREZ_ADDER_16_BITS
+Z17 !s110 1506310910
+!i10b 1
+!s100 hYASED;46UHYkzM`WkJ0E1
+I<^^X8dJRW_m8;^1b2Uj`e1
+R2
+R0
+w1506310909
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z18 !s108 1506310910.000000
+R8
+R9
+!i113 1
+R10
+n@g@u@t@i@e@r@r@e@z_@a@d@d@e@r_16_@b@i@t@s
+vGUTIERREZ_ADDER_16_BITS_vlg_vec_tst
+R17
+!i10b 1
+!s100 a2Ga>O;5T:CD5ZCIMfMWE3
+Ile=o66FHg<4MFB`Xai5G71
+R2
+R0
+w1506310907
+8GUTIERREZ_ADDER_16_BITS.vwf.vt
+FGUTIERREZ_ADDER_16_BITS.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R18
+!s107 GUTIERREZ_ADDER_16_BITS.vwf.vt|
+!s90 -work|work|GUTIERREZ_ADDER_16_BITS.vwf.vt|
+!i113 1
+R10
+n@g@u@t@i@e@r@r@e@z_@a@d@d@e@r_16_@b@i@t@s_vlg_vec_tst
+vGUTIERREZ_ADDER_32_BITS
+Z19 !s110 1506311524
+!i10b 1
+!s100 9zUh8:12K@zEB9o4jC96Z0
+ITHPmCSI6nLQOOmg<hzkAD3
+R2
+R0
+w1506311523
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z20 !s108 1506311524.000000
+R8
+R9
+!i113 1
+R10
+n@g@u@t@i@e@r@r@e@z_@a@d@d@e@r_32_@b@i@t@s
+vGUTIERREZ_ADDER_32_BITS_vlg_vec_tst
+R19
+!i10b 1
+!s100 Ek35cUd2BdoPDGX0afll>0
+IHOQ=mEQL>0Re4_?QcDgeG2
+R2
+R0
+w1506311521
+8GUTIERREZ_ADDER_32_BITS.vwf.vt
+FGUTIERREZ_ADDER_32_BITS.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R20
+!s107 GUTIERREZ_ADDER_32_BITS.vwf.vt|
+!s90 -work|work|GUTIERREZ_ADDER_32_BITS.vwf.vt|
+!i113 1
+R10
+n@g@u@t@i@e@r@r@e@z_@a@d@d@e@r_32_@b@i@t@s_vlg_vec_tst
+vGUTIERREZ_ADDER_4_BITS
+Z21 !s110 1506383321
+!i10b 1
+!s100 WN3243C[WoFIbNH@9nX?Y3
+ILMD[e];b8<26Sck;XYcZz2
+R2
+R0
+w1506383320
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z22 !s108 1506383321.000000
+R8
+R9
+!i113 1
+R10
+n@g@u@t@i@e@r@r@e@z_@a@d@d@e@r_4_@b@i@t@s
+vGUTIERREZ_ADDER_4_BITS_vlg_vec_tst
+R21
+!i10b 1
+!s100 LNA1mhZN;QUOhomboda:<2
+IHfBf6F^>GF>XE>3Te3O=W2
+R2
+R0
+w1506383318
+8remove.vwf.vt
+Fremove.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R22
+!s107 remove.vwf.vt|
+!s90 -work|work|remove.vwf.vt|
+!i113 1
+R10
+n@g@u@t@i@e@r@r@e@z_@a@d@d@e@r_4_@b@i@t@s_vlg_vec_tst
+vGUTIERREZ_COMPARE_16_BITS_ADVANCE
+Z23 !s110 1506344474
+!i10b 1
+!s100 <8:jY_O8?zH=ClHiS=D9R0
+IFIA<?9oIQL3MVW6PE0a>32
+R2
+R0
+w1506344474
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z24 !s108 1506344474.000000
+R8
+R9
+!i113 1
+R10
+n@g@u@t@i@e@r@r@e@z_@c@o@m@p@a@r@e_16_@b@i@t@s_@a@d@v@a@n@c@e
+vGUTIERREZ_COMPARE_16_BITS_ADVANCE_vlg_vec_tst
+R23
+!i10b 1
+!s100 LjNKDVd3F6UzbMjC4`nl02
+ITINP7:j7ZS]4zgA]dKf290
+R2
+R0
+w1506344472
+8GUTIERREZ_COMPARE_16_BITS_ADVANCE.vwf.vt
+FGUTIERREZ_COMPARE_16_BITS_ADVANCE.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R24
+!s107 GUTIERREZ_COMPARE_16_BITS_ADVANCE.vwf.vt|
+!s90 -work|work|GUTIERREZ_COMPARE_16_BITS_ADVANCE.vwf.vt|
+!i113 1
+R10
+n@g@u@t@i@e@r@r@e@z_@c@o@m@p@a@r@e_16_@b@i@t@s_@a@d@v@a@n@c@e_vlg_vec_tst
+vGUTIERREZ_COMPARE_32_BITS_ADVANCE
+Z25 !s110 1506344930
+!i10b 1
+!s100 8J>LL1ZdOK[`=`OKXcR@H2
+I]C;KT:X]Z[g@`GZ<a9m0n1
+R2
+R0
+w1506344929
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z26 !s108 1506344930.000000
+R8
+R9
+!i113 1
+R10
+n@g@u@t@i@e@r@r@e@z_@c@o@m@p@a@r@e_32_@b@i@t@s_@a@d@v@a@n@c@e
+vGUTIERREZ_COMPARE_32_BITS_ADVANCE_vlg_vec_tst
+R25
+!i10b 1
+!s100 0n[chC]X5FfJ8cY8WNR4g3
+Il:A<^a7Mj2MjM@iI<YILH1
+R2
+R0
+w1506344928
+8GUTIERREZ_COMPARE_32_BITS_ADVANCE.vwf.vt
+FGUTIERREZ_COMPARE_32_BITS_ADVANCE.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R26
+!s107 GUTIERREZ_COMPARE_32_BITS_ADVANCE.vwf.vt|
+!s90 -work|work|GUTIERREZ_COMPARE_32_BITS_ADVANCE.vwf.vt|
+!i113 1
+R10
+n@g@u@t@i@e@r@r@e@z_@c@o@m@p@a@r@e_32_@b@i@t@s_@a@d@v@a@n@c@e_vlg_vec_tst
+vGUTIERREZ_COMPARE_4_BITS_ADVANCE
+Z27 !s110 1506312488
+!i10b 1
+!s100 oOZTg50i[dSHN1BN<;60l3
+I]hS6PiEE>Y^W1N<Ri[d0?1
+R2
+R0
+w1506312487
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z28 !s108 1506312488.000000
+R8
+R9
+!i113 1
+R10
+n@g@u@t@i@e@r@r@e@z_@c@o@m@p@a@r@e_4_@b@i@t@s_@a@d@v@a@n@c@e
+vGUTIERREZ_COMPARE_4_BITS_ADVANCE_vlg_vec_tst
+R27
+!i10b 1
+!s100 =lfL?6MX>SUA1SgTDQEC52
+IHB`6S3ocY9IDHRT:I]dUo2
+R2
+R0
+w1506312486
+8GUTIERREZ_COMPARE_4_BITS_ADVANCE.vwf.vt
+FGUTIERREZ_COMPARE_4_BITS_ADVANCE.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R28
+!s107 GUTIERREZ_COMPARE_4_BITS_ADVANCE.vwf.vt|
+!s90 -work|work|GUTIERREZ_COMPARE_4_BITS_ADVANCE.vwf.vt|
+!i113 1
+R10
+n@g@u@t@i@e@r@r@e@z_@c@o@m@p@a@r@e_4_@b@i@t@s_@a@d@v@a@n@c@e_vlg_vec_tst
+vGUTIERREZ_MISTAKE4_ADDER
+Z29 !s110 1506346636
+!i10b 1
+!s100 l<;NoXbWe6E??ohZog1[F2
+IDIQ>SSGWmz_gDkbe_`4j]0
+R2
+R0
+w1506346635
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z30 !s108 1506346636.000000
+R8
+R9
+!i113 1
+R10
+n@g@u@t@i@e@r@r@e@z_@m@i@s@t@a@k@e4_@a@d@d@e@r
+vGUTIERREZ_MISTAKE4_ADDER_vlg_vec_tst
+R29
+!i10b 1
+!s100 ]<Cd1g6SR3GLMUel<4>Ch1
+Iz]3eQ>?jQ=9@;cCM@iSOb2
+R2
+R0
+w1506346634
+8GUTIERREZ_4BITADDERMISTAKE.vwf.vt
+FGUTIERREZ_4BITADDERMISTAKE.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R30
+!s107 GUTIERREZ_4BITADDERMISTAKE.vwf.vt|
+!s90 -work|work|GUTIERREZ_4BITADDERMISTAKE.vwf.vt|
+!i113 1
+R10
+n@g@u@t@i@e@r@r@e@z_@m@i@s@t@a@k@e4_@a@d@d@e@r_vlg_vec_tst

@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/jgutierrez/Documents/SRAM_32_BOARD/simulation/qsim
+vRamport
+Z1 !s110 1510345711
+!i10b 1
+!s100 U:YbA?aLGz5;Dffo9>`;h3
+IKZC0S[SlPcYzO<_VGLTKQ3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1510345710
+8SRAM_32_BOARD.vo
+FSRAM_32_BOARD.vo
+L0 32
+Z3 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z4 !s108 1510345711.000000
+!s107 SRAM_32_BOARD.vo|
+!s90 -work|work|SRAM_32_BOARD.vo|
+!i113 1
+Z5 o-work work
+n@ramport
+vRamport_vlg_vec_tst
+R1
+!i10b 1
+!s100 H^A0hW=a[Rdz<dEFNan3O2
+Iig2<[Zi`[<nT7L=MWDk6b1
+R2
+R0
+w1510345709
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 30
+R3
+r1
+!s85 0
+31
+R4
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R5
+n@ramport_vlg_vec_tst

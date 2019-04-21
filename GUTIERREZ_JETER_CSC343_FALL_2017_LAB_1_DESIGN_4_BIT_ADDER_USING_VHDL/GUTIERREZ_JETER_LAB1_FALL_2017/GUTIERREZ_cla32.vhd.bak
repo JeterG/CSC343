@@ -1,0 +1,59 @@
+library IEEE;--Jeter Gutierrez Due 3/27/2017
+use IEEE.std_logic_1164.all;
+entity cla32 is -- 4-bit CLA structural model: top entity
+port( a, b: in std_logic_vector(31 downto 0);
+carryin: in std_logic;
+sum: out std_logic_vector(31 downto 0);
+cgout, cpout, overflow: out std_logic);
+end cla32;
+architecture arch of cla32 is
+component full_adder_g_p -- component declaration full adder
+port( a, b, cin: in std_logic;
+sum, g, p: out std_logic);
+end component;
+component cla_logic_32 -- component declaration CLA-generator
+port( g, p: in std_logic_vector(31 downto 0);
+cin: in std_logic;
+C_Out: out std_logic_vector(30 downto 0);
+cgout, cpout: out std_logic);
+end component;
+signal g, p, carry: std_logic_vector(31 downto 0); --local signals
+signal cout: std_logic;
+begin
+carry(0) <= carryin;
+GUTI_ADD0: full_adder_g_p port map (a(0), b(0), carry(0), sum(0), g(0), p(0));
+GUTI_ADD1: full_adder_g_p port map (a(1), b(1), carry(1), sum(1), g(1), p(1));
+GUTI_ADD2: full_adder_g_p port map (a(2), b(2), carry(2), sum(2), g(2), p(2));
+GUTI_ADD3: full_adder_g_p port map (a(3), b(3), carry(3), sum(3), g(3), p(3));
+GUTI_ADD4: full_adder_g_p port map (a(4), b(4), carry(4), sum(4), g(4), p(4));
+GUTI_ADD5: full_adder_g_p port map (a(5), b(5), carry(5), sum(5), g(5), p(5));
+GUTI_ADD6: full_adder_g_p port map (a(6), b(6), carry(6), sum(6), g(6), p(6));
+GUTI_ADD7: full_adder_g_p port map (a(7), b(7), carry(7), sum(7), g(7), p(7));
+GUTI_ADD8: full_adder_g_p port map (a(8), b(8), carry(8), sum(8), g(8), p(8));
+GUTI_ADD9: full_adder_g_p port map (a(9), b(9), carry(9), sum(9), g(9), p(9));
+GUTI_ADD10: full_adder_g_p port map (a(10), b(10), carry(10), sum(10), g(10), p(10));
+GUTI_ADD11: full_adder_g_p port map (a(11), b(11), carry(11), sum(11), g(11), p(11));
+GUTI_ADD12: full_adder_g_p port map (a(12), b(12), carry(12), sum(12), g(12), p(12));
+GUTI_ADD13: full_adder_g_p port map (a(13), b(13), carry(13), sum(13), g(13), p(13));
+GUTI_ADD14: full_adder_g_p port map (a(14), b(14), carry(14), sum(14), g(14), p(14));
+GUTI_ADD15: full_adder_g_p port map (a(15), b(15), carry(15), sum(15), g(15), p(15));
+GUTI_ADD16: full_adder_g_p port map (a(16), b(16), carry(16), sum(16), g(16), p(16));
+GUTI_ADD17: full_adder_g_p port map (a(17), b(17), carry(17), sum(17), g(17), p(17));
+GUTI_ADD18: full_adder_g_p port map (a(18), b(18), carry(18), sum(18), g(18), p(18));
+GUTI_ADD19: full_adder_g_p port map (a(19), b(19), carry(19), sum(19), g(19), p(19));
+GUTI_ADD20: full_adder_g_p port map (a(20), b(20), carry(20), sum(20), g(20), p(20));
+GUTI_ADD21: full_adder_g_p port map (a(21), b(21), carry(21), sum(21), g(21), p(21));
+GUTI_ADD22: full_adder_g_p port map (a(22), b(22), carry(22), sum(22), g(22), p(22));
+GUTI_ADD23: full_adder_g_p port map (a(23), b(23), carry(23), sum(23), g(23), p(23));
+GUTI_ADD24: full_adder_g_p port map (a(24), b(24), carry(24), sum(24), g(24), p(24));
+GUTI_ADD25: full_adder_g_p port map (a(25), b(25), carry(25), sum(25), g(25), p(25));
+GUTI_ADD26: full_adder_g_p port map (a(26), b(26), carry(26), sum(26), g(26), p(26));
+GUTI_ADD27: full_adder_g_p port map (a(27), b(27), carry(27), sum(27), g(27), p(27));
+GUTI_ADD28: full_adder_g_p port map (a(28), b(28), carry(28), sum(28), g(28), p(28));
+GUTI_ADD29: full_adder_g_p port map (a(29), b(29), carry(29), sum(29), g(29), p(29));
+GUTI_ADD30: full_adder_g_p port map (a(30), b(30), carry(30), sum(30), g(30), p(30));
+GUTI_ADD31: full_adder_g_p port map (a(31), b(31), carry(31), sum(31), g(31), p(31));
+CLA: cla_logic_32 port map(g, p, carryin, carry(31 downto 1), cout, cpout);
+cgout <= cout;
+overflow <= carry(31) xor cout;
+end arch;--Jeter Gutierrez Due 3/27/2017

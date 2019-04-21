@@ -1,0 +1,14 @@
+To, Location
+a[0],PIN_AB28
+a[1],PIN_AC28
+a[2],PIN_AC27
+a[3],PIN_AD27
+b[0],PIN_AB27
+b[1],PIN_AC26
+b[2],PIN_AD26
+b[3],PIN_AB26
+sum[0],PIN_G19
+sum[1],PIN_F19
+sum[2],PIN_E19
+sum[3],PIN_F21
+cout,PIN_F18

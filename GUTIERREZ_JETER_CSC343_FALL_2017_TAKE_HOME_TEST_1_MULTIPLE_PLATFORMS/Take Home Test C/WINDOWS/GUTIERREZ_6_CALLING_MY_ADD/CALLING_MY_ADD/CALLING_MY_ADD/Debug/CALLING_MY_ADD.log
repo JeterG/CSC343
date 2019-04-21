@@ -1,0 +1,4 @@
+﻿  stdafx.cpp
+  CALLING_MY_ADD.cpp
+c:\users\jeter_gutierrez\source\repos\calling_my_add\calling_my_add\calling_my_add.cpp(6): warning C4227: anachronism used: qualifiers on reference are ignored
+  CALLING_MY_ADD.vcxproj -> C:\Users\Jeter_Gutierrez\source\repos\CALLING_MY_ADD\Debug\CALLING_MY_ADD.exe

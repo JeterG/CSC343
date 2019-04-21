@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SIMPLEFORITERATIONLOOP", "SIMPLEFORITERATIONLOOP\SIMPLEFORITERATIONLOOP.vcxproj", "{8064378F-C518-4ADD-9E5B-B440E876DD85}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8064378F-C518-4ADD-9E5B-B440E876DD85}.Debug|x64.ActiveCfg = Debug|x64
+		{8064378F-C518-4ADD-9E5B-B440E876DD85}.Debug|x64.Build.0 = Debug|x64
+		{8064378F-C518-4ADD-9E5B-B440E876DD85}.Debug|x86.ActiveCfg = Debug|Win32
+		{8064378F-C518-4ADD-9E5B-B440E876DD85}.Debug|x86.Build.0 = Debug|Win32
+		{8064378F-C518-4ADD-9E5B-B440E876DD85}.Release|x64.ActiveCfg = Release|x64
+		{8064378F-C518-4ADD-9E5B-B440E876DD85}.Release|x64.Build.0 = Release|x64
+		{8064378F-C518-4ADD-9E5B-B440E876DD85}.Release|x86.ActiveCfg = Release|Win32
+		{8064378F-C518-4ADD-9E5B-B440E876DD85}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {85948BF9-5A83-4F09-8D1D-37DDA8D2CF7E}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,388 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/jgutierrez/Documents/GUTIERREZ_JETER_LAB_7_ACCUMULATOR_MULTIPLICATION_DOT_PRODUCT_FALL_2017/GUTIERREZ_JETER_LAB_7_FALL_2017/simulation/qsim
+vGUTI_16bit_Accumulator
+Z1 !s110 1511033727
+!i10b 1
+!s100 BBD:lDYAFaIdI9SC1maPb0
+IZi4DHIOb6;i6Q?`?5ni>g1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1511033726
+Z3 8GUTIERREZ_JETER_LAB_7_FALL_2017.vo
+Z4 FGUTIERREZ_JETER_LAB_7_FALL_2017.vo
+Z5 L0 32
+Z6 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z7 !s108 1511033727.000000
+Z8 !s107 GUTIERREZ_JETER_LAB_7_FALL_2017.vo|
+Z9 !s90 -work|work|GUTIERREZ_JETER_LAB_7_FALL_2017.vo|
+!i113 1
+Z10 o-work work
+n@g@u@t@i_16bit_@accumulator
+vGUTI_16bit_Accumulator_vlg_vec_tst
+R1
+!i10b 1
+!s100 gaSK:PfU<jGYE=NK[[FG13
+Ie]fGeSC>dYRSZRR?HT3gD2
+R2
+R0
+w1511033725
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+Z11 L0 30
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R10
+n@g@u@t@i_16bit_@accumulator_vlg_vec_tst
+vGUTI_8BIT_MULTIPLICATION
+Z12 !s110 1511030857
+!i10b 1
+!s100 XEf9<U^De;o=i]El?mKVg1
+IcRiUeM1ZK@`GIK<QXj>U81
+R2
+R0
+w1511030856
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z13 !s108 1511030857.000000
+R8
+R9
+!i113 1
+R10
+n@g@u@t@i_8@b@i@t_@m@u@l@t@i@p@l@i@c@a@t@i@o@n
+vGUTI_8BIT_MULTIPLICATION_vlg_vec_tst
+R12
+!i10b 1
+!s100 5;RidH0hozmUP[IX03KBM3
+IeZBP8WhPSIK_i[1T`mOR61
+R2
+R0
+w1511030855
+8Waveform2.vwf.vt
+FWaveform2.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R13
+!s107 Waveform2.vwf.vt|
+!s90 -work|work|Waveform2.vwf.vt|
+!i113 1
+R10
+n@g@u@t@i_8@b@i@t_@m@u@l@t@i@p@l@i@c@a@t@i@o@n_vlg_vec_tst
+vGUTI_8BITMULTIPLIER
+Z14 !s110 1511024194
+!i10b 1
+!s100 fKcCA8EkI<PYUM@h_>J1M3
+IEU8AA6>K0TUWQnbTF_XTL2
+R2
+R0
+w1511024194
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z15 !s108 1511024194.000000
+R8
+R9
+!i113 1
+R10
+n@g@u@t@i_8@b@i@t@m@u@l@t@i@p@l@i@e@r
+vGUTI_8BITMULTIPLIER_vlg_vec_tst
+R14
+!i10b 1
+!s100 T>KlR@ES>ZWmJbLdogok13
+I7leV<=9Cb=0knVJAd@R9W3
+R2
+R0
+w1511024193
+8GUTI_8BIT_MULTIPLIER.vwf.vt
+FGUTI_8BIT_MULTIPLIER.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R15
+!s107 GUTI_8BIT_MULTIPLIER.vwf.vt|
+!s90 -work|work|GUTI_8BIT_MULTIPLIER.vwf.vt|
+!i113 1
+R10
+n@g@u@t@i_8@b@i@t@m@u@l@t@i@p@l@i@e@r_vlg_vec_tst
+vGUTI_DOT_PRODUCT
+Z16 !s110 1511035577
+!i10b 1
+!s100 ;[<DdW3l=RL15XzJ2<dZ@0
+If6HTEgRQ_e=n9Qd=Z1ceP2
+R2
+R0
+w1511035576
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z17 !s108 1511035577.000000
+R8
+R9
+!i113 1
+R10
+n@g@u@t@i_@d@o@t_@p@r@o@d@u@c@t
+vGUTI_DOT_PRODUCT_vlg_vec_tst
+R16
+!i10b 1
+!s100 jV_7EK3XE9GljZk@aS`K50
+Ii=IDS3^mM]HF75T?A23Cz3
+R2
+R0
+w1511035575
+8Waveform3.vwf.vt
+FWaveform3.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R17
+!s107 Waveform3.vwf.vt|
+!s90 -work|work|Waveform3.vwf.vt|
+!i113 1
+R10
+n@g@u@t@i_@d@o@t_@p@r@o@d@u@c@t_vlg_vec_tst
+vGUTI_multi_4bit
+Z18 !s110 1511023179
+!i10b 1
+!s100 VGUklVK^WN63>o44]?:Th2
+I=E7E:YYZOOF^JAij:2;oo0
+R2
+R0
+w1511023179
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z19 !s108 1511023179.000000
+R8
+R9
+!i113 1
+R10
+n@g@u@t@i_multi_4bit
+vGUTI_multi_4bit_vlg_vec_tst
+R18
+!i10b 1
+!s100 ]GDRBg`ig5S>POP0SKN:i3
+IDjgcdFD_f=aP6Pn3bI22b1
+R2
+R0
+w1511023178
+8multi4.vwf.vt
+Fmulti4.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R19
+!s107 multi4.vwf.vt|
+!s90 -work|work|multi4.vwf.vt|
+!i113 1
+R10
+n@g@u@t@i_multi_4bit_vlg_vec_tst
+vGUTI_Sub_8bit_Accumulator
+Z20 !s110 1511026098
+!i10b 1
+!s100 M[GG[h>nKff[mai11Q02X0
+I`WX7gGfE_[iG]`F71`RI<2
+R2
+R0
+w1511026098
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z21 !s108 1511026098.000000
+R8
+R9
+!i113 1
+R10
+n@g@u@t@i_@sub_8bit_@accumulator
+vGUTI_Sub_8bit_Accumulator_vlg_vec_tst
+R20
+!i10b 1
+!s100 =nD:a2N@jaCUlHW7^8<G:3
+IRF9Eef4YI382?fTk9PW:l2
+R2
+R0
+w1511026097
+8GUTI_Sub_8bit_Accumulator.vwf.vt
+FGUTI_Sub_8bit_Accumulator.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R21
+!s107 GUTI_Sub_8bit_Accumulator.vwf.vt|
+!s90 -work|work|GUTI_Sub_8bit_Accumulator.vwf.vt|
+!i113 1
+R10
+n@g@u@t@i_@sub_8bit_@accumulator_vlg_vec_tst
+vGUTI_TREEMULTI
+Z22 !s110 1511335166
+!i10b 1
+!s100 8a`CP1L^STaPoPhC2bYUD2
+I1f931U`18NGlH^<KMfZlL1
+R2
+R0
+w1511335165
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z23 !s108 1511335166.000000
+R8
+R9
+!i113 1
+R10
+n@g@u@t@i_@t@r@e@e@m@u@l@t@i
+vGUTI_TREEMULTI_vlg_vec_tst
+R22
+!i10b 1
+!s100 [eE><3=UV7@YdEDN2Cn^<0
+INhEiiFDoCijVKnohd31^;3
+R2
+R0
+w1511335164
+8Waveform4.vwf.vt
+FWaveform4.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R23
+!s107 Waveform4.vwf.vt|
+!s90 -work|work|Waveform4.vwf.vt|
+!i113 1
+R10
+n@g@u@t@i_@t@r@e@e@m@u@l@t@i_vlg_vec_tst
+vMultiplier
+Z24 !s110 1511023795
+!i10b 1
+!s100 kDP`<b1MjP7PMomU4dFgD0
+IU:zoIzdQll6FB9lD0nDP=3
+R2
+R0
+w1511023795
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z25 !s108 1511023795.000000
+R8
+R9
+!i113 1
+R10
+n@multiplier
+vMultiplier_vlg_vec_tst
+R24
+!i10b 1
+!s100 Vf<B09KHY>F]3A18k5e4B1
+IABiJ4;R1l0ml;gS9iW8JR0
+R2
+R0
+w1511023794
+8test.vwf.vt
+Ftest.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R25
+!s107 test.vwf.vt|
+!s90 -work|work|test.vwf.vt|
+!i113 1
+R10
+n@multiplier_vlg_vec_tst
+vSubtractor
+Z26 !s110 1511025972
+!i10b 1
+!s100 :j9HA0UQ9CK77G=EhP7ER2
+INT5Bj]N:_KSdb]1Ba`1213
+R2
+R0
+w1511025972
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z27 !s108 1511025972.000000
+R8
+R9
+!i113 1
+R10
+n@subtractor
+vSubtractor_vlg_vec_tst
+R26
+!i10b 1
+!s100 =ML=JYRjWHP7_o<WSi48Y3
+IXSCmZ5;eoRY;l>6Mi;j]51
+R2
+R0
+w1511025971
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R27
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R10
+n@subtractor_vlg_vec_tst

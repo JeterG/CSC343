@@ -1,0 +1,5 @@
+﻿  USINGTHEVECTORCLASS.cpp
+c:\users\jeter_gutierrez\source\repos\usingthevectorclass\usingthevectorclass\usingthevectorclass.cpp(16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\jeter_gutierrez\source\repos\usingthevectorclass\usingthevectorclass\usingthevectorclass.cpp(17): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\jeter_gutierrez\source\repos\usingthevectorclass\usingthevectorclass\usingthevectorclass.cpp(18): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  USINGTHEVECTORCLASS.vcxproj -> C:\Users\Jeter_Gutierrez\source\repos\USINGTHEVECTORCLASS\Debug\USINGTHEVECTORCLASS.exe

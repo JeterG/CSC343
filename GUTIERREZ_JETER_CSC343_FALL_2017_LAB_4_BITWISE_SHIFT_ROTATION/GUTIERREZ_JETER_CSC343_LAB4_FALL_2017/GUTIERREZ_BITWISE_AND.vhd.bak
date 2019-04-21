@@ -1,0 +1,11 @@
+library ieee;
+use ieee.std_logic_1164.all;
+entity GUTIERREZ_BITWISE_AND is
+port( X: in std_logic_vector(5 downto 0);
+		Y:	in std_logic_vector (5 downto 0);
+		RESULT: out std_logic_vector (5 downto 0););
+end GUTIERREZ_BITWISE_AND;
+architecture design_and of GUTIERREZ_BITWISE_AND is
+begin
+result<=X and Y;
+end design_and;

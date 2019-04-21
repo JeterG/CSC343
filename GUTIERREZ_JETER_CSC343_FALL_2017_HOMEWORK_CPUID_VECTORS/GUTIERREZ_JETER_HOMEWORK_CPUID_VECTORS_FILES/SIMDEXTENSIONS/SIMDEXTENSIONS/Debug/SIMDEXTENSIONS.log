@@ -1,0 +1,5 @@
+﻿  SIMDEXTENSIONS.cpp
+c:\users\jeter_gutierrez\source\repos\simdextensions\simdextensions\simdextensions.cpp(20): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\jeter_gutierrez\source\repos\simdextensions\simdextensions\simdextensions.cpp(24): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\jeter_gutierrez\source\repos\simdextensions\simdextensions\simdextensions.cpp(28): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  SIMDEXTENSIONS.vcxproj -> C:\Users\Jeter_Gutierrez\source\repos\SIMDEXTENSIONS\Debug\SIMDEXTENSIONS.exe

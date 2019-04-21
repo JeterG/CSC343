@@ -1,0 +1,637 @@
+// Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus Prime License Agreement,
+// the Altera MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Altera and sold by Altera or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition"
+
+// DATE "11/18/2017 11:56:12"
+
+// 
+// Device: Altera EP4CE115F29C7 Package FBGA780
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module GUTI_8BITMULTIPLIER (
+	INPUT_X,
+	INPUT_Y,
+	PRODUCT);
+input 	[7:0] INPUT_X;
+input 	[7:0] INPUT_Y;
+output 	[15:0] PRODUCT;
+
+// Design Ports Information
+// PRODUCT[0]	=>  Location: PIN_G11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// PRODUCT[1]	=>  Location: PIN_E7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// PRODUCT[2]	=>  Location: PIN_F8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// PRODUCT[3]	=>  Location: PIN_F10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// PRODUCT[4]	=>  Location: PIN_D7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// PRODUCT[5]	=>  Location: PIN_F7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// PRODUCT[6]	=>  Location: PIN_H12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// PRODUCT[7]	=>  Location: PIN_B6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// PRODUCT[8]	=>  Location: PIN_G10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// PRODUCT[9]	=>  Location: PIN_H10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// PRODUCT[10]	=>  Location: PIN_B8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// PRODUCT[11]	=>  Location: PIN_H8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// PRODUCT[12]	=>  Location: PIN_G7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// PRODUCT[13]	=>  Location: PIN_E8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// PRODUCT[14]	=>  Location: PIN_A6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// PRODUCT[15]	=>  Location: PIN_C8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// INPUT_X[0]	=>  Location: PIN_D6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// INPUT_X[1]	=>  Location: PIN_E10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// INPUT_X[2]	=>  Location: PIN_G12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// INPUT_X[3]	=>  Location: PIN_D9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// INPUT_X[4]	=>  Location: PIN_B4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// INPUT_X[5]	=>  Location: PIN_D11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// INPUT_X[6]	=>  Location: PIN_C7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// INPUT_X[7]	=>  Location: PIN_A7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// INPUT_Y[0]	=>  Location: PIN_G9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// INPUT_Y[1]	=>  Location: PIN_J10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// INPUT_Y[2]	=>  Location: PIN_D8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// INPUT_Y[3]	=>  Location: PIN_A8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// INPUT_Y[4]	=>  Location: PIN_G8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// INPUT_Y[5]	=>  Location: PIN_A4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// INPUT_Y[6]	=>  Location: PIN_C9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// INPUT_Y[7]	=>  Location: PIN_C11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+// synopsys translate_off
+initial $sdf_annotate("GUTIERREZ_JETER_LAB_7_FALL_2017_7_1200mv_85c_v_slow.sdo");
+// synopsys translate_on
+
+wire \Mult0|auto_generated|mac_out2~0 ;
+wire \Mult0|auto_generated|mac_out2~1 ;
+wire \PRODUCT[0]~output_o ;
+wire \PRODUCT[1]~output_o ;
+wire \PRODUCT[2]~output_o ;
+wire \PRODUCT[3]~output_o ;
+wire \PRODUCT[4]~output_o ;
+wire \PRODUCT[5]~output_o ;
+wire \PRODUCT[6]~output_o ;
+wire \PRODUCT[7]~output_o ;
+wire \PRODUCT[8]~output_o ;
+wire \PRODUCT[9]~output_o ;
+wire \PRODUCT[10]~output_o ;
+wire \PRODUCT[11]~output_o ;
+wire \PRODUCT[12]~output_o ;
+wire \PRODUCT[13]~output_o ;
+wire \PRODUCT[14]~output_o ;
+wire \PRODUCT[15]~output_o ;
+wire \INPUT_X[0]~input_o ;
+wire \INPUT_X[1]~input_o ;
+wire \INPUT_X[2]~input_o ;
+wire \INPUT_X[3]~input_o ;
+wire \INPUT_X[4]~input_o ;
+wire \INPUT_X[5]~input_o ;
+wire \INPUT_X[6]~input_o ;
+wire \INPUT_X[7]~input_o ;
+wire \INPUT_Y[0]~input_o ;
+wire \INPUT_Y[1]~input_o ;
+wire \INPUT_Y[2]~input_o ;
+wire \INPUT_Y[3]~input_o ;
+wire \INPUT_Y[4]~input_o ;
+wire \INPUT_Y[5]~input_o ;
+wire \INPUT_Y[6]~input_o ;
+wire \INPUT_Y[7]~input_o ;
+wire \Mult0|auto_generated|mac_mult1~dataout ;
+wire \Mult0|auto_generated|mac_mult1~DATAOUT1 ;
+wire \Mult0|auto_generated|mac_mult1~DATAOUT2 ;
+wire \Mult0|auto_generated|mac_mult1~DATAOUT3 ;
+wire \Mult0|auto_generated|mac_mult1~DATAOUT4 ;
+wire \Mult0|auto_generated|mac_mult1~DATAOUT5 ;
+wire \Mult0|auto_generated|mac_mult1~DATAOUT6 ;
+wire \Mult0|auto_generated|mac_mult1~DATAOUT7 ;
+wire \Mult0|auto_generated|mac_mult1~DATAOUT8 ;
+wire \Mult0|auto_generated|mac_mult1~DATAOUT9 ;
+wire \Mult0|auto_generated|mac_mult1~DATAOUT10 ;
+wire \Mult0|auto_generated|mac_mult1~DATAOUT11 ;
+wire \Mult0|auto_generated|mac_mult1~DATAOUT12 ;
+wire \Mult0|auto_generated|mac_mult1~DATAOUT13 ;
+wire \Mult0|auto_generated|mac_mult1~DATAOUT14 ;
+wire \Mult0|auto_generated|mac_mult1~DATAOUT15 ;
+wire \Mult0|auto_generated|mac_mult1~0 ;
+wire \Mult0|auto_generated|mac_mult1~1 ;
+wire \Mult0|auto_generated|mac_out2~dataout ;
+wire \Mult0|auto_generated|mac_out2~DATAOUT1 ;
+wire \Mult0|auto_generated|mac_out2~DATAOUT2 ;
+wire \Mult0|auto_generated|mac_out2~DATAOUT3 ;
+wire \Mult0|auto_generated|mac_out2~DATAOUT4 ;
+wire \Mult0|auto_generated|mac_out2~DATAOUT5 ;
+wire \Mult0|auto_generated|mac_out2~DATAOUT6 ;
+wire \Mult0|auto_generated|mac_out2~DATAOUT7 ;
+wire \Mult0|auto_generated|mac_out2~DATAOUT8 ;
+wire \Mult0|auto_generated|mac_out2~DATAOUT9 ;
+wire \Mult0|auto_generated|mac_out2~DATAOUT10 ;
+wire \Mult0|auto_generated|mac_out2~DATAOUT11 ;
+wire \Mult0|auto_generated|mac_out2~DATAOUT12 ;
+wire \Mult0|auto_generated|mac_out2~DATAOUT13 ;
+wire \Mult0|auto_generated|mac_out2~DATAOUT14 ;
+wire \Mult0|auto_generated|mac_out2~DATAOUT15 ;
+
+wire [17:0] \Mult0|auto_generated|mac_out2_DATAOUT_bus ;
+wire [17:0] \Mult0|auto_generated|mac_mult1_DATAOUT_bus ;
+
+assign \Mult0|auto_generated|mac_out2~0  = \Mult0|auto_generated|mac_out2_DATAOUT_bus [0];
+assign \Mult0|auto_generated|mac_out2~1  = \Mult0|auto_generated|mac_out2_DATAOUT_bus [1];
+assign \Mult0|auto_generated|mac_out2~dataout  = \Mult0|auto_generated|mac_out2_DATAOUT_bus [2];
+assign \Mult0|auto_generated|mac_out2~DATAOUT1  = \Mult0|auto_generated|mac_out2_DATAOUT_bus [3];
+assign \Mult0|auto_generated|mac_out2~DATAOUT2  = \Mult0|auto_generated|mac_out2_DATAOUT_bus [4];
+assign \Mult0|auto_generated|mac_out2~DATAOUT3  = \Mult0|auto_generated|mac_out2_DATAOUT_bus [5];
+assign \Mult0|auto_generated|mac_out2~DATAOUT4  = \Mult0|auto_generated|mac_out2_DATAOUT_bus [6];
+assign \Mult0|auto_generated|mac_out2~DATAOUT5  = \Mult0|auto_generated|mac_out2_DATAOUT_bus [7];
+assign \Mult0|auto_generated|mac_out2~DATAOUT6  = \Mult0|auto_generated|mac_out2_DATAOUT_bus [8];
+assign \Mult0|auto_generated|mac_out2~DATAOUT7  = \Mult0|auto_generated|mac_out2_DATAOUT_bus [9];
+assign \Mult0|auto_generated|mac_out2~DATAOUT8  = \Mult0|auto_generated|mac_out2_DATAOUT_bus [10];
+assign \Mult0|auto_generated|mac_out2~DATAOUT9  = \Mult0|auto_generated|mac_out2_DATAOUT_bus [11];
+assign \Mult0|auto_generated|mac_out2~DATAOUT10  = \Mult0|auto_generated|mac_out2_DATAOUT_bus [12];
+assign \Mult0|auto_generated|mac_out2~DATAOUT11  = \Mult0|auto_generated|mac_out2_DATAOUT_bus [13];
+assign \Mult0|auto_generated|mac_out2~DATAOUT12  = \Mult0|auto_generated|mac_out2_DATAOUT_bus [14];
+assign \Mult0|auto_generated|mac_out2~DATAOUT13  = \Mult0|auto_generated|mac_out2_DATAOUT_bus [15];
+assign \Mult0|auto_generated|mac_out2~DATAOUT14  = \Mult0|auto_generated|mac_out2_DATAOUT_bus [16];
+assign \Mult0|auto_generated|mac_out2~DATAOUT15  = \Mult0|auto_generated|mac_out2_DATAOUT_bus [17];
+
+assign \Mult0|auto_generated|mac_mult1~0  = \Mult0|auto_generated|mac_mult1_DATAOUT_bus [0];
+assign \Mult0|auto_generated|mac_mult1~1  = \Mult0|auto_generated|mac_mult1_DATAOUT_bus [1];
+assign \Mult0|auto_generated|mac_mult1~dataout  = \Mult0|auto_generated|mac_mult1_DATAOUT_bus [2];
+assign \Mult0|auto_generated|mac_mult1~DATAOUT1  = \Mult0|auto_generated|mac_mult1_DATAOUT_bus [3];
+assign \Mult0|auto_generated|mac_mult1~DATAOUT2  = \Mult0|auto_generated|mac_mult1_DATAOUT_bus [4];
+assign \Mult0|auto_generated|mac_mult1~DATAOUT3  = \Mult0|auto_generated|mac_mult1_DATAOUT_bus [5];
+assign \Mult0|auto_generated|mac_mult1~DATAOUT4  = \Mult0|auto_generated|mac_mult1_DATAOUT_bus [6];
+assign \Mult0|auto_generated|mac_mult1~DATAOUT5  = \Mult0|auto_generated|mac_mult1_DATAOUT_bus [7];
+assign \Mult0|auto_generated|mac_mult1~DATAOUT6  = \Mult0|auto_generated|mac_mult1_DATAOUT_bus [8];
+assign \Mult0|auto_generated|mac_mult1~DATAOUT7  = \Mult0|auto_generated|mac_mult1_DATAOUT_bus [9];
+assign \Mult0|auto_generated|mac_mult1~DATAOUT8  = \Mult0|auto_generated|mac_mult1_DATAOUT_bus [10];
+assign \Mult0|auto_generated|mac_mult1~DATAOUT9  = \Mult0|auto_generated|mac_mult1_DATAOUT_bus [11];
+assign \Mult0|auto_generated|mac_mult1~DATAOUT10  = \Mult0|auto_generated|mac_mult1_DATAOUT_bus [12];
+assign \Mult0|auto_generated|mac_mult1~DATAOUT11  = \Mult0|auto_generated|mac_mult1_DATAOUT_bus [13];
+assign \Mult0|auto_generated|mac_mult1~DATAOUT12  = \Mult0|auto_generated|mac_mult1_DATAOUT_bus [14];
+assign \Mult0|auto_generated|mac_mult1~DATAOUT13  = \Mult0|auto_generated|mac_mult1_DATAOUT_bus [15];
+assign \Mult0|auto_generated|mac_mult1~DATAOUT14  = \Mult0|auto_generated|mac_mult1_DATAOUT_bus [16];
+assign \Mult0|auto_generated|mac_mult1~DATAOUT15  = \Mult0|auto_generated|mac_mult1_DATAOUT_bus [17];
+
+// Location: IOOBUF_X25_Y73_N16
+cycloneive_io_obuf \PRODUCT[0]~output (
+	.i(\Mult0|auto_generated|mac_out2~dataout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\PRODUCT[0]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \PRODUCT[0]~output .bus_hold = "false";
+defparam \PRODUCT[0]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X13_Y73_N9
+cycloneive_io_obuf \PRODUCT[1]~output (
+	.i(\Mult0|auto_generated|mac_out2~DATAOUT1 ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\PRODUCT[1]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \PRODUCT[1]~output .bus_hold = "false";
+defparam \PRODUCT[1]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X11_Y73_N9
+cycloneive_io_obuf \PRODUCT[2]~output (
+	.i(\Mult0|auto_generated|mac_out2~DATAOUT2 ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\PRODUCT[2]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \PRODUCT[2]~output .bus_hold = "false";
+defparam \PRODUCT[2]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X20_Y73_N2
+cycloneive_io_obuf \PRODUCT[3]~output (
+	.i(\Mult0|auto_generated|mac_out2~DATAOUT3 ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\PRODUCT[3]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \PRODUCT[3]~output .bus_hold = "false";
+defparam \PRODUCT[3]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X13_Y73_N2
+cycloneive_io_obuf \PRODUCT[4]~output (
+	.i(\Mult0|auto_generated|mac_out2~DATAOUT4 ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\PRODUCT[4]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \PRODUCT[4]~output .bus_hold = "false";
+defparam \PRODUCT[4]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X9_Y73_N9
+cycloneive_io_obuf \PRODUCT[5]~output (
+	.i(\Mult0|auto_generated|mac_out2~DATAOUT5 ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\PRODUCT[5]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \PRODUCT[5]~output .bus_hold = "false";
+defparam \PRODUCT[5]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X25_Y73_N23
+cycloneive_io_obuf \PRODUCT[6]~output (
+	.i(\Mult0|auto_generated|mac_out2~DATAOUT6 ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\PRODUCT[6]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \PRODUCT[6]~output .bus_hold = "false";
+defparam \PRODUCT[6]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X27_Y73_N23
+cycloneive_io_obuf \PRODUCT[7]~output (
+	.i(\Mult0|auto_generated|mac_out2~DATAOUT7 ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\PRODUCT[7]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \PRODUCT[7]~output .bus_hold = "false";
+defparam \PRODUCT[7]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X20_Y73_N9
+cycloneive_io_obuf \PRODUCT[8]~output (
+	.i(\Mult0|auto_generated|mac_out2~DATAOUT8 ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\PRODUCT[8]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \PRODUCT[8]~output .bus_hold = "false";
+defparam \PRODUCT[8]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X20_Y73_N16
+cycloneive_io_obuf \PRODUCT[9]~output (
+	.i(\Mult0|auto_generated|mac_out2~DATAOUT9 ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\PRODUCT[9]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \PRODUCT[9]~output .bus_hold = "false";
+defparam \PRODUCT[9]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X16_Y73_N2
+cycloneive_io_obuf \PRODUCT[10]~output (
+	.i(\Mult0|auto_generated|mac_out2~DATAOUT10 ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\PRODUCT[10]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \PRODUCT[10]~output .bus_hold = "false";
+defparam \PRODUCT[10]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X11_Y73_N23
+cycloneive_io_obuf \PRODUCT[11]~output (
+	.i(\Mult0|auto_generated|mac_out2~DATAOUT11 ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\PRODUCT[11]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \PRODUCT[11]~output .bus_hold = "false";
+defparam \PRODUCT[11]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X9_Y73_N2
+cycloneive_io_obuf \PRODUCT[12]~output (
+	.i(\Mult0|auto_generated|mac_out2~DATAOUT12 ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\PRODUCT[12]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \PRODUCT[12]~output .bus_hold = "false";
+defparam \PRODUCT[12]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X11_Y73_N2
+cycloneive_io_obuf \PRODUCT[13]~output (
+	.i(\Mult0|auto_generated|mac_out2~DATAOUT13 ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\PRODUCT[13]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \PRODUCT[13]~output .bus_hold = "false";
+defparam \PRODUCT[13]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X27_Y73_N16
+cycloneive_io_obuf \PRODUCT[14]~output (
+	.i(\Mult0|auto_generated|mac_out2~DATAOUT14 ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\PRODUCT[14]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \PRODUCT[14]~output .bus_hold = "false";
+defparam \PRODUCT[14]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X16_Y73_N9
+cycloneive_io_obuf \PRODUCT[15]~output (
+	.i(\Mult0|auto_generated|mac_out2~DATAOUT15 ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\PRODUCT[15]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \PRODUCT[15]~output .bus_hold = "false";
+defparam \PRODUCT[15]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X13_Y73_N15
+cycloneive_io_ibuf \INPUT_X[0]~input (
+	.i(INPUT_X[0]),
+	.ibar(gnd),
+	.o(\INPUT_X[0]~input_o ));
+// synopsys translate_off
+defparam \INPUT_X[0]~input .bus_hold = "false";
+defparam \INPUT_X[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X18_Y73_N15
+cycloneive_io_ibuf \INPUT_X[1]~input (
+	.i(INPUT_X[1]),
+	.ibar(gnd),
+	.o(\INPUT_X[1]~input_o ));
+// synopsys translate_off
+defparam \INPUT_X[1]~input .bus_hold = "false";
+defparam \INPUT_X[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X27_Y73_N8
+cycloneive_io_ibuf \INPUT_X[2]~input (
+	.i(INPUT_X[2]),
+	.ibar(gnd),
+	.o(\INPUT_X[2]~input_o ));
+// synopsys translate_off
+defparam \INPUT_X[2]~input .bus_hold = "false";
+defparam \INPUT_X[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X23_Y73_N22
+cycloneive_io_ibuf \INPUT_X[3]~input (
+	.i(INPUT_X[3]),
+	.ibar(gnd),
+	.o(\INPUT_X[3]~input_o ));
+// synopsys translate_off
+defparam \INPUT_X[3]~input .bus_hold = "false";
+defparam \INPUT_X[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X7_Y73_N22
+cycloneive_io_ibuf \INPUT_X[4]~input (
+	.i(INPUT_X[4]),
+	.ibar(gnd),
+	.o(\INPUT_X[4]~input_o ));
+// synopsys translate_off
+defparam \INPUT_X[4]~input .bus_hold = "false";
+defparam \INPUT_X[4]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X23_Y73_N8
+cycloneive_io_ibuf \INPUT_X[5]~input (
+	.i(INPUT_X[5]),
+	.ibar(gnd),
+	.o(\INPUT_X[5]~input_o ));
+// synopsys translate_off
+defparam \INPUT_X[5]~input .bus_hold = "false";
+defparam \INPUT_X[5]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X16_Y73_N22
+cycloneive_io_ibuf \INPUT_X[6]~input (
+	.i(INPUT_X[6]),
+	.ibar(gnd),
+	.o(\INPUT_X[6]~input_o ));
+// synopsys translate_off
+defparam \INPUT_X[6]~input .bus_hold = "false";
+defparam \INPUT_X[6]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X29_Y73_N1
+cycloneive_io_ibuf \INPUT_X[7]~input (
+	.i(INPUT_X[7]),
+	.ibar(gnd),
+	.o(\INPUT_X[7]~input_o ));
+// synopsys translate_off
+defparam \INPUT_X[7]~input .bus_hold = "false";
+defparam \INPUT_X[7]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X13_Y73_N22
+cycloneive_io_ibuf \INPUT_Y[0]~input (
+	.i(INPUT_Y[0]),
+	.ibar(gnd),
+	.o(\INPUT_Y[0]~input_o ));
+// synopsys translate_off
+defparam \INPUT_Y[0]~input .bus_hold = "false";
+defparam \INPUT_Y[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X20_Y73_N22
+cycloneive_io_ibuf \INPUT_Y[1]~input (
+	.i(INPUT_Y[1]),
+	.ibar(gnd),
+	.o(\INPUT_Y[1]~input_o ));
+// synopsys translate_off
+defparam \INPUT_Y[1]~input .bus_hold = "false";
+defparam \INPUT_Y[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X16_Y73_N15
+cycloneive_io_ibuf \INPUT_Y[2]~input (
+	.i(INPUT_Y[2]),
+	.ibar(gnd),
+	.o(\INPUT_Y[2]~input_o ));
+// synopsys translate_off
+defparam \INPUT_Y[2]~input .bus_hold = "false";
+defparam \INPUT_Y[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X18_Y73_N22
+cycloneive_io_ibuf \INPUT_Y[3]~input (
+	.i(INPUT_Y[3]),
+	.ibar(gnd),
+	.o(\INPUT_Y[3]~input_o ));
+// synopsys translate_off
+defparam \INPUT_Y[3]~input .bus_hold = "false";
+defparam \INPUT_Y[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X11_Y73_N15
+cycloneive_io_ibuf \INPUT_Y[4]~input (
+	.i(INPUT_Y[4]),
+	.ibar(gnd),
+	.o(\INPUT_Y[4]~input_o ));
+// synopsys translate_off
+defparam \INPUT_Y[4]~input .bus_hold = "false";
+defparam \INPUT_Y[4]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X7_Y73_N15
+cycloneive_io_ibuf \INPUT_Y[5]~input (
+	.i(INPUT_Y[5]),
+	.ibar(gnd),
+	.o(\INPUT_Y[5]~input_o ));
+// synopsys translate_off
+defparam \INPUT_Y[5]~input .bus_hold = "false";
+defparam \INPUT_Y[5]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X23_Y73_N15
+cycloneive_io_ibuf \INPUT_Y[6]~input (
+	.i(INPUT_Y[6]),
+	.ibar(gnd),
+	.o(\INPUT_Y[6]~input_o ));
+// synopsys translate_off
+defparam \INPUT_Y[6]~input .bus_hold = "false";
+defparam \INPUT_Y[6]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X23_Y73_N1
+cycloneive_io_ibuf \INPUT_Y[7]~input (
+	.i(INPUT_Y[7]),
+	.ibar(gnd),
+	.o(\INPUT_Y[7]~input_o ));
+// synopsys translate_off
+defparam \INPUT_Y[7]~input .bus_hold = "false";
+defparam \INPUT_Y[7]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: DSPMULT_X22_Y72_N0
+cycloneive_mac_mult \Mult0|auto_generated|mac_mult1 (
+	.signa(gnd),
+	.signb(gnd),
+	.clk(gnd),
+	.aclr(gnd),
+	.ena(vcc),
+	.dataa({\INPUT_X[7]~input_o ,\INPUT_X[6]~input_o ,\INPUT_X[5]~input_o ,\INPUT_X[4]~input_o ,\INPUT_X[3]~input_o ,\INPUT_X[2]~input_o ,\INPUT_X[1]~input_o ,\INPUT_X[0]~input_o ,gnd}),
+	.datab({\INPUT_Y[7]~input_o ,\INPUT_Y[6]~input_o ,\INPUT_Y[5]~input_o ,\INPUT_Y[4]~input_o ,\INPUT_Y[3]~input_o ,\INPUT_Y[2]~input_o ,\INPUT_Y[1]~input_o ,\INPUT_Y[0]~input_o ,gnd}),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.dataout(\Mult0|auto_generated|mac_mult1_DATAOUT_bus ));
+// synopsys translate_off
+defparam \Mult0|auto_generated|mac_mult1 .dataa_clock = "none";
+defparam \Mult0|auto_generated|mac_mult1 .dataa_width = 9;
+defparam \Mult0|auto_generated|mac_mult1 .datab_clock = "none";
+defparam \Mult0|auto_generated|mac_mult1 .datab_width = 9;
+defparam \Mult0|auto_generated|mac_mult1 .signa_clock = "none";
+defparam \Mult0|auto_generated|mac_mult1 .signb_clock = "none";
+// synopsys translate_on
+
+// Location: DSPOUT_X22_Y72_N2
+cycloneive_mac_out \Mult0|auto_generated|mac_out2 (
+	.clk(gnd),
+	.aclr(gnd),
+	.ena(vcc),
+	.dataa({\Mult0|auto_generated|mac_mult1~DATAOUT15 ,\Mult0|auto_generated|mac_mult1~DATAOUT14 ,\Mult0|auto_generated|mac_mult1~DATAOUT13 ,\Mult0|auto_generated|mac_mult1~DATAOUT12 ,\Mult0|auto_generated|mac_mult1~DATAOUT11 ,\Mult0|auto_generated|mac_mult1~DATAOUT10 ,
+\Mult0|auto_generated|mac_mult1~DATAOUT9 ,\Mult0|auto_generated|mac_mult1~DATAOUT8 ,\Mult0|auto_generated|mac_mult1~DATAOUT7 ,\Mult0|auto_generated|mac_mult1~DATAOUT6 ,\Mult0|auto_generated|mac_mult1~DATAOUT5 ,\Mult0|auto_generated|mac_mult1~DATAOUT4 ,
+\Mult0|auto_generated|mac_mult1~DATAOUT3 ,\Mult0|auto_generated|mac_mult1~DATAOUT2 ,\Mult0|auto_generated|mac_mult1~DATAOUT1 ,\Mult0|auto_generated|mac_mult1~dataout ,\Mult0|auto_generated|mac_mult1~1 ,\Mult0|auto_generated|mac_mult1~0 }),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.dataout(\Mult0|auto_generated|mac_out2_DATAOUT_bus ));
+// synopsys translate_off
+defparam \Mult0|auto_generated|mac_out2 .dataa_width = 18;
+defparam \Mult0|auto_generated|mac_out2 .output_clock = "none";
+// synopsys translate_on
+
+assign PRODUCT[0] = \PRODUCT[0]~output_o ;
+
+assign PRODUCT[1] = \PRODUCT[1]~output_o ;
+
+assign PRODUCT[2] = \PRODUCT[2]~output_o ;
+
+assign PRODUCT[3] = \PRODUCT[3]~output_o ;
+
+assign PRODUCT[4] = \PRODUCT[4]~output_o ;
+
+assign PRODUCT[5] = \PRODUCT[5]~output_o ;
+
+assign PRODUCT[6] = \PRODUCT[6]~output_o ;
+
+assign PRODUCT[7] = \PRODUCT[7]~output_o ;
+
+assign PRODUCT[8] = \PRODUCT[8]~output_o ;
+
+assign PRODUCT[9] = \PRODUCT[9]~output_o ;
+
+assign PRODUCT[10] = \PRODUCT[10]~output_o ;
+
+assign PRODUCT[11] = \PRODUCT[11]~output_o ;
+
+assign PRODUCT[12] = \PRODUCT[12]~output_o ;
+
+assign PRODUCT[13] = \PRODUCT[13]~output_o ;
+
+assign PRODUCT[14] = \PRODUCT[14]~output_o ;
+
+assign PRODUCT[15] = \PRODUCT[15]~output_o ;
+
+endmodule

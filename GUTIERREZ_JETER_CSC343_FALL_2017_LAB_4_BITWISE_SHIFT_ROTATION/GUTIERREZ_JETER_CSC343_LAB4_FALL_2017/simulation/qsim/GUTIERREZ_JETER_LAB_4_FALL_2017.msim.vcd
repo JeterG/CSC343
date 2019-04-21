@@ -1,0 +1,590 @@
+$comment
+	File created using the following command:
+		vcd file GUTIERREZ_JETER_LAB_4_FALL_2017.msim.vcd -direction
+$end
+$date
+	Wed Oct  4 12:05:27 2017
+$end
+$version
+	ModelSim Version 10.4d
+$end
+$timescale
+	1ps
+$end
+
+$scope module GUTIERREZ_OPCODE_vlg_vec_tst $end
+$var reg 1 ! CLOCK $end
+$var reg 4 " OPCODE [3:0] $end
+$var reg 6 # X [5:0] $end
+$var reg 6 $ Y [5:0] $end
+$var wire 1 % RESULT [5] $end
+$var wire 1 & RESULT [4] $end
+$var wire 1 ' RESULT [3] $end
+$var wire 1 ( RESULT [2] $end
+$var wire 1 ) RESULT [1] $end
+$var wire 1 * RESULT [0] $end
+$var wire 1 + X_IS_LESS_THAN_Y $end
+
+$scope module i1 $end
+$var wire 1 , gnd $end
+$var wire 1 - vcc $end
+$var wire 1 . unknown $end
+$var tri1 1 / devclrn $end
+$var tri1 1 0 devpor $end
+$var tri1 1 1 devoe $end
+$var wire 1 2 X_IS_LESS_THAN_Y~output_o $end
+$var wire 1 3 RESULT[0]~output_o $end
+$var wire 1 4 RESULT[1]~output_o $end
+$var wire 1 5 RESULT[2]~output_o $end
+$var wire 1 6 RESULT[3]~output_o $end
+$var wire 1 7 RESULT[4]~output_o $end
+$var wire 1 8 RESULT[5]~output_o $end
+$var wire 1 9 CLOCK~input_o $end
+$var wire 1 : Y[5]~input_o $end
+$var wire 1 ; X[5]~input_o $end
+$var wire 1 < X[4]~input_o $end
+$var wire 1 = Y[4]~input_o $end
+$var wire 1 > X[3]~input_o $end
+$var wire 1 ? Y[3]~input_o $end
+$var wire 1 @ Y[2]~input_o $end
+$var wire 1 A X[2]~input_o $end
+$var wire 1 B X[1]~input_o $end
+$var wire 1 C Y[1]~input_o $end
+$var wire 1 D Y[0]~input_o $end
+$var wire 1 E X[0]~input_o $end
+$var wire 1 F LessThan1~1_cout $end
+$var wire 1 G LessThan1~3_cout $end
+$var wire 1 H LessThan1~5_cout $end
+$var wire 1 I LessThan1~7_cout $end
+$var wire 1 J LessThan1~9_cout $end
+$var wire 1 K LessThan1~10_combout $end
+$var wire 1 L LessThan0~1_cout $end
+$var wire 1 M LessThan0~3_cout $end
+$var wire 1 N LessThan0~5_cout $end
+$var wire 1 O LessThan0~7_cout $end
+$var wire 1 P LessThan0~9_cout $end
+$var wire 1 Q LessThan0~10_combout $end
+$var wire 1 R OPCODE[0]~input_o $end
+$var wire 1 S OPCODE[1]~input_o $end
+$var wire 1 T OPCODE[2]~input_o $end
+$var wire 1 U OPCODE[3]~input_o $end
+$var wire 1 V Mux6~0_combout $end
+$var wire 1 W X_IS_LESS_THAN_Y~0_combout $end
+$var wire 1 X X_IS_LESS_THAN_Y~reg0_q $end
+$var wire 1 Y Mux5~0_combout $end
+$var wire 1 Z RESULT[0]~0_combout $end
+$var wire 1 [ Mux5~1_combout $end
+$var wire 1 \ RESULT[0]~reg0_q $end
+$var wire 1 ] RESULT[1]~1_combout $end
+$var wire 1 ^ Mux4~0_combout $end
+$var wire 1 _ RESULT[1]~reg0_q $end
+$var wire 1 ` RESULT[2]~2_combout $end
+$var wire 1 a Mux3~0_combout $end
+$var wire 1 b RESULT[2]~reg0_q $end
+$var wire 1 c RESULT[3]~3_combout $end
+$var wire 1 d Mux2~0_combout $end
+$var wire 1 e RESULT[3]~reg0_q $end
+$var wire 1 f RESULT[4]~4_combout $end
+$var wire 1 g Mux1~0_combout $end
+$var wire 1 h RESULT[4]~reg0_q $end
+$var wire 1 i Mux0~0_combout $end
+$var wire 1 j RESULT[5]~5_combout $end
+$var wire 1 k Mux0~1_combout $end
+$var wire 1 l RESULT[5]~reg0_q $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+b0 "
+b110111 #
+b101001 $
+0*
+0)
+0(
+0'
+0&
+0%
+0+
+0,
+1-
+x.
+1/
+10
+11
+02
+03
+04
+05
+06
+07
+08
+09
+1:
+1;
+1<
+0=
+0>
+1?
+0@
+1A
+1B
+0C
+1D
+1E
+0F
+0G
+1H
+1I
+1J
+1K
+0L
+1M
+0N
+0O
+0P
+0Q
+0R
+0S
+0T
+0U
+0V
+0W
+0X
+0Y
+0Z
+1[
+0\
+1]
+0^
+0_
+1`
+0a
+0b
+1c
+0d
+0e
+0f
+0g
+0h
+0i
+1j
+1k
+0l
+$end
+#50000
+1!
+19
+1l
+1\
+13
+18
+1%
+1*
+#100000
+b111111 #
+b111101 #
+b111100 #
+b1001 $
+b1011 $
+b1010 $
+b1 "
+0!
+1R
+0D
+1C
+0:
+0E
+0B
+1>
+09
+1g
+1d
+1a
+1^
+0[
+0M
+1G
+1O
+0I
+0j
+1f
+#150000
+1!
+19
+1h
+1e
+1b
+1_
+0\
+03
+14
+15
+16
+17
+1&
+1'
+1(
+1)
+0*
+#200000
+b11010 $
+b11 "
+b11000 $
+b11001 $
+b10 "
+0!
+0R
+1S
+1D
+0C
+1=
+09
+0g
+0d
+0^
+1[
+1Y
+1L
+1M
+1j
+0`
+0]
+0M
+1Z
+#250000
+1!
+19
+0h
+0e
+0_
+1\
+13
+04
+06
+07
+0&
+0'
+0)
+1*
+#300000
+b11100 #
+b10001 $
+b10101 $
+b10100 #
+b11 "
+0!
+1R
+1@
+0?
+0>
+0;
+09
+1d
+0a
+1^
+1N
+0H
+0Y
+0j
+0f
+1]
+0Z
+0O
+1I
+1P
+0J
+1Q
+0K
+#350000
+1!
+19
+1e
+0b
+1_
+14
+05
+16
+1'
+0(
+1)
+#400000
+b100 #
+b111 "
+b110 #
+b111 #
+b101 $
+b101 "
+b111 $
+b11 $
+b100 "
+0!
+1C
+0@
+0=
+0R
+0S
+1T
+1E
+1B
+0<
+09
+0N
+1H
+0k
+0d
+0L
+1`
+1O
+0I
+1M
+0P
+1J
+0Q
+1K
+#450000
+1!
+19
+0l
+1b
+0\
+03
+15
+08
+0%
+1(
+0*
+#500000
+b11 #
+b100011 #
+b1011 $
+b110011 #
+b110001 #
+b110000 #
+b1001 $
+b101 "
+0!
+1R
+0C
+1?
+0E
+0B
+0A
+1<
+1;
+09
+1k
+1g
+1d
+0^
+0O
+1I
+1L
+0H
+1f
+0`
+0]
+0M
+1N
+#550000
+1!
+19
+1h
+0b
+0_
+04
+05
+17
+1&
+0(
+0)
+#600000
+b1000 $
+b111000 #
+b111 "
+b1100 $
+b111100 #
+b11100 #
+b11110 #
+b1110 $
+b110 "
+0!
+0R
+1S
+1B
+1A
+1>
+0;
+0D
+1C
+1@
+09
+0k
+0d
+0[
+0L
+1j
+1`
+1M
+0N
+1O
+#650000
+1!
+19
+1l
+1b
+15
+18
+1%
+1(
+#700000
+b101110 $
+b100110 $
+b11111 #
+b100111 $
+b10111 #
+b100011 $
+b110111 #
+b110101 #
+b100001 $
+b111 "
+0!
+1R
+1E
+0B
+0>
+1;
+1D
+0C
+0@
+0?
+1:
+09
+0g
+1d
+1^
+1i
+1Y
+1H
+0j
+0`
+1]
+0I
+1j
+#750000
+1!
+19
+0b
+1_
+14
+05
+0(
+1)
+#800000
+b1111 "
+b1011 "
+b100101 #
+b1001 "
+b100001 #
+b1 $
+b1001 $
+b100000 #
+b1000 $
+b1100 $
+b0 #
+b1110 $
+b1000 "
+0!
+0D
+1C
+1@
+1?
+0:
+0E
+0A
+0<
+0;
+0R
+0S
+0T
+1U
+09
+0^
+0M
+1N
+0H
+0d
+0O
+1I
+0i
+0Y
+1V
+0]
+0c
+0j
+0f
+1Z
+1P
+0J
+0Z
+1Q
+0K
+1W
+#850000
+1!
+19
+1X
+12
+1+
+#900000
+b1000 #
+b1010 #
+b11010 #
+b11110 #
+b110 $
+b11111 #
+b111 $
+b11 $
+b111111 #
+b1 $
+b1001 "
+0!
+1R
+1D
+0C
+0@
+0?
+1E
+1B
+1A
+1>
+1<
+1;
+09
+1k
+1g
+1d
+1a
+1^
+1[
+0V
+1M
+0G
+0N
+1H
+1O
+0I
+0P
+1J
+0Q
+1K
+1f
+1c
+1`
+1]
+1Z
+#950000
+1!
+19
+#1000000

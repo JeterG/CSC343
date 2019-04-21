@@ -1,0 +1,36 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_arith.all;
+use IEEE.std_logic_signed.all;
+
+entity GUTIERREZ_COMPARE_4_BITS_ADVANCE is 
+	port ( Mode: in std_logic;
+			 X, Y: in std_logic_vector(3 downto 0);
+			 S: out std_logic_vector (3 downto 0);
+			 Neg: out std_logic;
+			 Z: out std_logic;
+			 Cout, Overflow: out std_logic);
+end entity;
+
+architecture IDEA of GUTIERREZ_COMPARE_4_BITS_ADVANCE is 
+component GUTIERREZ_ADDER_4_BITS is 
+	port ( cin: in std_logic;
+			 X, Y: in std_logic_vector(3 downto 0);
+			 sum_prime: out std_logic_vector (3 downto 0);
+			 Cout, Overflow: out std_logic);
+end component;
+	signal New_Y: std_logic_vector(3 downto 0);
+	signal Z2: std_logic;
+	signal S2: std_logic_vector (3 downto 0);
+	signal Neg2: std_logic;
+	begin
+	FIRST:
+		for i in 0 to (4-1) generate
+			INVERSE: New_Y(i) <= Y(i) xor Mode;
+		end generate;
+	SECOND : GUTIERREZ_ADDER_4_BITS port map(Mode, X, New_Y, S2, Cout, Overflow);
+	THIRD:
+	Neg<=S2(4-1);
+		S<=S2;
+		Z<=(((S2(0) nor S2(1)) and (S2(2) nor S2(3))));								
+end IDEA;
